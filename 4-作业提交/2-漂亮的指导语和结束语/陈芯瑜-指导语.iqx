@@ -1,0 +1,78 @@
+ <text instructiontxt1>
+ 	/items = ("这是一个想要漂亮一点的指导语。 :D")
+ 	/hjustify = center
+ 	/vposition = 40 pct
+	/size = (1000,300)
+ 	/fontstyle = ("幼圆体", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,251,240)
+  </text>
+
+ <text instructiontxt2>
+  /items = ("所以有了下面的图片 ~ :D")
+ 	/hjustify = center
+ 	/vposition = 50 pct
+	/size = (1000,300)
+ 	/fontstyle = ("幼圆体", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,251,240)
+  </text>
+
+ <text instructiontxt3>
+ 	/items = ("唉... 按任意键进入实验吧，不闹了... ")
+ 	/hjustify = center
+ 	/vposition = 95 pct
+	/size = (1000,300)
+ 	/fontstyle = ("幼圆体", 16pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (160,160,164)
+</text>
+
+<picture firstpic>
+ 	/items = ("http://img2.duitang.com/uploads/item/201209/28/20120928121319_BjzPi.jpeg")
+ 	/valign = top
+ 	/halign = center
+ </picture>
+
+
+<text goodbyetxt>
+ 	/items = ("哈哈哈哈没有实验啦！多做被试赚被试费来孝顺父母吧~ :D")
+ 	/hjustify = center
+	/vposition = 100 pct
+ 	/size = (1000,300)
+ 	/fontstyle = ("幼圆体", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+  </text>
+
+<picture secondpic>
+ 	/items = ("http://v1.qzone.cc/pic/201311/01/13/40/52733edabd911015.jpg%21600x600.jpg")
+ 	/valign = center
+ 	/halign = center
+ </picture>
+
+ <trial instruction>
+ 	/stimulusframes = [1=firstpic,instructiontxt1,instructiontxt2,instructiontxt3]
+ 	/validresponse = (anyresponse)
+ </trial>
+  
+ <trial goodbye>
+ 	/validresponse = (anyresponse)
+ 	/stimulusframes = [1=goodbyetxt,secondpic]
+ 	/recorddata = false
+ </trial>
+
+
+<block instructionblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = instruction]
+ </block>
+ 
+ <block goodbyeblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = goodbye]
+ </block>
+ 
+ <expt defaultinstruction>
+ 	/blocks = [1 = instructionblk;2 = goodbyeblk]
+</expt>

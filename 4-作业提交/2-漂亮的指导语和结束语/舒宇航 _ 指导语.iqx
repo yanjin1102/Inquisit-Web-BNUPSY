@@ -1,0 +1,88 @@
+﻿<item welcome>
+    /1 = "欢迎来到实验室！"
+</item>
+
+<item instruction>
+    /1 ="请将左数和右手的食指分别放在键盘的“F”键和“J”键上；在屏幕的中央会随机出现1个字，请判断该字的字意与颜色是否一致；如果一致请按“F”键，如果不一致请按“J”键。"
+</item>
+
+<item key>
+    /1 = "请按任意键开始实验！"
+</item>
+
+<item over>
+    /1= "请按空格键退出实验!"
+</item>
+
+<item thanks>
+    /1 = "实验结束，谢谢您的参与，请出门到主试处领取被试费！"
+</item>
+
+<text welcometxt>
+    /items = welcome 
+    / vposition = 30 
+    /hposition = 50
+    / fontstyle = ("华文行楷", 6.72%, true, false, false, false, 5, 1)
+    / txcolor = (255, 255, 255)
+    /txbgcolor = (0,0,0)
+</text>
+
+<text instructiontxt>
+    /items = instruction
+    /hjustify = center
+    /size = (1300,100)
+    / fontstyle = ("黑体", 4.57%, false, false, false, false, 5, 1)
+    / txcolor = (255, 255, 255)
+    /txbgcolor = (0,0,0)
+</text>
+
+<text anykeytxt>
+    /items = key
+    /vposition = 80 pct
+    / fontstyle = ("楷体", 4.07%, true, false, false, false, 5, 1)
+    / txcolor = (255, 0, 0)
+    /txbgcolor = (0,0,0)
+</text>
+
+<text overtxt>
+    /items = over
+    /vposition = 70 pct
+    / fontstyle = ("楷体", 4.74%, true, false, false, false, 5, 1)
+    / txcolor = (255,0,0)
+    / txbgcolor = (0,0,0)
+</text>
+
+<text thanktxt>
+    /items = thanks
+    /hjustify = center
+    /size = (1300,200)
+    / fontstyle = ("黑体", 6.72%, false, false, false, false, 5, 1)
+    / txcolor = (255, 255, 255)
+    /txbgcolor = (0,0,0)
+</text>
+
+<trial instruction>
+     /validresponse = (anyresponse)
+     /stimulustimes = [1=welcometxt,instructiontxt,anykeytxt]
+     /recorddata = false
+</trial>
+
+<trial over>
+     /validresponse = (" ")
+     /stimulustimes = [1=overtxt,thanktxt]
+     /recorddata = false
+</trial>
+
+<block instructionblk>
+     /screencolor = (0,0,0)
+     /trials = [1=instruction]
+</block>
+
+<block overblk>
+    /screencolor = (0,0,0)
+    /trials = [1=over]
+</block>
+
+<expt>
+  /blocks = [1=instructionblk;2=overblk]
+</expt>

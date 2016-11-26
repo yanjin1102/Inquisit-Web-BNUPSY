@@ -1,0 +1,18 @@
+<instruct minstruct>
+	/nextkey = (" ")     
+	/fontstyle = ("隶书", 10%, true, false, true, false, 5, 1)  
+	/txcolor = (100,100,100)
+	/screencolor = (0,0,0)
+	/lastlabel = "按空格键继续"
+	/windowsize = (1366,768)
+</instruct>
+
+<page instruction>欢迎来参加我们的实验^^虽然我们的主试长得很帅，但是请你不要将注意力分配在他身上哦！^^请注意看电脑屏幕^^实验即将开始</page>
+
+<page endinstruction>实验结束啦！^^谢谢你参加我们的实验^^现在你可以去跟主试搭讪了~</page>
+
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

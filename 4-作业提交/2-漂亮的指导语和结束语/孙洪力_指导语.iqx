@@ -1,0 +1,30 @@
+﻿<instruct inst>
+/ fontstyle = ("微软雅黑", 3.26%, false, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+/ inputdevice = keyboard
+/ lastlabel = "Press [Q] to continue"
+/ nextkey = ("q")
+/ windowsize = (750,500)
+</instruct>
+
+<page hello>
+	^这是一个迷宫实验，
+	^你要在排除视觉条件下，尽快学会走迷宫，
+	^中间不要停顿，要积极运用动觉、记忆和思维，
+	^期间若触棒进入盲巷并到达盲巷终点，
+	^仪器会发出蜂鸣声，并计错一次。
+	^到达终点后仪器会长鸣一秒。
+	^当你连续三次无错走完迷宫，实验结束。
+
+	^^当你明白了操作要求后，请按“Q”继续。
+</page>
+
+<page bye>
+	^^^           实验结束
+	^^^^^           感谢您参加我们的实验
+</page>
+
+<expt>
+/ preinstructions = (hello)
+/ postinstructions = (bye)
+</expt>

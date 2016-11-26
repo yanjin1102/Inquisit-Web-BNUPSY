@@ -1,0 +1,20 @@
+//李沛然lpr 201511060166
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("黑体", 3.14%, false, false, true, false, 5, 1)
+	/txcolor = (0,255,255)
+	/screencolor = (0,0,0)
+	/lastlabel = "觉得它漂亮就按空格键»­"
+	/windowsize = (1000,800)
+</instruct>
+
+<page instruction>^^ ^^ ^^ ^^欢迎参加本次没有实验的实验，您真是个幸运人儿！ (●´З｀●)^^您正在观看一个漂亮的指导语٩(๑>◡<๑)۶ ^^什么？ ⊙ˍ⊙^^您觉得它不够漂亮？(´థ౪థ）σ^^那我也没有办法啊。</page>
+
+<page endinstruction>^^ ^^ ^^ ^^是的！朋友！这是我们最开心的时刻了！^^这个指导语结束了！^^您开心吗！^^您快乐吗！^^您还要编程吗！^^来吧咱们伸手伸手伸伸手！ </page>
+
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

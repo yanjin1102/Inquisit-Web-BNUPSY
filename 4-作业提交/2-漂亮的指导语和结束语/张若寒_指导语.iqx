@@ -1,0 +1,68 @@
+
+<item instruction>
+	/1 = "很高兴在这里与你相遇，
+
+请你按照我们的指示进行操作，
+
+开始一段奇妙的旅程吧。"
+</item>
+<item goodbye>
+	/1= "谢谢你的用心参与，
+
+祝你生活开心。"
+</item>
+
+
+//定义指导语的内容
+----------------
+<text instructiontxt>
+	/ items = instruction
+	/ fontstyle = ("黑体",6%)
+	/ txbgcolor = (transparent)  
+	/ txcolor = (163,96,74)
+	/ vposition = 35
+</text>
+
+<text goodbyetxt>
+	/ items = goodbye
+	/ fontstyle = ("黑体",6%)
+	/ txbgcolor = (transparent)  
+	/ txcolor = (163,96,74)
+	/ vposition = 35
+</text>
+
+//定义文字刺激材料的呈现
+-----------------------------
+
+<picture instructionbgpic>
+	/items = ("2.jpg")  
+
+	/ position = (50,50)  
+	/ size = (100%,100%)
+</picture>
+
+
+<trial instruct>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic,instructiontxt]  
+</trial>
+
+<trial ending>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic,goodbyetxt]
+</trial>
+
+
+<block ins>
+	/ screencolor = (255,255,255)
+	/ trials = [1=instruct,ending]
+</block>
+
+//定义一个block，包含上面的trial。
+<expt in>
+	/ blocks = [1=ins]
+
+</expt>
+// 定义一个experiment。

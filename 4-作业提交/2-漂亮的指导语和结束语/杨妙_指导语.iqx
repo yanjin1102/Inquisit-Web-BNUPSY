@@ -1,0 +1,157 @@
+<picture easonpic>
+    /items=("http://www.qqxiaowo.com/uploads/imgs/2012/0417/1334650823727324.jpg")
+    /position = (40,20)
+    /valign = top
+    / halign = left
+</picture>
+
+<picture chenpic>
+    /items=("http://i.damai.cn/fp/site/eason2011/images/photo4.jpg")
+    /position = (34,16)
+    /valign = top
+    / halign = left
+</picture>
+
+<text instruction1txt>
+	/hjustify = left
+    /vposition = 48 pct
+	/items = ("这是一个指导语")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,170,255)
+</text>
+
+<text instruction2txt>
+	/hjustify = left
+    /vposition = 58 pct
+	/items = ("字不重要看图")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,85,255)
+</text>
+
+<text instruction3txt>
+	/hjustify = left
+    /vposition = 68 pct
+	/items = ("听过吗")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,0,255)
+</text>
+
+<text instruction4txt>
+	/hjustify = left
+    /vposition = 78 pct
+	/items = ("喜欢吗")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (85,0,127)
+</text>
+
+<text bye1txt>
+	/hjustify = center
+    /vposition = 25 pct
+	/items = ("结束语")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,170,255)
+</text>
+
+<text bye2txt>
+	/hjustify = center
+    /vposition = 30 pct
+	/items = ("献上Eason的歌")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,170,255)
+</text>
+
+<text bye3txt>
+	/hjustify = center
+    /vposition = 40 pct
+	/items = ("明年今日")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 28pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,0,255)
+</text>
+
+<text bye4txt>
+	/hjustify = left
+    /vposition = 58 pct
+	/items = ("
+明年今日 别要再失眠
+床褥都改变 如果有幸会面
+或在同伴新婚的盛宴
+惶惑地等待你出现")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 20pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,0,255)
+</text>
+
+<text bye5txt>
+	/hjustify = right
+    /vposition = 58 pct
+	/items = ("
+明年今日 未见你一年
+谁舍得改变 离开你六十年
+但愿能认得出你的子女
+临别亦听得到你讲再见")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 20pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,0,255)
+</text>
+
+// 这里增加一个按钮选项，就是看完指导语之后按任意键继续。
+
+<text anykey1txt>
+	/items = ("按任意键切换到结束语")
+	/vposition = 85 pct
+	/fontstyle = ("宋体", 18pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<text anykey2txt>
+	/items = ("按任意键退出")
+	/vposition = 95 pct
+	/fontstyle = ("宋体", 20pt)
+	/txcolor = (0,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instruction1txt,instruction2txt,instruction3txt,instruction4txt,easonpic,anykey1txt]
+	/recorddata = false
+</trial>
+
+<trial bye>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=chenpic,bye1txt,bye2txt,bye3txt,bye4txt,bye5txt,anykey2txt]
+	/recorddata = false
+</trial>
+
+//增加instruction block来呈现指导语
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block byeblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = bye]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk;2=byeblk]
+</expt>

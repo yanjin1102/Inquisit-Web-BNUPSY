@@ -1,0 +1,134 @@
+﻿
+//注释：这里需要定义一个刺激
+
+<item any>
+   / 1="请按任意键开始试验"	
+</item>
+
+<item rednumbers>
+	/1="Blue"
+     /2="Green"
+</item>
+
+<item greennumbers>
+	/1="Red"
+    /2="Blue"
+</item>
+
+
+<item bluenumbers>
+	/1="Red"
+    /2="Green"
+</item>
+
+<text rednumbertxt>
+   /items=rednumbers
+   /fontstyle=("Arial",60ptc)
+   /txcolor=(255,0,0)
+   /txbgcolor=(0,0,0)
+</text>
+
+
+<text greennumbertxt>
+   /items=greennumbers
+   /fontstyle=("Arial",60ptc)
+   /txcolor=(0,255,0)
+   /txbgcolor=(0,0,0)
+</text>
+
+<text bluenumbertxt>
+   /items=bluenumbers
+   /fontstyle=("Arial",60ptc)
+   /txcolor=(0,0,255)
+   /txbgcolor=(0,0,0)
+</text>
+
+//在这里加入需要反馈给被试的信息，例如是否正确作答，正确的就打一个对号，做错的就打一个错号。
+	
+
+	<text correctmsg>
+		/items = ("√")
+		/fontstyle = ("Arial", 10%)
+		/txbgcolor = (transparent)
+		/txcolor = (0,255,0)
+	</text>
+	
+
+	<text errormsg>
+		/items = ("×")
+		/fontstyle = ("Arial", 10%)
+		/txbgcolor = (transparent)
+		/txcolor = (255,0,0)
+	</text>
+	
+//注视点
+	<text fixation>
+		/items = ("+")
+		/fontstyle = ("Arial", 40ptc)
+		/txbgcolor = (transparent)
+		/txcolor = (255,255,255)
+	</text>
+
+<text instructiontxt>
+	/hjustify = center
+   /items=("请将左手和右手分别放在F键与J键，在屏幕的中央会随机出现英语单词，请判断单词字体的颜色。当你看到红色的单词，请按“R”键，看到绿色的单词，请按“G”键,看到蓝色的字，请按“B”键")
+   /fontstyle = ("宋体", 5pt)
+   /txcolor = (255,255,255)
+   /txbgcolor = (0,0,0)
+   /size=(1200,800)
+</text>
+
+<text anykeytxt>
+   /items=any
+   /vposition=70 pct
+   /fontstyle=("宋体",24pt)
+   /txcolor=(255,0,0)
+   /txbgcolor=(transparent)
+</text>
+
+//增加几个instruction trial 来呈现指导语
+<trial instruction>
+   /validresponse=(anyresponse)
+   /stimulusframes=[1=instructiontxt,anykeytxt]
+   /recorddata=false
+</trial>
+
+<trial rednumbertrial>
+    /pretrialpause=1000
+   /validresponse=("R","G","B")
+   /correctresponse=("R")
+   /recorddata=true
+   /stimulusframes=[1 = fixation; 100=rednumbertxt]
+</trial>
+
+<trial greennumbertrial>
+    /pretrialpause=1000
+   /validresponse=("R","G","B")
+   /correctresponse=("G")
+   /recorddata=true
+   /stimulusframes=[1 = fixation; 100=greennumbertxt]
+</trial>
+
+<trial bluenumbertrial>
+    /pretrialpause=1000
+   /validresponse=("R","G","B")
+   /correctresponse=("B")
+   /recorddata=true
+   /stimulusframes=[1 = fixation; 100=bluenumbertxt]
+</trial>
+
+	//增加instruction block来呈现指导语
+<block redgreenblueblk>
+    /screencolor=(0,0,0)
+     /blockfeedback=(meanlatency,correct)
+     /trials=[1-12 = noreplace(rednumbertrial,greennumbertrial,bluenumbertrial)]
+</block>
+
+	<block instructionblk>
+		/screencolor = (0,0,0)
+		/trials = [1 = instruction]
+	</block>
+	
+<expt>
+   /blocks=[1=instructionblk; 2=redgreenblueblk]
+</expt>

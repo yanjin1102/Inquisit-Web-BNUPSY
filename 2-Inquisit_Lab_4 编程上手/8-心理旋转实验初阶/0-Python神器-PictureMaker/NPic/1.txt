@@ -1,0 +1,8 @@
+ 驱动器 C 中的卷是 系统
+ 卷的序列号是 2625-86F4
+
+ C:\Users\weicong\Documents\GitHub\Inquisit-Web-BNUPSY\2-Inquisit_Lab_4 编程上手\0-Python神器-PictureMaker\NPic 的目录
+
+
+ C:\Users\weicong\Documents\GitHub\Inquisit-Web-BNUPSY\2-Inquisit_Lab_4 编程上手\0-Python神器-PictureMaker\NPic 的目录
+

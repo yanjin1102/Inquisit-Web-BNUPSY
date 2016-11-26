@@ -1,0 +1,44 @@
+<item begininstruction>
+	/1="这是一个非常好玩的实验，主试大叔也不知道该怎么做哦，反正纠结生气的你就看着办呗.其实是作业任务啦，就先这样吧."
+</item>
+<item endinstruction>
+	/1="莫名其妙就结束辣."
+</item>
+<text begininstruction>
+	/items=begininstruction	
+	/size=(640,640)
+	/select=1	
+	/frontstyle=("楷体",70pt)
+	/txcolor=(0,0,255)
+</text>
+<text endinstruction>
+	/items=endinstruction	
+	/size=(640,640)
+	/select=sequence(1)	
+	/frontstyle=("楷体",70pt)
+	/txcolor=(0,0,255)
+</text>
+
+<text spacebar>	
+	/items=("按下space有奖")
+	/vposition=80pct
+	/fontstyle=("幼圆",22px)
+	/txcolor=(255,0,0)
+</text>
+<trial begininstruction>	
+	/validresponse=(" ")
+	/stimulusframes=[1=begininstruction,spacebar]
+</trial>
+<trial endinstruction>	
+	/validresponse=(" ")
+	/stimulusframes=[1=endinstruction,spacebar]
+</trial>
+
+
+
+<block begininstruction>
+	/trials=[1=begininstruction]
+</block>
+<block endinstruction>
+	/trials=[1=endinstruction]
+</block>

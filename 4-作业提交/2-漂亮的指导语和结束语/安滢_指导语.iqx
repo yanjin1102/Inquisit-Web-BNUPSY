@@ -1,0 +1,24 @@
+﻿<instruct my>
+/nextkey = (" ")
+/fontstyle = ("楷体", 24pt, false, false, false, false, 5, 134)
+/txcolor = (128,50,128)
+/screencolor = (255,255,255)
+/lastlabel = "按空格键继续"
+/windowsize = (800,600)
+</instruct>
+
+<page instruct>
+我要做漂漂亮亮的指导语和结束语，所以用了基佬紫的颜色~
+
+</page>
+
+<page endinstruction>
+结束啦，这个颜色超好看！
+
+</page>
+
+<expt defaultinstruction>
+/preinstructions = (instruct)
+/postinstructions = (endinstruction)
+</expt>
+

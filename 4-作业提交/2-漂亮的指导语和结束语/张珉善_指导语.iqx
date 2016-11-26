@@ -1,0 +1,32 @@
+  <instruct myinstruct> 
+  /nextkey = (" ")
+  /fontstyle = ("黑体", 5%, false, false, false, false, 5, 1)
+  /txcolor = (0,0,255)
+  /screencolor = (0,0,0)
+  /lastlabel = "请按空格键继续"
+  /windowsize = (800,640)
+  </instruct>
+  
+  <page instruction>欢迎来参加本次的实验^^我们的实验并不怎么难，非常简单。但是，现在不要看别的请注意看电视屏幕！谢谢~实验就要开始了^^ ^^ </page>
+
+  <page endinstruction>现在实验结束了，谢谢你来参加本次的实验^^你辛苦啦！你累了，早点回家休息吧!!^^· </page>
+
+  
+  <expt defaultinstruction>
+  /preinstructions = (instruction)
+  /postinstructions = (endinstruction)
+  </expt>
+
+  
+ 
+
+
+
+ 
+
+
+
+  
+ 
+
+

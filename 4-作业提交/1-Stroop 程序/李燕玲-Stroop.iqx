@@ -1,0 +1,112 @@
+// stroop任务
+
+*****************************************************************************************************************************************************************************
+<item green>
+	/1= "red"
+	/2= "green"
+</item>
+
+<item red>
+	/1= "red"
+	/2= "green"
+</item>
+
+*****************************************************************************************************************************************************************************
+
+//指导语
+
+<text instructiontxt>
+	/hjustify = center
+	/items = ("请将左数和右手的食指分别放在键盘的“R”键和“G”键上；在屏幕的中央会出现一个汉字，你需要判断汉字的颜色；若汉字颜色为红色，请按“R”键；若汉字为绿色，请按“G”键。若你已明白实验要求，请按任意键继续。如有任何疑问，请呼叫主试。")
+	/size = (1000,300)
+	/fontstyle = ("宋体",24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+//注视点
+
+<text fixation>
+	/items = ("+")
+	/fontstyle = ("Arial", 40ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text greentxt>
+	/items = red
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (0,255,0)
+</text>
+
+<text redtxt>
+	/items = green
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,0,0)
+</text>
+
+//结束语
+
+<text goodbyetxt>
+	/hjustify = center
+	/items = ("实验结束，请呼叫主试！")
+	/size = (1000,300)
+	/fontstyle = ("宋体",24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+*******************************************************************************************************************************************************************************
+
+<trial instructiontrial>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt]
+	/recorddata = false
+</trial>
+
+<trial greentrial>
+	/pretrialpause = 500
+	/validresponse = ("R","G")
+	/correctresponse = ("G")
+	/stimulusframes = [1 = fixation; 100 = greentxt]
+</trial>
+
+<trial redtrial>
+	/pretrialpause = 500
+	/validresponse = ("R","G")
+	/correctresponse = ("R")
+	/stimulusframes = [1 = fixation; 100 = redtxt]
+</trial>
+
+<trial goodbyetrial>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=goodbyetxt]
+	/recorddata = false
+</trial>
+
+*****************************************************************************************************************************************************************
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instructiontrial]
+</block>
+
+<block greenredblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-16 = noreplace(greentrial, redtrial)]
+</block>
+
+<block goodbyeblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = goodbyetrial]
+</block>
+
+*********************************************************************************************************************************************************************
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = greenredblk; 3 = goodbyeblk]
+</expt>
+

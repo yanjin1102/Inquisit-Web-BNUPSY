@@ -1,0 +1,46 @@
+
+<picture instructionbgpic>
+	/items = ("1.png")  //图片的文件名
+
+	/ position = (50,45)  //设置位置，分别是X和Y的位置比例。这里是居中。
+	/ size = (100%,100%)
+</picture>
+
+<picture endpic>
+/items = ("2.png")
+/position = (50,45)
+/size = (100%,100%)
+</picture>
+
+//定义图片刺激的呈现，这里要注意提取的图片要和这个iqx文件在同一个文件夹里。具体的图片设置可以在软件的帮助功能里查询~（Help→Table of content→目录→language reference→stimuli→picture）
+
+<trial instruct>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic]  
+</trial>
+
+<trial end>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=endpic]  
+</trial>
+
+//定义一个trial，呈现刺激，也就是指导语。
+
+<block ins>
+	/ screencolor = (255,255,255)
+	/ trials = [1=instruct]
+</block>
+
+<block ed>
+	/ screencolor = (255,255,255)
+	/ trials = [1=end]
+</block>
+
+//定义一个block，包含上面的trial。
+<expt in>
+	/ blocks = [1=ins;2=ed]
+
+</expt>
+// 定义一个experiment。

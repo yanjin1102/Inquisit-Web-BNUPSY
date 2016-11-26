@@ -1,0 +1,35 @@
+﻿<picture instruction>
+	/items = ("instruction.jpg")
+	/size = (1440,900)
+</picture>
+
+<picture endinginstruction>
+	/items = ("endinginstruction.jpg")
+	/size = (1440,900)
+</picture>
+
+<trial instruction>
+	/validresponse = (" ")
+	/stimulusframes = [1=instruction]
+	/recorddata = false
+</trial>
+
+<trial endinginstruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=endinginstruction]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = white
+	/trials = [1=instruction]
+</block>
+
+<block endinginstructionblk>
+	/screencolor = white
+	/trials = [1=endinginstruction]
+</block>
+
+<expt instruction>
+	/blocks = [1=instructionblk;2=endinginstructionblk]
+</expt>

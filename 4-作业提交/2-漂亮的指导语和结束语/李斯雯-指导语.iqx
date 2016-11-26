@@ -1,0 +1,113 @@
+<text instructiontxt>
+	/ hjustify = center
+	/ items = ("
+	欢迎参加实验心理学实验!此次实验与个人学习情况有关，
+	请您将自己的实际想法、做法与题目所陈述的相对照，选
+	出与自己情况最接近的选项。最终您的实验数据会被反馈
+	至学校领导、班主任、家长等人手中，他们会据此对您的
+	培养方式及发展方向进行规划[正经脸]。请您务必如实作
+	答，一旦被发现有虚假报告情况下,我们将会联系当地警察。
+			 谢谢您的合作!")
+	/ fontstyle = ("华文行楷", 3.50%, true, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/txbgcolor= (218, 69, 255)
+</text>
+
+<text anykeytxt>
+	/items = ("请按任意键开始实验")
+	/ vposition = 70 pct
+	/ fontstyle = ("华文行楷",  6.64%, true, false, false, false, 5, 1)
+	/txcolor =(0, 0, 0)
+	/txbgcolor= (yellow)
+</text>
+
+
+<text explanationtxt>
+	/ hjustify = center
+	/ items = ("
+	有木有被实验指导语吓一跳？有木有后悔参加这个实验？有木有觉得我们
+	是有点小霸道的江湖骗子？做为一个学了实验心理学的人，怎么会进行这
+	么蛮横霸道不讲理的实验呢[卖萌脸]？所以……骗你的啦！")
+	/ fontstyle = ("华文行楷", 3.50%, true, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/txbgcolor= (218, 69, 255)
+</text>
+
+<text spacetxt>
+	/items = ("请按空格键进入下一页")
+	/vposition = 70 pct
+	/ fontstyle = ("华文行楷",  6.64%, true, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/txbgcolor= (yellow)
+
+</text>
+
+<text endinstructiontxt>
+	/ hjustify = center
+	/items=("虽然什么实验都没有，还是感谢您的参与[鞠躬]！")
+	/ fontstyle = ("华文行楷", 6.64%, true, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/txbgcolor= (218, 69, 255)
+</text>
+
+<text endspacetxt>
+	/items = ("请按空格键结束实验")
+	/vposition = 70 pct
+	/ fontstyle = ("华文行楷",  6.64%, true, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/txbgcolor= (yellow)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial explanation>
+	/validresponse = (" ")
+	/stimulusframes =[1=explanationtxt,spacetxt]
+	/recorddata = false
+</trial>
+
+<trial endinstruction>
+	/validresponse = (" ")
+	/stimulusframes =[1=endinstructiontxt,endspacetxt]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor=(218, 69, 255)
+	/trials=[1=instruction]
+
+</block>
+
+<block explanationblk>
+	/screencolor=(218, 69, 255)
+	/trials=[1=explanation]
+
+</block>
+
+
+<block endinstructionblk>
+	/screencolor=(218, 69, 255)
+	/trials=[1=endinstruction]
+
+</block>
+
+<expt >
+	/blocks=[1= instructionblk;2=explanationblk;3=endinstructionblk]
+
+</expt>
+
+
+
+
+
+
+
+
+
+
+
+
