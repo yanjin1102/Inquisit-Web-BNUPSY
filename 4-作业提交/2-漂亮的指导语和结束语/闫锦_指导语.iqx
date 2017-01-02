@@ -1,0 +1,80 @@
+<picture backgroundins>
+ 	/items = ("instruction.jpg")
+ 	/position = (3,0)
+  /valign = top
+ 	/halign = left
+</picture>
+<picture backgroundend>
+ 	/items = ("end.jpg")
+ 	/position = (3,3)
+ 	/valign = top
+ 	/halign = left
+</picture>
+
+<text instructiontxt1>
+ 	/hjustify = center
+  /vposition = 56 pct
+ 	/items = ("Welcome to our experiment，")
+ 	/ fontstyle = ("Comic Sans MS", 6.64%, true, false, false, false, 5, 1)
+  /txbgcolor = (transparent)
+  /txcolor = (255, 255, 255)
+</text>
+<text instructiontxt2>
+ 	/hjustify = center
+ 	/vposition = 63 pct
+ 	/items = ("in the following section, you should")
+ 	/ fontstyle = ("Comic Sans MS", 6.64%, true, false, false, false, 5, 1)
+  /txbgcolor = (transparent)
+  /txcolor = (255, 255, 255)
+</text>
+<text instructiontxt3>
+ 	/hjustify = center
+ 	/vposition = 70 pct
+ 	/items = ("look at the picture carefully!")
+ 	/ fontstyle = ("Comic Sans MS", 6.64%, true, false, false, false, 5, 1)
+  /txbgcolor = (transparent)
+  /txcolor = (255, 255, 255)
+</text>
+ 
+<text nexttxt>
+ 	/hjustify = center
+  /vposition = 107 pct
+  /size = (1200,300)
+ 	/items = ("press the space bar to continue!")
+  / fontstyle = ("Forte", 4.86%, false, false, false, false, 5, 1)
+  / txcolor = (255, 255, 255)
+ 	/txbgcolor = (transparent)
+</text>
+
+<text endtxt>
+ 	/hjustify = center
+ 	/vposition = 55 pct
+ 	/items = ("No chocolate here！♪(^∇^*)")
+	/size = (1000,500)
+  / fontstyle = ("Brush Script MT", 12%, false, true, false, false, 5, 1)
+  / txcolor = (255, 255, 255)
+ 	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+ 	/stimulusframes = [1=backgroundins,instructiontxt1,instructiontxt2,instructiontxt3,nexttxt]
+	/validresponse = (" ")
+</trial>
+ 
+<trial end>
+ 	/stimulusframes = [1=backgroundend,endtxt]
+  /validresponse = (anyresponse)
+</trial>
+ 
+<block instructionblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = instruction]
+</block>
+ 
+<block endblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = end]
+</block>
+<expt defaultinstruction>
+ 	/blocks = [1 = instructionblk;2 = endblk]
+</expt>

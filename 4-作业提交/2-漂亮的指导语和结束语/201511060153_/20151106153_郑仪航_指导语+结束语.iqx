@@ -1,0 +1,41 @@
+﻿<instruct>
+/fontstyle = ("楷体", 24pt, false, false, false, false, 5, 134)
+/txcolor = (199,21,133)
+/screencolor = (255,255,255)
+/lastlabel = "确 定" 
+/windowsize = (1300,780)
+</instruct>
+
+<htmlpage instruction>
+/ file = "指导语.html"
+</htmlpage>
+
+<page endinstruction>
+^^^^^^^^^                                            谢谢！结束啦！
+</page>
+
+<picture endpic>
+	/items = ("endpic.jpg")
+</picture>
+
+<trial endpic>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=endpic]
+	/recorddata = false
+</trial>
+
+<block endpicblk>
+	/screencolor = white
+	/trials = [1=endpic]
+</block>
+
+<expt defaultinstruction>
+/ preinstructions = (instruction)
+/ blocks = [1=endpicblk]
+/ postinstructions = (endinstruction)
+</expt>
+
+<defaults>
+/ inputdevice = mouse
+</defaults>
+

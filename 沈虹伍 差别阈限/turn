@@ -1,0 +1,14 @@
+from PIL import Image
+ +from pylab import *
+ +
+ +
+ +work_dir = "D:\photos"
+ +
+ +
+ +im = array(Image.open("IMG_2722.jpg").convert('L'))
+ +
+ +
+ +for i in range(0, 255, 16):
+ +    image = (i/255)*im
+ +    out = Image.fromarray(uint8(image))
+ +    out.save(work_dir+"00"+str(i)+".jpg")

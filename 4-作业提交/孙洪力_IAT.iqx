@@ -1,0 +1,596 @@
+﻿//指导语页面设置
+<instruct my>
+	/nextkey=("Q")
+	/lastlabel=("Press [Q] to continue")
+	/screencolor=(234,234,234)
+	/windowsize=(800,600)
+</instruct>
+
+//整个实验的结束语
+<page exit>
+	^^Thank you for your cooperation.
+	^^The whole experiment has been finished.
+	^^You can press [Q] to exit.
+</page>
+
+//练习block的指导语
+<page practice>
+	^^This is a practice block.
+	^^You need to remember the category the word belongs to.
+	^^The latency will not be recorded.
+</page>
+
+//正式实验block的指导语
+<page test>
+	^^This is a test block.
+	^^You need to give the correct response as quickly as you can.
+</page>
+
+//每个block结束时要求被试休息
+<page end>
+	^^Thank you for your cooperation.
+	^^Please have a rest.
+	^^When you are ready,
+	^^Press "Q" to continue.
+</page>
+
+//对相应按键进行说明
+<page attribute>
+	^^You are going to respond with the key [F] and [J].
+	^^If the word belongs to "pleasant" category,
+	^press [F]
+	^^If the word belongs to "unpleasant" category,
+	^press [J]
+	^^When you are ready,
+	^You can press "Q" to continue.
+</page>
+
+//对相应按键进行说明
+<page combined>
+	^^You are going to respond with the key [F] and [J].
+	^^If the word or name belongs to "pleasant" or "black" category,
+	^press [F]
+	^^If the word or name belongs to "unpleasant" or "white" category,
+	^press [J]
+	^^When you are ready,
+	^You can press "Q" to continue.
+</page>
+
+//对相应按键进行说明
+<page rcombined>
+	^^You are going to respond with the key [F] and [J].
+	^^If the word or name belongs to "pleasant" or "white" category,
+	^press [F]
+	^^If the word or name belongs to "unpleasant" or "black" category,
+	^press [J]
+	^^When you are ready,
+	^You can press "Q" to continue.
+</page>
+
+//对相应按键进行说明
+<page rtarget>
+	^^You are going to respond with the key [F] and [J].
+	^^If the name belongs to "white" category,
+	^press [F]
+	^^If the name belongs to "black" category,
+	^press [J]
+	^^When you are ready,
+	^You can press "Q" to continue.
+</page>
+
+//对相应按键进行说明
+<page target>
+	^^You are going to respond with the key [F] and [J].
+	^^If the name belongs to "black" category,
+	^press [F]
+	^^If the name belongs to "white" category,
+	^press [J]
+	^^When you are ready,
+	^You can press "Q" to continue.
+</page>
+
+<item pleasant>
+/1="caress"
+/2="freedom"
+/3="health"
+/4="love"
+/5="peace"
+/6="cheer"
+/7="friend"
+/8="heaven"
+/9="loyal"
+/10="pleasure"
+/11="diamond"
+/12="gentle"
+/13="honest"
+/14="lucky"
+/15="rainbow"
+/16="diploma"
+/17="gift"
+/18="honor"
+/19="miracle"
+/20="sunrise"
+/21="family"
+/22="happy"
+/23="laughter"
+/24="paradise"
+/25="vacation"
+</item>
+
+<item unpleasant>
+/1="abuse"
+/2="crash"
+/3="filth"
+/4="murder"
+/5="sickness"
+/6="accident"
+/7="death"
+/8="grief"
+/9="poison"
+/10="stink"
+/11="assault"
+/12="disaster"
+/13="hatred"
+/14="pollute"
+/15="tragedy"
+/16="bomb"
+/17="divorce"
+/18="jail"
+/19="poverty"
+/20="ugly"
+/21="cancer"
+/22="evil"
+/23="kill"
+/24="rotten"
+/25="vomit"
+</item>
+
+//常见的男性白人的姓
+<item white1>
+/1="ADAM"
+/2="CHIP"
+/3="HARRY"
+/4="JOSH"
+/5="ROGER"
+/6="ALAN"
+/7="FRANK"
+/8="IAN"
+/9="JUSTIN"
+/10="RYAN"
+/11="ANDREW"
+/12="FRED"
+/13="JACK"
+/14="MATTHEW"
+/15="STEPHEN"
+/16="BRAD"
+/17="GREG"
+/18="JED"
+/19="PAUL"
+/20="TODD"
+/21="BRANDON"
+/22="HANK"
+/23="JONATHAN"
+/24="PETER"
+/25="WILBUR"
+</item>
+
+//常见的男性黑人的姓
+<item black1>
+/1="ALONZO"
+/2="JAMEL"
+/3="LERONE"
+/4="PERCELL"
+/5="THEO"
+/6="ALPHONSE"
+/7="JEROME"
+/8="LEROY"
+/9="RASAAN"
+/10="TORRANCE"
+/11="DARNELL"
+/12="LAMAR"
+/13="LIONEL"
+/14="RASHAUN"
+/15="TYREE"
+/16="DEION"
+/17="LAMONT"
+/18="MALIK"
+/19="TERRENCE"
+/20="TYRONE"
+/21="EVEROL"
+/22="LAVON"
+/23="MARCELLUS"
+/24="TERRYL"
+/25="WARDELL"
+</item>
+
+//常见的女性黑人的姓
+<item black2>
+/1="AIESHA"
+/2="LASHELLE"
+/3="NICHELLE"
+/4="SHEREEN"
+/5="TEMEKA"
+/6="EBONY"
+/7="LATISHA"
+/8="SHANIQUA"
+/9="TAMEISHA"
+/10="TERETHA"
+/11="JASMINE"
+/12="LATONYA"
+/13="SHANISE"
+/14="TANISHA"
+/15="TIA"
+/16="LAKISHA"
+/17="LATOYA"
+/18="SHARISE"
+/19="TASHIKA"
+/20="YOLANDA"
+/21="LASHANDRA"
+/22="MALIKA"
+/23="SHAVONN"
+/24="TAWANDA"
+/25="YVETTE"
+</item>
+
+//常见的女性白人的姓
+<item white2>
+/1="AMANDA"
+/2="COURTNEY"
+/3="HEATHER"
+/4="MELANIE"
+/5="SARA"
+/6="AMBER"
+/7="CRYSTAL"
+/8="KATIE"
+/9="MEREDITH"
+/10="SHANNON"
+/11="BETSY"
+/12="DONNA"
+/13="KRISTIN"
+/14="NANCY"
+/15="STEPHANIE"
+/16="BOBBIE-SUE"
+/17="ELLEN"
+/18="LAUREN"
+/19="PEGGY"
+/20="SUE-ELLEN"
+/21="COLLEEN"
+/22="EMILY"
+/23="MEGAN"
+/24="RACHEL"
+/25="WENDY"
+</item>
+
+<text pleasant>
+	/position=(50%,50%)
+	/items=pleasant
+</text>
+
+<text unpleasant>
+	/position=(50%,50%)
+	/items=unpleasant
+</text>
+
+<text black1>
+	/position=(50%,50%)
+	/items=black1
+</text>
+
+<text black2>
+	/position=(50%,50%)
+	/items=black2
+</text>
+
+<text white1>
+	/position=(50%,50%)
+	/items=white1
+</text>
+
+<text white2>
+	/position=(50%,50%)
+	/items=white2
+</text>
+
+//按键提示
+<text reminderpleasant>
+	/position=(25%,5%)
+	/items=("pleasant")
+</text>
+
+//按键提示
+<text reminderunpleasant>
+	/position=(75%,5%)
+	/items=("unpleasant")
+</text>
+
+//按键提示
+<text reminderblackleft>
+	/position=(25%,10%)
+	/items=("BLACK")
+</text>
+
+//按键提示
+<text reminderblackright>
+	/position=(75%,10%)
+	/items=("BLACK")
+</text>
+
+//按键提示
+<text reminderwhiteleft>
+	/position=(25%,10%)
+	/items=("WHITE")
+</text>
+
+//按键提示
+<text reminderwhiteright>
+	/position=(75%,10%)
+	/items=("WHITE")
+</text>
+
+//错误提示
+<text error>
+	/position=(50%,55%)
+	/items=("error")
+	/size=(20%,4%)
+</text>
+
+<trial pleasant>
+	/correctresponse=("F")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=pleasant]
+</trial>
+
+<trial unpleasant>
+	/correctresponse=("J")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=unpleasant]
+</trial>
+
+<trial black1>
+	/correctresponse=("F")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=black1]
+</trial>
+
+<trial white1>
+	/correctresponse=("J")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=white1]
+</trial>
+
+//交换了黑人白人对应的反应按键
+<trial rblack1>
+	/correctresponse=("J")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=black1]
+</trial>
+
+//交换了黑人白人对应的反应按键
+<trial rwhite1>
+	/correctresponse=("F")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=white1]
+</trial>
+
+<trial black2>
+	/correctresponse=("F")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=black2]
+</trial>
+
+<trial white2>
+	/correctresponse=("J")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=white2]
+</trial>
+
+//交换了黑人白人对应的反应按键
+<trial rblack2>
+	/correctresponse=("J")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=black2]
+</trial>
+
+//交换了黑人白人对应的反应按键
+<trial rwhite2>
+	/correctresponse=("F")
+	/pretrialpause=250
+	/validresponse=("F","J")
+	/stimulusframes=[1=white2]
+</trial>
+
+//练习阶段，确保被试将不同的姓正确归类
+<block lxtarget1>
+	/bgstim=(reminderblackleft,reminderwhiteright)
+	/postinstructions=(end)
+	/preinstructions=(practice,target)
+	/recorddata=false
+	/trials=[1-50=noreplace(black1,white1)]
+	/response=correct
+</block>
+
+//练习阶段，确保被试将不同的姓正确归类
+<block lxrtarget1>
+	/bgstim=(reminderblackright,reminderwhiteleft)
+	/postinstructions=(end)
+	/preinstructions=(practice,rtarget)
+	/recorddata=false
+	/trials=[1-50=noreplace(rblack1,rwhite1)]
+	/response=correct
+</block>
+
+//正式实验，记录被试在不受相容性干扰的情况下的反应情况
+<block target1>
+	/bgstim=(reminderblackleft,reminderwhiteright)
+	/postinstructions=(end)
+	/preinstructions=(test,target)
+	/trials=[1-50=noreplace(black1,white1)]
+</block>
+
+//练习阶段，确保被试将不同的词正确归类
+<block lxattribute>
+	/bgstim=(reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(practice,attribute)
+	/recorddata=false
+	/trials=[1-50=noreplace(pleasant,unpleasant)]
+	/response=correct
+</block>
+
+//正式实验，记录被试在不受相容性干扰的情况下的反应情况
+<block attribute>
+	/bgstim=(reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(test,attribute)
+	/trials=[1-50=noreplace(pleasant,unpleasant)]
+</block>
+
+//练习阶段，让被试适应新的反应方式，同时巩固每个词和姓的类别记忆
+<block lxcombined1>
+	/bgstim=(reminderblackleft,reminderwhiteright,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(practice,combined)
+	/recorddata=false
+	/trials=[1-50=noreplace(pleasant,unpleasant,black1,white1)]
+	/response=correct
+</block>
+
+//正式实验，记录被试的反映情况
+<block combined1>
+	/bgstim=(reminderblackleft,reminderwhiteright,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(test,combined)
+	/trials=[1-50=noreplace(pleasant,unpleasant,black1,white1)]
+</block>
+
+//正式实验，交换黑人白人对应的按键
+<block rtarget1>
+	/bgstim=(reminderblackright,reminderwhiteleft)
+	/postinstructions=(end)
+	/preinstructions=(test,rtarget)
+	/trials=[1-50=noreplace(rblack1,rwhite1)]
+</block>
+
+//练习阶段，在交换按键后熟悉模式
+<block lxrcombined1>
+	/bgstim=(reminderblackright,reminderwhiteleft,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(practice,rcombined)
+	/recorddata=false
+	/trials=[1-50=noreplace(pleasant,unpleasant,rblack1,rwhite1)]
+	/response=correct
+</block>
+
+//正式实验，记录被试的反应情况
+<block rcombined1>
+	/bgstim=(reminderblackright,reminderwhiteleft,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(test,rcombined)
+	/trials=[1-50=noreplace(pleasant,unpleasant,rblack1,rwhite1)]
+</block>
+
+//练习阶段，将男性的姓换为女性的姓，确保被试将不同的姓正确归类
+<block lxtarget2>
+	/bgstim=(reminderblackleft,reminderwhiteright)
+	/postinstructions=(end)
+	/preinstructions=(practice,target)
+	/recorddata=false
+	/trials=[1-50=noreplace(black2,white2)]
+	/response=correct
+</block>
+
+//练习阶段，将男性的姓换为女性的姓，确保被试将不同的姓正确归类
+<block lxrtarget2>
+	/bgstim=(reminderblackright,reminderwhiteleft)
+	/postinstructions=(end)
+	/preinstructions=(practice,rtarget)
+	/recorddata=false
+	/trials=[1-50=noreplace(rblack2,rwhite2)]
+	/response=correct
+</block>
+
+//正式实验，记录被试的反映情况
+<block target2>
+	/bgstim=(reminderblackleft,reminderwhiteright)
+	/postinstructions=(end)
+	/preinstructions=(test,target)
+	/trials=[1-50=noreplace(black2,white2)]
+</block>
+
+//练习阶段，需要被试熟悉按键模式
+<block lxcombined2>
+	/bgstim=(reminderblackleft,reminderwhiteright,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(practice,combined)
+	/recorddata=false
+	/trials=[1-50=noreplace(pleasant,unpleasant,black2,white2)]
+	/response=correct
+</block>
+
+//正式实验，记录被试的反应情况
+<block combined2>
+	/bgstim=(reminderblackleft,reminderwhiteright,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(test,combined)
+	/trials=[1-50=noreplace(pleasant,unpleasant,black2,white2)]
+</block>
+
+//正式实验，交换黑人白人对应的按键
+<block rtarget2>
+	/bgstim=(reminderblackright,reminderwhiteleft)
+	/postinstructions=(end)
+	/preinstructions=(test,rtarget)
+	/trials=[1-50=noreplace(rblack2,rwhite2)]
+</block>
+
+//练习阶段，在交换按键后熟悉模式
+<block lxrcombined2>
+	/bgstim=(reminderblackright,reminderwhiteleft,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(practice,rcombined)
+	/recorddata=false
+	/trials=[1-50=noreplace(pleasant,unpleasant,rblack2,rwhite2)]
+	/response=correct
+</block>
+
+//正式实验，记录被试的反应情况
+<block rcombined2>
+	/bgstim=(reminderblackright,reminderwhiteleft,reminderpleasant,reminderunpleasant)
+	/postinstructions=(end)
+	/preinstructions=(test,rcombined)
+	/trials=[1-50=noreplace(pleasant,unpleasant,rblack2,rwhite2)]
+</block>
+
+//半数被试先将黑人与好结合
+<expt>
+	/blocks=[1=lxtarget1;2=target1;3=lxattribute;4=attribute;5=lxcombined1;6=combined1;7=rtarget1;8=lxrcombined1;9=rcombined2;10=lxtarget2;11=target2;12=lxcombined2;13=combined2;14=rtarget2;15=lxrcombined2;16=rcombined2]
+	/subjects=(1 of 2)
+	/errormessage=(error,300)
+	/postinstructions=(exit)
+</expt>
+
+//半数被试先将白人与好结合
+<expt>
+	/blocks=[1=lxrtarget1;2=rtarget1;3=lxattribute;4=attribute;5=lxrcombined1;6=rcombined1;7=target1;8=lxcombined1;9=combined1;10=lxrtarget2;11=rtarget2;12=lxrcombined2;13=rcombined2;14=target2;15=lxcombined2;16=combined2]
+	/subjects=(2 of 2)
+	/errormessage=(error,300)
+	/postinstructions=(exit)
+</expt>
+
+<defaults>
+	/fontstyle = ("Arial", 3.52%, false, false, false, false, 5, 1)
+	/txcolor = (0, 0, 0)
+	/txbgcolor=(234,234,234)
+	/screencolor=(234,234,234)
+	/blockfeedback = (meanlatency,correct)	
+	/quitcommand=(Win+Alt+'T')
+</defaults>

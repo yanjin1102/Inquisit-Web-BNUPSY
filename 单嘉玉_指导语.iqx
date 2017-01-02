@@ -1,0 +1,27 @@
+﻿<instruct>
+/windowsize = (90%, 90%)
+/nextkey=(" ")
+/nextlabel = "空格"
+/finishlabel = "空格"
+/ fontstyle = ("楷体", 3%, true, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+</instruct>
+
+<page hello>
+^^^^^^^^                            欢迎来到本次试验！这是一个指导语啦啦啦
+^^^^^^^^^                                       按空格键继续
+</page>
+
+
+
+<page end>
+^^^^^^^^^^^                               其实并没有什么实验啦啦啦，再见~
+</page>
+
+<expt>
+/ preinstructions = (hello)
+/ postinstructions = (end)
+</expt>
+
+
+

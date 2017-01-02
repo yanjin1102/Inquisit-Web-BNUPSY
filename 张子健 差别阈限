@@ -1,0 +1,576 @@
+<picture 1p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 1p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 1p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 1p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 2p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 2p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 2p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 2p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 3p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 3p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 3p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 3p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 4p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 4p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 4p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 4p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 5p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 5p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 5p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 5p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 6p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 6p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 6p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 6p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 7p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 7p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 7p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 7p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 8p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 8p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 8p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 8p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 9p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 9p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 9p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 9p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 10p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 10p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 10p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 10p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 11p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 11p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 11p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 11p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 12p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 12p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 12p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 12p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 13p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 13p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 13p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 13p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 14p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 14p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 14p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 14p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 15p1>
+  /items = ("1p.jpg")
+  /position = (75pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 15p2>
+  /items = ("1p.jpg")
+  /position = (25pct, 75pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 15p3>
+  /items = ("1p.jpg")
+  /position = (25pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<picture 15p4>
+  /items = ("1pa.jpg")
+  /position = (75pct, 25pct)
+  /valign = center
+  /halign = center
+  /size = (900, 600)
+</picture>
+
+<trial 1p>
+  /stimulusframes = [1 = 1p1, 1p2, 1p3, 1p4]
+  /correctresponse = (1p4)
+</trial>
+
+<trial 2p>
+  /stimulusframes = [1 = 2p1, 2p2, 2p3, 2p4]
+  /correctresponse = (2p4)
+</trial>
+
+<trial 3p>
+  /stimulusframes = [1 = 3p1, 3p2, 3p3, 3p4]
+  /correctresponse = (3p4)
+</trial>
+
+<trial 4p>
+  /stimulusframes = [1 = 4p1, 4p2, 4p3, 4p4]
+  /correctresponse = (4p4)
+</trial>
+
+<trial 5p>
+  /stimulusframes = [1 = 5p1, 5p2, 5p3, 5p4]
+  /correctresponse = (5p4)
+</trial>
+
+<trial 6p>
+  /stimulusframes = [1 = 6p1, 6p2, 6p3, 6p4]
+  /correctresponse = (6p4)
+</trial>
+
+<trial 7p>
+  /stimulusframes = [1 =7p1, 7p2, 7p3, 7p4]
+  /correctresponse = (7p4)
+</trial>
+
+<trial 8p>
+  /stimulusframes = [1 = 8p1, 8p2, 8p3, 8p4]
+  /correctresponse = (8p4)
+</trial>
+
+<trial 9p>
+  /stimulusframes = [1 = 9p1, 9p2, 9p3, 9p4]
+  /correctresponse = (9p4)
+</trial>
+
+<trial 10p>
+  /stimulusframes = [1 = 10p1, 10p2, 10p3, 10p4]
+  /correctresponse = (10p4)
+</trial>
+
+<trial 11p>
+  /stimulusframes = [1 = 11p1, 11p2, 11p3, 11p4]
+  /correctresponse = (11p4)
+</trial>
+
+<trial 12p>
+  /stimulusframes = [1 = 12p1, 12p2, 12p3, 12p4]
+  /correctresponse = (12p4)
+</trial>
+
+<trial 13p>
+  /stimulusframes = [1 = 13p1, 13p2, 13p3, 13p4]
+  /correctresponse = (13p4)
+</trial>
+
+<trial 14p>
+  /stimulusframes = [1 = 14p1, 14p2, 14p3, 14p4]
+  /correctresponse = (14p4)
+</trial>
+
+<trial 15p>
+  /stimulusframes = [1 = 15p1, 15p2, 15p3, 15p4]
+  /correctresponse = (15p4)
+</trial>
+
+<block pictures>
+  /trials = [1-15 = noreplace(1p, 2p, 3p, 4p, 5p, 6p, 7p, 8p, 9p, 10p, 11p, 12p, 13p, 14p, 15p, )]
+</block>
+
+<expt>
+  /preinstructions = (intro)
+  /blocks = [1 = pictures]
+  /postinstructions = (result)
+</expt>
+
+<page intro>
+实验开始，请点击灰度与其他照片不同的一张照片
+</page>
+
+<page result>
+实验结束，拜拜
+</page>
+
+<defaults>
+  /inputdevice = mouse
+</defaults>

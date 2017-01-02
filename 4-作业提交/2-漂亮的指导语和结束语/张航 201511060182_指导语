@@ -1,0 +1,81 @@
+//这里放一张图 图源网络侵删
+<picture lesliepic>
+	/items = ("http://img5q.duitang.com/uploads/item/201505/11/20150511000458_UExNu.jpeg")
+	/position = (40,40)
+	/valign = top
+	/halign = left
+</picture>
+//这里放四行文字
+<text instructiontxt1>
+	/hjustify = center
+	/vposition = 35 pct
+	/items = ("我想做一个漂亮的指导语")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,255)
+ </text>
+<text instructiontxt2>
+	/hjustify = center
+	/vposition = 40 pct
+	/items = ("所以我放进来一张图片。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,70,255)
+ </text>
+<text instructiontxt3>
+	/hjustify = center
+	/vposition = 45 pct
+	/items = ("请认真看图片。。。。。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,140,255)
+ </text>
+<text instructiontxt4>
+	/hjustify = center
+	/vposition = 50 pct
+	/items = ("然后按任意键继续。。。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,210,255)
+ </text>
+//这里制作结束语
+<text goodbyetxt>
+	/hjustify = center
+	/vposition = 60 pct
+	/items = ("并没有啥子实验！张国荣先生最好看啦！请呼叫主试")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+ </text>
+
+//这里制定指导语的trial
+<trial instruction>
+	/stimulusframes = [1=instructiontxt1,instructiontxt2,instructiontxt3,instructiontxt4,lesliepic]
+	/validresponse = (anyresponse)
+</trial>
+//这里制定结束语的trial
+<trial goodbye>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=goodbyetxt]
+	/recorddata = false
+</trial>
+
+//block部分
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block goodbyeblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = goodbye]
+</block>
+
+<expt defaultinstruction>
+	/blocks = [1 = instructionblk;2 = goodbyeblk]
+</expt>

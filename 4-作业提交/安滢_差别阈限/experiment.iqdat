@@ -1,0 +1,56 @@
+date	time	group	subject	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	windowcenter	trialduration	trialtimeout	blocktimeout	response	correct	latency	inwindow	stimulusnumber1	stimulusitem1	stimulusvpos1	stimulushpos1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusvpos2	stimulushpos2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusvpos3	stimulushpos3	stimulusonset3	stimulusnumber4	stimulusitem4	stimulusvpos4	stimulushpos4	stimulusonset4
+112916	19:39:40	1	1	4.0.9.0	2	1	choose	one	0	0	0	0	0	0	onegrey	1	2577	0	1	1 (1).bmp	65	20	5	1	1 (1).bmp	65	40	5	1	1 (1).bmp	65	60	5	1	1.bmp	65	80	5
+112916	19:40:12	1	1	4.0.9.0	2	1	choose	one	0	0	0	0	0	0	onegrey	1	2703	0	1	1 (1).bmp	45	20	10	1	1 (1).bmp	45	40	10	1	1 (1).bmp	45	60	10	1	1.bmp	45	80	10
+112916	19:43:42	1	1	4.0.9.0	2	1	choose	two	0	0	0	0	0	0	two3	0	2007	0	1	1 (1).bmp	45	20	4	1	1 (1).bmp	45	60	4	1	1.bmp	45	80	4	1	1 (1).bmp	45	40	4
+112916	19:43:42	1	1	4.0.9.0	2	2	choose	one	0	0	0	0	0	0	onegrey	1	1325	0	1	1 (1).bmp	45	20	4	1	1 (1).bmp	45	40	4	1	1 (1).bmp	45	60	4	1	1.bmp	45	80	4
+112916	19:44:28	1	1	4.0.9.0	2	1	choose	one	0	0	0	0	0	0	onegrey	1	1253	0	1	1 (1).bmp	45	20	5	1	1 (1).bmp	45	40	5	1	1 (1).bmp	45	60	5	1	1.bmp	45	80	5
+112916	19:44:28	1	1	4.0.9.0	2	2	choose	two	0	0	0	0	0	0	two3	0	897	0	1	1 (1).bmp	45	20	3	1	1 (1).bmp	45	60	3	1	1.bmp	45	80	3	1	1 (1).bmp	45	40	3
+112916	19:45:05	1	1	4.0.9.0	2	1	choose	one	0	0	0	0	0	0	onegrey	1	1279	0	1	1 (1).bmp	45	20	6	1	1 (1).bmp	45	40	6	1	1 (1).bmp	45	60	6	1	1.bmp	45	80	6
+112916	19:45:05	1	1	4.0.9.0	2	2	choose	two	0	0	0	0	0	0	twogrey	1	1131	0	1	1 (2).bmp	45	20	3	1	1 (2).bmp	45	60	3	1	1 (2).bmp	45	80	3	1	2.bmp	45	40	3
+112916	21:00:38	1	1	4.0.9.0	2	1	choose	one	0	0	0	0	0	0	onegrey	1	911	0	1	1 (1).bmp	45	20	2	1	1 (1).bmp	45	40	2	1	1 (1).bmp	45	60	2	1	1.bmp	45	80	2
+112916	21:00:38	1	1	4.0.9.0	2	2	choose	two	0	0	0	0	0	0	twogrey	1	1104	0	1	1 (2).bmp	45	20	1	1	1 (2).bmp	45	60	1	1	1 (2).bmp	45	80	1	1	2.bmp	45	40	1
+112916	21:25:44	1	1	4.0.9.0	2	1	choose	fifteen	0	0	0	0	0	0	fifteengrey	1	1082	0	1	1 (15).bmp	45	20	1	1	1 (15).bmp	45	40	1	1	1 (15).bmp	45	80	1	1	15.bmp	45	60	1
+112916	21:25:44	1	1	4.0.9.0	2	2	choose	ten	0	0	0	0	0	0	tengrey	1	981	0	1	1 (10).bmp	45	40	1	1	1 (10).bmp	45	60	1	1	1 (10).bmp	45	80	1	1	10.bmp	45	20	1
+112916	21:25:44	1	1	4.0.9.0	2	3	choose	three	0	0	0	0	0	0	threegrey	1	772	0	1	1 (3).bmp	45	20	1	1	1 (3).bmp	45	40	1	1	1 (3).bmp	45	80	1	1	3.bmp	45	60	1
+112916	21:25:44	1	1	4.0.9.0	2	4	choose	five	0	0	0	0	0	0	fivegrey	1	708	0	1	1 (5).bmp	45	20	1	1	1 (5).bmp	45	60	1	1	1 (5).bmp	45	80	1	1	5.bmp	45	40	1
+112916	21:25:44	1	1	4.0.9.0	2	5	choose	nine	0	0	0	0	0	0	ninegrey	1	654	0	1	1 (9).bmp	45	40	1	1	1 (9).bmp	45	60	1	1	1 (9).bmp	45	80	1	1	9.bmp	45	20	1
+112916	21:25:44	1	1	4.0.9.0	2	6	choose	seven	0	0	0	0	0	0	sevengrey	1	578	0	1	1 (7).bmp	45	20	1	1	1 (7).bmp	45	60	1	1	1 (7).bmp	45	80	1	1	7.bmp	45	40	1
+112916	21:25:44	1	1	4.0.9.0	2	7	choose	one	0	0	0	0	0	0	onegrey	1	882	0	1	1 (1).bmp	45	20	1	1	1 (1).bmp	45	40	1	1	1 (1).bmp	45	60	1	1	1.bmp	45	80	1
+112916	21:25:44	1	1	4.0.9.0	2	8	choose	two	0	0	0	0	0	0	twogrey	1	630	0	1	1 (2).bmp	45	20	0	1	1 (2).bmp	45	60	0	1	1 (2).bmp	45	80	0	1	2.bmp	45	40	0
+112916	21:25:44	1	1	4.0.9.0	2	9	choose	eight	0	0	0	0	0	0	eightgrey	1	899	0	1	1 (8).bmp	45	20	1	1	1 (8).bmp	45	40	1	1	1 (8).bmp	45	60	1	1	8.bmp	45	80	1
+112916	21:25:44	1	1	4.0.9.0	2	10	choose	four	0	0	0	0	0	0	fourgrey	1	678	0	1	1 (4).bmp	45	40	0	1	1 (4).bmp	45	60	0	1	1 (4).bmp	45	80	0	1	4.bmp	45	20	0
+112916	21:25:44	1	1	4.0.9.0	2	11	choose	thirteen	0	0	0	0	0	0	thirteengrey	1	626	0	1	1 (13).bmp	45	20	1	1	1 (13).bmp	45	40	1	1	1 (13).bmp	45	60	1	1	13.bmp	45	80	1
+112916	21:25:44	1	1	4.0.9.0	2	12	choose	six	0	0	0	0	0	0	sixgrey	1	615	0	1	1 (6).bmp	45	20	1	1	1 (6).bmp	45	60	1	1	1 (6).bmp	45	80	1	1	6.bmp	45	40	1
+112916	21:25:44	1	1	4.0.9.0	2	13	choose	eleven	0	0	0	0	0	0	elevengrey	1	990	0	1	1 (11).bmp	45	40	0	1	1 (11).bmp	45	60	0	1	1 (11).bmp	45	80	0	1	11.bmp	45	20	0
+112916	21:25:44	1	1	4.0.9.0	2	14	choose	twelve	0	0	0	0	0	0	twelvegrey	1	932	0	1	1 (12).bmp	45	20	1	1	1 (12).bmp	45	40	1	1	1 (12).bmp	45	60	1	1	12.bmp	45	80	1
+112916	21:25:44	1	1	4.0.9.0	2	15	choose	fourteen	0	0	0	0	0	0	fourteengrey	1	502	0	1	1 (14).bmp	45	20	0	1	1 (14).bmp	45	40	0	1	1 (14).bmp	45	80	0	1	14.bmp	45	60	0
+113016	21:14:07	1	1	4.0.9.0	2	1	choose	fourteen	0	0	0	0	0	0	fourteengrey	1	1809	0	1	A.bmp	45	20	2	1	A.bmp	45	40	2	1	A.bmp	45	80	2	1	14.bmp	45	60	2
+113016	21:14:07	1	1	4.0.9.0	2	2	choose	eight	0	0	0	0	0	0	eight3	0	2140	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	8.bmp	45	80	1
+113016	21:14:07	1	1	4.0.9.0	2	3	choose	seven	0	0	0	0	0	0	sevengrey	1	1151	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	7.bmp	45	40	1
+113016	21:14:07	1	1	4.0.9.0	2	4	choose	four	0	0	0	0	0	0	fourgrey	1	1063	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	4.bmp	45	20	1
+113016	21:14:07	1	1	4.0.9.0	2	5	choose	three	0	0	0	0	0	0	three1	0	1739	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	80	1	1	3.bmp	45	60	1
+113016	21:14:07	1	1	4.0.9.0	2	6	choose	fifteen	0	0	0	0	0	0	fifteengrey	1	2043	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	80	1	1	15.bmp	45	60	1
+113016	21:14:07	1	1	4.0.9.0	2	7	choose	thirteen	0	0	0	0	0	0	thirteengrey	1	2648	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	13.bmp	45	80	1
+113016	21:14:07	1	1	4.0.9.0	2	8	choose	twelve	0	0	0	0	0	0	twelvegrey	1	2445	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	12.bmp	45	80	1
+113016	21:14:07	1	1	4.0.9.0	2	9	choose	ten	0	0	0	0	0	0	tengrey	1	1935	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	10.bmp	45	20	1
+113016	21:14:07	1	1	4.0.9.0	2	10	choose	six	0	0	0	0	0	0	sixgrey	1	1360	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	6.bmp	45	40	1
+113016	21:14:07	1	1	4.0.9.0	2	11	choose	one	0	0	0	0	0	0	one1	0	1432	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	1.bmp	45	80	1
+113016	21:14:07	1	1	4.0.9.0	2	12	choose	two	0	0	0	0	0	0	two1	0	1045	0	1	A.bmp	45	20	2	1	A.bmp	45	60	2	1	A.bmp	45	80	2	1	2.bmp	45	40	2
+113016	21:14:07	1	1	4.0.9.0	2	13	choose	nine	0	0	0	0	0	0	ninegrey	1	1041	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	9.bmp	45	20	1
+113016	21:14:07	1	1	4.0.9.0	2	14	choose	five	0	0	0	0	0	0	fivegrey	1	1134	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	5.bmp	45	40	1
+113016	21:14:07	1	1	4.0.9.0	2	15	choose	eleven	0	0	0	0	0	0	elevengrey	1	831	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	11.bmp	45	20	1
+113016	21:15:16	1	1	4.0.9.0	2	1	choose	seven	0	0	0	0	0	0	sevengrey	1	1860	0	1	A.bmp	45	20	2	1	A.bmp	45	60	2	1	A.bmp	45	80	2	1	7.bmp	45	40	2
+113016	21:15:16	1	1	4.0.9.0	2	2	choose	eleven	0	0	0	0	0	0	elevengrey	1	896	0	1	A.bmp	45	40	2	1	A.bmp	45	60	2	1	A.bmp	45	80	2	1	11.bmp	45	20	2
+113016	21:15:16	1	1	4.0.9.0	2	3	choose	four	0	0	0	0	0	0	fourgrey	1	1723	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	4.bmp	45	20	1
+113016	21:15:16	1	1	4.0.9.0	2	4	choose	twelve	0	0	0	0	0	0	twelvegrey	1	900	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	12.bmp	45	80	1
+113016	21:15:16	1	1	4.0.9.0	2	5	choose	eight	0	0	0	0	0	0	eightgrey	1	3534	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	8.bmp	45	80	1
+113016	21:15:16	1	1	4.0.9.0	2	6	choose	fourteen	0	0	0	0	0	0	fourteengrey	1	966	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	80	1	1	14.bmp	45	60	1
+113016	21:15:16	1	1	4.0.9.0	2	7	choose	three	0	0	0	0	0	0	threegrey	1	1067	0	1	A.bmp	45	20	2	1	A.bmp	45	40	2	1	A.bmp	45	80	2	1	3.bmp	45	60	2
+113016	21:15:16	1	1	4.0.9.0	2	8	choose	five	0	0	0	0	0	0	fivegrey	1	2141	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	5.bmp	45	40	1
+113016	21:15:16	1	1	4.0.9.0	2	9	choose	one	0	0	0	0	0	0	one1	0	2425	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	1.bmp	45	80	1
+113016	21:15:16	1	1	4.0.9.0	2	10	choose	ten	0	0	0	0	0	0	tengrey	1	734	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	10.bmp	45	20	1
+113016	21:15:16	1	1	4.0.9.0	2	11	choose	two	0	0	0	0	0	0	twogrey	1	12591	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	2.bmp	45	40	1
+113016	21:15:16	1	1	4.0.9.0	2	12	choose	nine	0	0	0	0	0	0	ninegrey	1	1103	0	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	9.bmp	45	20	1
+113016	21:15:16	1	1	4.0.9.0	2	13	choose	six	0	0	0	0	0	0	sixgrey	1	673	0	1	A.bmp	45	20	1	1	A.bmp	45	60	1	1	A.bmp	45	80	1	1	6.bmp	45	40	1
+113016	21:15:16	1	1	4.0.9.0	2	14	choose	fifteen	0	0	0	0	0	0	fifteengrey	1	1277	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	80	1	1	15.bmp	45	60	1
+113016	21:15:16	1	1	4.0.9.0	2	15	choose	thirteen	0	0	0	0	0	0	thirteengrey	1	2556	0	1	A.bmp	45	20	1	1	A.bmp	45	40	1	1	A.bmp	45	60	1	1	13.bmp	45	80	1

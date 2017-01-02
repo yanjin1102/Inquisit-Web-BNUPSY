@@ -1,0 +1,84 @@
+﻿<instruct myinstruct>
+	/nextkey = (" ")
+	/ fontstyle = ("华文行楷", 14%, false, false, false, false, 5, 1)
+	/ txcolor = crimson
+	/screencolor = black
+	/lastlabel = "按空格试试"
+	/windowsize = (80,80)
+</instruct>
+<page instruction>^^              好烦呐^^</page>
+<page endinstruction>^^           更郁闷了吗^^ </page>
+
+ <picture pic1>
+  	/items = ("pic1.JPG")
+  	/size = (1000,1000)
+ </picture>
+  <picture pic2>
+  	/items = ("pic2.JPG")
+  	/size = (1000,1000)
+ </picture>
+ 
+  <text instructiontxt>
+  	/items = ("你感受到深深的蔑视了吗→_→")
+  	/position = ( 50%, 125%)
+  	/fontstyle = ("华文行楷", 6.64%, false, false, false, false, 5, 1)
+  	/txbgcolor = (transparent)
+  	/txcolor = palegreen
+  	/size = (1300,800)
+  	/hjustify=left
+  </text>
+  
+  <text instructionkey>
+  	/items = ("按【空格键】继续")
+  	/position = ( 90%, 80%)
+  	/fontstyle = ("华文行楷", 6.64%, false, false, false, false, 5, 1)
+  	/txbgcolor = (transparent)
+  	/txcolor = palegreen
+  	/size = (800,800)
+  	/hjustify = left
+  </text>
+ <text concludingkey>
+ 	/items = ("请按任意键结束")
+ 	/position = ( 80%, 80%)
+    /fontstyle = ("华文行楷", 6.64%, false, false, false, false, 5, 1)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = palegreen 	
+	/size = (800,800)
+ 	/ hjustify = center
+ </text>
+  <text concludingtxt>
+ 	/items = ("BYEBYE")
+	/position = ( 40%, 70%)
+    /fontstyle = ("华文行楷", 13.15%, false, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+ 	/txcolor = palegreen
+ 	/size = (800,800)
+ 	/hjustify = left
+ </text>
+ <trial instruction>
+ 	/validresponse = (" ")
+ 	/stimulustimes = [1=pic1,instructiontxt,instructionkey]
+  	/recorddata = false
+ </trial>
+ 
+ <trial concluding>
+ 	/validresponse = (anyresponse)
+ 	/stimulustimes = [1=pic2,concludingtxt,concludingkey]
+ 	/recorddata = false
+ </trial>
+ 
+ <block instructionblk>
+ 	/screencolor =black
+ 	/trials = [1 = instruction]
+ </block>
+ 
+ <block concludingblk>
+ 	/ screencolor = black
+ 	/ trials = [1 = concluding]
+ </block>
+ 
+<expt>  
+    /preinstructions = (instruction)
+  	/ blocks = [1 = instructionblk; 2 = concludingblk]
+	/postinstructions = (endinstruction)
+ </expt>

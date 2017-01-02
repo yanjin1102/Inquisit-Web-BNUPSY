@@ -1,0 +1,262 @@
+﻿//在这个部分，我们先把事先定义好的图片用item的方式写进表达式中，因为涉及的内容太多，我们可以用python代码来事先打印的功能，直接
+//打印成我们想要的格式，在以后写程序的过程中，也可以结合python和inquisit，结果inquisit非常笨的问题。
+====================================================================================================================
+<item ta>
+    /1 = "1.jpg"
+    /2 = "2.jpg"
+    /3 = "3.jpg"
+    /4 = "4.jpg"
+</item>
+
+<item compare>
+    /1="0.jpg"
+</item>
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "请用鼠标点击继续"
+	/windowsize = (1000,800)
+</instruct>
+
+
+<page begininstruction1>^^^^您好，非常欢迎您参与我们的研究！^^我们当前的研究是测验您进行灰度辩知的能力。^^请您尽量准确快速的对我们呈现的刺激材料进行反应！^^</page>
+
+<page begininstruction2>^^^^下面进行的是实验的练习环节^^在屏幕上会出现四张图片，请仔细观察.^^用鼠标点击灰度不同的一张。</page>
+
+<page endinstruction1>^^^^请您稍微休息一下!^^如果您休息好了，准备进入下一阶段的实验，请您按鼠标继续！^^</page>
+
+<page endinstruction2>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^再次感谢您的参与！^^</page>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+====================================================================================================================
+//接下来我们就需要用图片刺激的定义方式定义我们的刺激材料啦！我们要定义两类刺激，一类是呈现正常的R，一类是定义镜像过的R
+<picture tar_1>
+	/items = ta
+	/position=(25,25)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture tar_2>
+	/items = ta
+	/position=(75,25)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture tar_3>
+	/items = ta
+	/position=(25,75)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture tar_4>
+	/items = ta
+	/position=(75,75)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+
+<picture comp_1>
+	/items = compare
+	/position=(25,25)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture comp_2>
+	/items = compare
+	/position=(75,25)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture comp_3>
+	/items = compare
+	/position=(25,75)
+	/erase = True(0,0,0) 
+	/size = (600,450)
+</picture>
+
+<picture comp_4>
+	/items = compare
+	/position = (75,75)
+	/ erase = true(0,0,0)
+	/size = (600,450)
+</picture>
+
+
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+	/size = (600,450)
+    /shape = rectangle
+</shape>
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+
+//定义values & expressions，让我们的注视点呈现时间任性起来。
+==========================================================================================================================================
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(100,150))
+</expressions>
+
+
+
+//定义trials，我们需要定义两类trial，一个是正常R的trial，一个是镜像R的trial
+===========================================================================================================================================
+
+<trial 1>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/validresponse = (tar_1,comp_2,comp_3,comp_4)
+	/correctresponse = (tar_1)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.1.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.1.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.1.insertstimulustime(picture.tar_1,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.comp_2,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.comp_3,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.comp_4,values.shapetime)]
+	/ontrialend = [trial.1.clearstimulusframes()]
+</trial>
+<trial 2>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/validresponse = (tar_2,comp_1,comp_3,comp_4)
+	/correctresponse = (tar_2)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.2.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.2.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.2.insertstimulustime(picture.tar_2,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.comp_1,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.comp_3,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.comp_4,values.shapetime)]
+	/ontrialend = [trial.2.clearstimulusframes()]
+</trial>
+<trial 3>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/validresponse = (tar_3,comp_1,comp_2,comp_4)
+	/correctresponse = (tar_3)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.3.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.3.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.3.insertstimulustime(picture.tar_3,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.comp_1,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.comp_2,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.comp_4,values.shapetime)]
+	
+	/ontrialend = [trial.3.clearstimulusframes()]
+</trial>
+<trial 4>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/validresponse = (tar_4,comp_1,comp_2,comp_3)
+	/correctresponse = (tar_4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.4.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.4.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.4.insertstimulustime(picture.tar_4,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.comp_1,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.comp_2,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.comp_3,values.shapetime)]
+	
+	/ontrialend = [trial.4.clearstimulusframes()]
+</trial>
+
+
+//定义blocks,我们在这里定义三个block，一个是instruction，一个是练习block，一个是正式实验的block。
+=============================================================================================================================================================
+
+<block startblock>
+	/screencolor = (255,255,255)
+	/preinstructions = (begininstruction2)
+</block>
+
+
+<block exerciseblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-4 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+<block restblock>
+	/screencolor = (255,255,255)
+	/postinstructions = (endinstruction1)
+</block>
+
+<block judgeblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-16 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+
+//定义experiment, 加入blocks
+======================================================================================================================================================================
+<expt>
+	/preinstructions = (begininstruction1)
+	/ blocks = [1 = startblock; 2=exerciseblk; 3 = restblock; 4 = startblock; 5 = judgeblk]
+	/postinstructions = (endinstruction2)
+</expt>
+
+<defaults>
+	/inputdevice = mouse
+</defaults>
+

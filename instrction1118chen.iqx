@@ -1,0 +1,39 @@
+﻿<text preinstructiontxt>
+	/items = ("Please press “F” when the char shown matches its color and “J”，when mismatch")
+	/size = (1000,300)
+	/fontstyle = ("Arial", 5%)
+	/txcolor = (0,0,0)
+</text>
+<text postinstructiontxt>
+    /items = ("Appreciate your participation! Press SPACE to quit please and reach the staff")
+    /size = (1000,300)
+    /fontstyle = ("Arial", 5%)
+    /txcolor = (0,0,0)
+</text>
+<text spacebar>
+    /items = ("If you get this, please press SPACE to continue")
+    /vposition = 90pct
+    /fontstyle = ("Arial",5%)
+    /txcolor = (255,0,0)
+</text>
+<picture psylogo>
+    /items = ("psylogo.jpg")
+    /size = (100,100)
+    /hposition = 10pct
+    /vposition = 10pct
+</picture>
+<trial preinstruction>
+    /validresponse = (" ")
+    /stimulusframes = [1 = preinstructiontxt, spacebar, psylogo]
+</trial>
+<trial postinstruction>
+    /validresponse = (" ")
+    /stimulusframes = [1 = postinstructiontxt, psylogo]
+</trial>
+
+<block instructions> 
+    /trials = [1 = preinstruction,postinstruction]
+</block>
+<expt>
+    /blocks = [1 = instructions]
+</expt>

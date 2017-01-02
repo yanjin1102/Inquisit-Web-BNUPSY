@@ -1,0 +1,25 @@
+﻿//喻沛诗_指导语.iqx
+//仅包含指导语和结束语
+
+<instruct myinstruction>
+	/nextkey = (" ")
+	/fontstyle = ("等线 Light", 3%, true, false, false, false, 5, 1)
+	/txcolor = (0, 191, 255)
+	/screencolor = (0, 0, 0)
+	/finishlabel = = "请按空格键继续"
+	/windowsize = (1000, 800)
+	/lastlabel = "请按空格键继续"
+</instruct>
+
+<page instruction>
+hhh^^欢迎来到我们的实验^^今天这个实验just for fun^^所以指导语什么的就随便写了^^不过要写的好看!^^
+</page>
+
+<page endinstruction>
+hhh^^实验结束了^^再次欢迎你来到我们的实验^^谢谢参与^^然而并不知道怎么样才能写的好看0.0^^
+</page>
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

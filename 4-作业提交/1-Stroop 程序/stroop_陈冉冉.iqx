@@ -1,0 +1,98 @@
+﻿<item instruction>
+	/1 = "请将左数和右手的食指分别放在键盘的“F”键和“J”键上；在屏幕的中央会随机出现不同颜色的汉字，请判断汉字的颜色；如果是汉字与颜色一致，请按“F”键，如果不一致，请按“J”键。"
+</item>
+<item any>
+	/1 = "请按任意键开始实验"
+</item>
+<item Chinese_characters>
+	/1 = "红"
+	/2 = "绿"
+</item>
+
+<text instructiontxt>
+	/items = instruction
+	/fontstyle = ("宋体", 4pct)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+	/size = (1300,700)
+	/hjustify = left
+</text>
+<text anykeytxt>
+	/items = any
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+<text facilitation_red>
+	/items = chinese_characters
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = red
+</text>
+<text facilitation_green>
+	/items = chinese_characters
+	/select = 2
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = green
+</text>
+<text interference_green>
+	/items = chinese_characters
+	/select = 2
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = red
+</text>
+<text interference_red>
+	/items = chinese_characters
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = green
+</text>
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial F_redtrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/stimulusframes = [1 = facilitation_red]
+</trial>
+<trial F_greentrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/stimulusframes = [1 = facilitation_green]
+</trial>
+<trial I_redtrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulusframes = [1 = interference_red]
+</trial>
+<trial I_greentrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulusframes = [1 = interference_green]
+</trial>
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+<block facinterblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-8 = noreplace(I_greentrial,F_greentrial,I_redtrial,F_redtrial)]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = facinterblk]
+</expt>

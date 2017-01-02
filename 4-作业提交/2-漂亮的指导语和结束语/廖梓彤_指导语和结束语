@@ -1,0 +1,34 @@
+<picture instructionpic>
+	/ items = ("instruction.BMP")
+	/ size = (1024,980)
+	/ halign = center
+	/ valign = center
+</picture>
+
+<text endtxt>
+	/ items = ("感谢参与我们的实验！请在离开之前再看我一眼...(>﹏<。)")
+	/ fontstyle = ("黑体",40pt)
+	/ hjustify = center
+	/ size = (800,300)
+	/ txcolor = (255,127,80)
+	/ txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/ validresponse = (anyresponse)
+	/ stimulustimes = [1=instructionpic]
+</trial>
+
+<trial end>
+	/ validresponse = (anyresponse)
+	/ stimulustimes = [1=endtxt]
+</trial>
+
+<block instructionblk>
+	/ screencolor = (100,149,237)
+	/ trials = [1=instruction;2=end]
+</block>
+
+<expt>
+	/ blocks = [1=instructionblk]
+</expt>

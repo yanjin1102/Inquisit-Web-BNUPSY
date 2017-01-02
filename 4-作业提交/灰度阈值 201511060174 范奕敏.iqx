@@ -1,0 +1,313 @@
+﻿
+//设置指导语和结束语
+<instruct myinstruct>
+/nextkey = (" ")
+/fontstyle = ("宋体", 3%, false, false, false, false, 5, 1)
+/txcolor = (0, 0, 0)
+/screencolor = (255,255,255)
+/lastlabel = "请按空格键继续"
+/windowsize = (1000,1000)
+</instruct>
+
+<page begininstruction1>
+^^您好，非常欢迎您参与我们的研究！
+^^我们当前的研究使测验您对图片灰度的知觉阈值。
+^^请您尽量准确快速地对我们呈现的刺激材料进行反应！
+</page>
+
+<page begininstruction2>
+^^请您将手指放在鼠标上；
+^^在屏幕四处会出现四张相同图案的图片，请判断出哪一个与其他三张的灰度不同；
+^^请用鼠标点击该图片。
+</page>
+
+<page endinstruction>
+^^非常感谢您的参与！
+^^祝您有愉快的一天！
+</page>
+
+//注视点、正误反馈
+<item fixation>
+/1="+"
+</item>
+
+<item correctmsg>
+/1="√"
+</item>
+
+<item errormsg>
+/1="×"
+</item>
+
+————————————————————————————————————————————————————————
+//设置图片
+<picture leftpic1>
+/items = ("picture.jpg")
+/position = (30,25)
+/size = (650,650)
+</picture>
+
+<picture leftpic2>
+/items= ("picture.jpg")
+/position = (30,75)
+/size = (650,650)
+</picture>
+
+<picture rightpic1>
+/items = ("picture.jpg")
+/position = (70,25)
+/size = (650,650)
+</picture>
+
+<picture rightpic2>
+/items=("N1.bmp")
+/position = (70,75)
+/size = (650,650)
+</picture>
+
+<picture leftpic3>
+/items = ("N1.bmp")
+/position = (30,25)
+/size = (650,650)
+</picture>
+
+<picture rightpic3>
+/items=("picture.jpg")
+/position = (70,75)
+/size = (650,650)
+</picture>
+
+<picture leftpic4>
+/items= ("N1.bmp")
+/position = (30,75)
+/size = (650,650)
+</picture>
+
+<picture rightpic4>
+/items = ("N1.bmp")
+/position = (70,25)
+/size = (650,650)
+</picture>
+
+<picture rightpic5>
+/items=("N2.bmp")
+/position = (70,75)
+/size = (650,650)
+</picture>
+
+<picture leftpic5>
+/items = ("N2.bmp")
+/position = (30,25)
+/size = (650,650)
+</picture>
+
+<picture leftpic6>
+/items= ("N2.bmp")
+/position = (30,75)
+/size = (650,650)
+</picture>
+
+<picture rightpic6>
+/items = ("N2.bmp")
+/position = (70,25)
+/size = (650,650)
+</picture>
+
+<picture rightpic7>
+/items=("N3.bmp")
+/position = (70,75)
+/size = (650,650)
+</picture>
+
+<picture leftpic7>
+/items = ("N3.bmp")
+/position = (30,25)
+/size = (650,650)
+</picture>
+
+<picture leftpic8>
+/items= ("N3.bmp")
+/position = (30,75)
+/size = (650,650)
+</picture>
+
+<picture rightpic8>
+/items = ("N3.bmp")
+/position = (70,25)
+/size = (650,650)
+</picture>
+
+<picture rightpic9>
+/items=("N4.bmp")
+/position = (70,75)
+/size = (650,650)
+</picture>
+
+<picture leftpic9>
+/items = ("N4.bmp")
+/position = (30,25)
+/size = (650,650)
+</picture>
+
+<picture leftpic10>
+/items= ("N4.bmp")
+/position = (30,75)
+/size = (650,650)
+</picture>
+
+<picture rightpic10>
+/items = ("N4.bmp")
+/position = (70,25)
+/size = (650,650)
+</picture>
+
+<trial judge1>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic2)
+/validresponse = (leftpic1,leftpic2,rightpic1,rightpic2)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic1,rightpic2]
+</trial>
+
+<trial judge2>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic3)
+/validresponse = (leftpic3,leftpic2,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic3,leftpic2,rightpic1,rightpic3]
+</trial>
+
+<trial judge3>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic4)
+/validresponse = (leftpic1,leftpic4,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic4,rightpic1,rightpic3]
+</trial>
+
+<trial judge4>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic4)
+/validresponse = (leftpic1,leftpic2,rightpic4,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic4,rightpic3]
+</trial>
+
+<trial judge5>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic5)
+/validresponse = (leftpic1,leftpic2,rightpic1,rightpic5)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic1,rightpic5]
+</trial>
+
+<trial judge6>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic5)
+/validresponse = (leftpic5,leftpic2,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic5,leftpic2,rightpic1,rightpic3]
+</trial>
+
+<trial judge7>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic6)
+/validresponse = (leftpic1,leftpic6,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic6,rightpic1,rightpic3]
+</trial>
+
+<trial judge16>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic6)
+/validresponse = (leftpic1,leftpic2,rightpic6,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic6,rightpic3]
+</trial>
+
+<trial judge8>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic7)
+/validresponse = (leftpic1,leftpic2,rightpic1,rightpic7)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic1,rightpic7]
+</trial>
+
+<trial judge9>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic7)
+/validresponse = (leftpic7,leftpic2,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic7,leftpic2,rightpic1,rightpic3]
+</trial>
+
+<trial judge10>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic8)
+/validresponse = (leftpic1,leftpic8,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic8,rightpic1,rightpic3]
+</trial>
+
+<trial judge11>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic8)
+/validresponse = (leftpic1,leftpic2,rightpic8,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic8,rightpic3]
+</trial>
+
+<trial judge12>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic9)
+/validresponse = (leftpic1,leftpic2,rightpic1,rightpic9)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic1,rightpic9]
+</trial>
+
+<trial judge13>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic9)
+/validresponse = (leftpic9,leftpic2,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic9,leftpic2,rightpic1,rightpic3]
+</trial>
+
+<trial judge14>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (leftpic10)
+/validresponse = (leftpic1,leftpic10,rightpic1,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic10,rightpic1,rightpic3]
+</trial>
+
+
+<trial judge15>
+/pretrialpause = 500
+/inputdevice = mouse
+/correctresponse = (rightpic10)
+/validresponse = (leftpic1,leftpic2,rightpic10,rightpic3)
+/stimulusframes = [1=leftpic1,leftpic2,rightpic10,rightpic3]
+</trial>
+
+<block instruction>
+/screencolor = (255,255,255)
+/preinstructions =(begininstruction1;begininstruction2)
+</block>
+
+<block endinstruction>
+/screencolor = (255,255,255)
+/preinstructions=(endinstruction)
+</block>
+
+<block judge>
+/trials = [1-16=random(judge1,judge2,judge3,judge4,judge5,judge6,judge7,judge8,judge9,judge10,judge11,judge12,judge13,judge14,judge15,judge16)]
+</block>
+
+<expt judge>
+/preinstructions=(begininstruction1)
+/preinstructions = (begininstruction2)
+/ blocks = [1=judge]
+/postinstructions = (endinstruction)
+</expt>                                                                                                                                                                                                                                                                                                         
+

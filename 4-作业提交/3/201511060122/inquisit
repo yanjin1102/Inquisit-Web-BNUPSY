@@ -1,0 +1,638 @@
+<defaults>
+/ screencolor = (0, 0, 0)
+/ fontstyle = ("Arial", 20pt)
+</defaults>
+
+<page instruction>
+	^您好，欢迎来到Eva的实验室！
+	^^请您在图片呈现之后从四张照片中选出您认为灰度不同的一张图片
+	^^您可以随时选择退出实验
+	^^^同意进入实验，按Enter键继续
+</page>
+
+<text endline>
+/ items = ("感谢您的参与，请不要触摸任何按键，并告知实验员您已完成实验")
+/ hjustify = center
+/ size = (640,1000)
+/ txcolor = white
+/ txbgcolor = (transparent)
+</text>
+
+<trial endline>
+/ stimulusframes = [1 = endline]
+/ validresponse = ("E")
+/ recorddata = false
+</trial>
+
+<instruct my>
+/ fontstyle = ("楷体",24pt,true,false,false,false,5,134)
+/ screencolor = (240,248,205)
+/ txcolor = (70,130,180)
+</instruct>
+
+
+*****************
+// 图片2，灰度差异10
+
+// a为正确选项
+<picture UL2a1>
+/ items = ("pic2a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2a1>
+/ items = ("pic2b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2a1>
+/ items = ("pic2b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2a1>
+/ items = ("pic2b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2a1>
+/ stimulusframes = [1=UL2a1,UR2a1,BL2a1,BR2a1]
+/ inputdevice = mouse
+/ validresponse = (UL2a1,UR2a1,BL2a1,BR2a1)
+/ correctresponse = (UL2a1)
+</trial>
+
+***
+<picture UL2a2>
+/ items = ("pic2b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2a2>
+/ items = ("pic2a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2a2>
+/ items = ("pic2b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2a2>
+/ items = ("pic2b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2a2>
+/ stimulusframes = [1=UL2a2,UR2a2,BL2a2,BR2a2]
+/ inputdevice = mouse
+/ validresponse = (UL2a2,UR2a2,BL2a2,BR2a2)
+/ correctresponse = (UR2a2)
+</trial>
+
+***
+<picture UL2a3>
+/ items = ("pic2b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2a3>
+/ items = ("pic2b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2a3>
+/ items = ("pic2a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2a3>
+/ items = ("pic2b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2a3>
+/ stimulusframes = [1=UL2a3,UR2a3,BL2a3,BR2a3]
+/ inputdevice = mouse
+/ validresponse = (UL2a3,UR2a3,BL2a3,BR2a3)
+/ correctresponse = (BL2a3)
+</trial>
+
+***
+<picture UL2a4>
+/ items = ("pic2b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2a4>
+/ items = ("pic2b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2a4>
+/ items = ("pic2b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2a4>
+/ items = ("pic2a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2a4>
+/ stimulusframes = [1=UL2a4,UR2a4,BL2a4,BR2a4]
+/ inputdevice = mouse
+/ validresponse = (UL2a4,UR2a4,BL2a4,BR2a4)
+/ correctresponse = (BR2a4)
+</trial>
+
+// b为正确答案
+<picture UL2b1>
+/ items = ("pic2b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2b1>
+/ items = ("pic2a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2b1>
+/ items = ("pic2a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2b1>
+/ items = ("pic2a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2b1>
+/ stimulusframes = [1=UL2b1,UR2b1,BL2b1,BR2b1]
+/ inputdevice = mouse
+/ validresponse = (UL2b1,UR2b1,BL2b1,BR2b1)
+/ correctresponse = (UL2b1)
+</trial>
+
+***
+<picture UL2b2>
+/ items = ("pic2a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2b2>
+/ items = ("pic2b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2b2>
+/ items = ("pic2a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2b2>
+/ items = ("pic2a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2b2>
+/ stimulusframes = [1=UL2b2,UR2b2,BL2b2,BR2b2]
+/ inputdevice = mouse
+/ validresponse = (UL2b2,UR2b2,BL2b2,BR2b2)
+/ correctresponse = (UR2b2)
+</trial>
+
+***
+<picture UL2b3>
+/ items = ("pic2a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2b3>
+/ items = ("pic2a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2b3>
+/ items = ("pic2b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2b3>
+/ items = ("pic2a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2b3>
+/ stimulusframes = [1=UL2b3,UR2b3,BL2b3,BR2b3]
+/ inputdevice = mouse
+/ validresponse = (UL2b3,UR2b3,BL2b3,BR2b3)
+/ correctresponse = (BL2b3)
+</trial>
+
+***
+<picture UL2b4>
+/ items = ("pic2a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR2b4>
+/ items = ("pic2a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL2b4>
+/ items = ("pic2a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR2b4>
+/ items = ("pic2b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 2b4>
+/ stimulusframes = [1=UL2b4,UR2b4,BL2b4,BR2b4]
+/ inputdevice = mouse
+/ validresponse = (UL2b4,UR2b4,BL2b4,BR2b4)
+/ correctresponse = (BR2b4)
+</trial>
+
+*****************
+// 图片1，灰度差异5
+// a为正确选项
+<picture UL1a1>
+/ items = ("pic1a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1a1>
+/ items = ("pic1b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1a1>
+/ items = ("pic1b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1a1>
+/ items = ("pic1b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1a1>
+/ stimulusframes = [1=UL1a1,UR1a1,BL1a1,BR1a1]
+/ inputdevice = mouse
+/ validresponse = (UL1a1,UR1a1,BL1a1,BR1a1)
+/ correctresponse = (UL1a1)
+</trial>
+
+***
+<picture UL1a2>
+/ items = ("pic1b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1a2>
+/ items = ("pic1a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1a2>
+/ items = ("pic1b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1a2>
+/ items = ("pic1b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1a2>
+/ stimulusframes = [1=UL1a2,UR1a2,BL1a2,BR1a2]
+/ inputdevice = mouse
+/ validresponse = (UL1a2,UR1a2,BL1a2,BR1a2)
+/ correctresponse = (UR1a2)
+</trial>
+
+***
+<picture UL1a3>
+/ items = ("pic1b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1a3>
+/ items = ("pic1b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1a3>
+/ items = ("pic1a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1a3>
+/ items = ("pic1b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1a3>
+/ stimulusframes = [1=UL1a3,UR1a3,BL1a3,BR1a3]
+/ inputdevice = mouse
+/ validresponse = (UL1a3,UR1a3,BL1a3,BR1a3)
+/ correctresponse = (BL1a3)
+</trial>
+
+***
+<picture UL1a4>
+/ items = ("pic1b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1a4>
+/ items = ("pic1b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1a4>
+/ items = ("pic1b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1a4>
+/ items = ("pic1a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1a4>
+/ stimulusframes = [1=UL1a4,UR1a4,BL1a4,BR1a4]
+/ inputdevice = mouse
+/ validresponse = (UL1a4,UR1a4,BL1a4,BR1a4)
+/ correctresponse = (BR1a4)
+</trial>
+
+// b为正确答案
+<picture UL1b1>
+/ items = ("pic1b.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1b1>
+/ items = ("pic1a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1b1>
+/ items = ("pic1a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1b1>
+/ items = ("pic1a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1b1>
+/ stimulusframes = [1=UL1b1,UR1b1,BL1b1,BR1b1]
+/ inputdevice = mouse
+/ validresponse = (UL1b1,UR1b1,BL1b1,BR1b1)
+/ correctresponse = (UL1b1)
+</trial>
+
+***
+<picture UL1b2>
+/ items = ("pic1a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1b2>
+/ items = ("pic1b.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1b2>
+/ items = ("pic1a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1b2>
+/ items = ("pic1a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1b2>
+/ stimulusframes = [1=UL1b2,UR1b2,BL1b2,BR1b2]
+/ inputdevice = mouse
+/ validresponse = (UL1b2,UR1b2,BL1b2,BR1b2)
+/ correctresponse = (UR1b2)
+</trial>
+
+***
+<picture UL1b3>
+/ items = ("pic1a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1b3>
+/ items = ("pic1a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1b3>
+/ items = ("pic1b.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1b3>
+/ items = ("pic1a.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1b3>
+/ stimulusframes = [1=UL1b3,UR1b3,BL1b3,BR1b3]
+/ inputdevice = mouse
+/ validresponse = (UL1b3,UR1b3,BL1b3,BR1b3)
+/ correctresponse = (BL1b3)
+</trial>
+
+***
+<picture UL1b4>
+/ items = ("pic1a.jpg")
+/ position = (0, 0) 
+/ valign = top 
+/ halign = left 
+</picture>
+
+<picture UR1b4>
+/ items = ("pic1a.jpg")
+/ position = (100,0) 
+/ valign = top 
+/ halign = right 
+</picture>
+
+<picture BL1b4>
+/ items = ("pic1a.jpg")
+/ position = (0,100) 
+/ valign = bottom 
+/ halign = left
+</picture>
+
+<picture BR1b4>
+/ items = ("pic1b.jpg")
+/ position = (100, 100) 
+/ valign = bottom
+/ halign = right 
+</picture>
+
+<trial 1b4>
+/ stimulusframes = [1=UL1b4,UR1b4,BL1b4,BR1b4]
+/ inputdevice = mouse
+/ validresponse = (UL1b4,UR1b4,BL1b4,BR1b4)
+/ correctresponse = (BR1b4)
+</trial>
+
+
+********************************
+
+<block pic10>
+/ branch = [if (block.pic10.percentcorrect > 50) block.pic5]
+/ branch = [if (block.pic10.percentcorrect < 50) block.endline]
+/ blockfeedback = (correct)
+/ trials = [1-8 = noreplace(2a1,2a2,2a3,2a4,2b1,2b2,2b3,2b4)]
+</block>
+
+<block pic5>
+/ branch = [if (block.pic10.percentcorrect < 50) block.endline]
+/ trials = [1-8 = noreplace(1a1,1a2,1a3,1a4,1b1,1b2,1b3,1b4)]
+/ blockfeedback = (correct)
+</block>
+
+<block endline>
+/ trials = [1 = endline]
+</block>
+
+<expt myexp>
+/ preinstructions = (instruction)
+/ blocks = [1 = pic10;2 = pic5;3 = endline]
+</expt>

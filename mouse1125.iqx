@@ -1,0 +1,251 @@
+﻿<item normal>
+	/1 = "s1.jpg"
+	/2 = "s2.jpg"
+	/3 = "s3.jpg"
+	/4 = "s4.jpg" 
+	/5 = "s5.jpg" 
+	/6 = "s6.jpg" 
+	/7 = "s7.jpg" 
+	/8 = "s8.jpg" 
+	/9 = "s9.jpg" 
+	/10 = "s10.jpg" 	 
+	/11 = "s11.jpg" 
+	/12 = "s12.jpg" 
+	/13 = "s13.jpg" 
+	/14 = "s14.jpg" 	
+    /15 = "s15.jpg" 
+</item>
+
+<item adjusted>
+	/1 = "a1.jpg"
+	/2 = "a2.jpg"
+	/3 = "a3.jpg"
+	/4 = "a4.jpg" 
+	/5 = "a5.jpg" 
+	/6 = "a6.jpg" 
+	/7 = "a7.jpg" 
+	/8 = "a8.jpg" 
+	/9 = "a9.jpg" 
+	/10 = "a10.jpg" 	 
+	/11 = "a11.jpg" 
+	/12 = "a12.jpg" 
+	/13 = "a13.jpg" 
+	/14 = "a14.jpg" 	
+    /15 = "a15.jpg" 
+</item>
+
+<picture normal0>
+    /items = normal
+    /size = (1,1)
+    /hposition = 10pct
+    /vposition = 10pct
+</picture>
+
+<picture normal1>
+    /items = normal
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 10pct
+    /vposition = 10pct
+</picture>
+
+<picture normal2>
+    /items = normal
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 90pct
+    /vposition = 10pct
+</picture>
+
+<picture normal3>
+    /items = normal
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 10pct
+    /vposition = 90pct
+</picture>
+
+<picture normal4>
+    /items = normal
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 90pct
+    /vposition = 90pct
+</picture>
+
+<picture adjusted1>
+    /items = adjusted
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 10pct
+    /vposition = 10pct
+</picture>
+
+<picture adjusted2>
+    /items = adjusted
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 90pct
+    /vposition = 10pct
+</picture>
+
+<picture adjusted3>
+    /items = adjusted
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 10pct
+    /vposition = 90pct
+</picture>
+
+<picture adjusted4>
+    /items = adjusted
+    /select = current(normal0)
+    /size = (200,200)
+    /hposition = 90pct
+    /vposition = 90pct
+</picture>
+
+<text correctmsg>
+	/items = ("√")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (0,255,0)
+</text>
+
+<text errormsg>
+	/items = ("×")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+</text>
+
+//这里增加一个注视点，在每次数字出现之前，让被试集中精力的作用。
+
+<text fixation>
+	/items = ("+")
+	/fontstyle = ("Arial", 40ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+//在这里增加指导语内容，告知被试任务要求。
+
+<text instructiontxt>
+	/hjustify = center
+	/items = ("请用鼠标点击以下四幅图片中，灰度不同的那一个。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,255,0)
+</text>
+
+// 这里增加一个按钮选项，就是看完指导语之后按任意键继续任务。
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+**************************************************************************************************************************************************************************
+增加几个instruction trial 来呈现指导语
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<values>
+    /fixationtimes=0
+</values>
+
+<expressions>
+    /generteramdom=ceil(rand(400,600))
+</expressions>
+
+<trial judge1>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+	/correctresponse = (adjusted1)
+    /validresponse = (adjusted1, normal4, normal2, normal3)
+	/ontrialbegin = [values.fixationtimes = expressions.generteramdom]
+    /ontrialbegin = [trial.judge1.insertstimulustime(text.fixation,0)]
+    /ontrialbegin = [trial.judge1.insertstimulustime(picture.adjusted1,values.fixationtimes)]
+    /ontrialbegin = [trial.judge1.insertstimulustime(picture.normal2,values.fixationtimes)]
+    /ontrialbegin = [trial.judge1.insertstimulustime(picture.normal3,values.fixationtimes)]
+    /ontrialbegin = [trial.judge1.insertstimulustime(picture.normal4,values.fixationtimes)]
+    /ontrialbegin = [trial.judge1.insertstimulustime(picture.normal0,values.fixationtimes)]
+    /ontrialend = [trial.judge1.clearstimulusframes()]
+</trial>
+
+<trial judge2>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+	/correctresponse = (adjusted2)
+    /validresponse = (adjusted2, normal4, normal1, normal3)
+	/ontrialbegin = [values.fixationtimes = expressions.generteramdom]
+    /ontrialbegin = [trial.judge2.insertstimulustime(text.fixation,0)]
+    /ontrialbegin = [trial.judge2.insertstimulustime(picture.adjusted2,values.fixationtimes)]
+    /ontrialbegin = [trial.judge2.insertstimulustime(picture.normal1,values.fixationtimes)]
+    /ontrialbegin = [trial.judge2.insertstimulustime(picture.normal3,values.fixationtimes)]
+    /ontrialbegin = [trial.judge2.insertstimulustime(picture.normal4,values.fixationtimes)]
+    /ontrialbegin = [trial.judge2.insertstimulustime(picture.normal0,values.fixationtimes)]
+    /ontrialend = [trial.judge2.clearstimulusframes()]
+</trial>
+
+<trial judge3>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+	/correctresponse = (adjusted3)
+    /validresponse = (adjusted3, normal4, normal2, normal1)
+	/ontrialbegin = [values.fixationtimes = expressions.generteramdom]
+    /ontrialbegin = [trial.judge3.insertstimulustime(text.fixation,0)]
+    /ontrialbegin = [trial.judge3.insertstimulustime(picture.adjusted3,values.fixationtimes)]
+    /ontrialbegin = [trial.judge3.insertstimulustime(picture.normal2,values.fixationtimes)]
+    /ontrialbegin = [trial.judge3.insertstimulustime(picture.normal1,values.fixationtimes)]
+    /ontrialbegin = [trial.judge3.insertstimulustime(picture.normal4,values.fixationtimes)]
+    /ontrialbegin = [trial.judge3.insertstimulustime(picture.normal0,values.fixationtimes)]
+    /ontrialend = [trial.judge3.clearstimulusframes()]
+</trial>
+
+<trial judge4>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+	/correctresponse = (adjusted4)
+    /validresponse = (adjusted4, normal1, normal2, normal3)
+	/ontrialbegin = [values.fixationtimes = expressions.generteramdom]
+    /ontrialbegin = [trial.judge4.insertstimulustime(text.fixation,0)]
+    /ontrialbegin = [trial.judge4.insertstimulustime(picture.adjusted4,values.fixationtimes)]
+    /ontrialbegin = [trial.judge4.insertstimulustime(picture.normal2,values.fixationtimes)]
+    /ontrialbegin = [trial.judge4.insertstimulustime(picture.normal3,values.fixationtimes)]
+    /ontrialbegin = [trial.judge4.insertstimulustime(picture.normal1,values.fixationtimes)]
+    /ontrialbegin = [trial.judge4.insertstimulustime(picture.normal0,values.fixationtimes)]
+    /ontrialend = [trial.judge4.clearstimulusframes()]
+</trial>
+**************************************************************************************************************************************************************************
+<block judgeblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-60 = noreplacenorepeat(judge1, judge2, judge3, judge4)]
+</block>
+
+<block instruction> 
+    /trials = [1 = instruction]
+</block>
+
+<expt>
+	/ blocks = [1 = instruction; 1 = judgeblk]
+</expt>
+
+**************************************************************************************************************************************************************************

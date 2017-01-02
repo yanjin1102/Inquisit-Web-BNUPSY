@@ -1,0 +1,510 @@
+﻿.//灰度的差别阈限实验，灰度差从24减小到12，每次减小的距离为3
+
+<item picturediffer24>
+    /1 = "pic_new25.bmp"
+</item>
+
+<item picturediffer21>
+    /1 = "pic_new22.bmp"
+</item>
+
+<item picturediffer18>
+    /1 = "pic_new19.bmp"
+</item>
+
+<item picturediffer15>
+    /1 = "pic_new16.bmp"
+</item>
+
+<item picturediffer12>
+    /1 = "pic_new13.bmp"
+</item>
+
+<item picturebase>
+	/1 = "pic_new1.bmp"
+</item>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+=====================================================================
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("等线 Light", 1.76%, false, false, false, false, 5, 1)
+	/txcolor = (0, 0, 0)
+	/screencolor = (255, 255, 255)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (1000, 800)
+</instruct>
+
+<page begininstruction>^^^^欢迎参加我们的实验！^^本实验的目的是测量人对灰度的感知差别阈限^^在实验中，你将看到一个字母R的图片^^用鼠标点击你认为的灰度不同的图片^^请尽量准确且快速的反应^^</page>
+
+<page endinstruction>^^^^谢谢参与！^^感谢你对实验做出的贡献！^^</page>
+
+========================================================================
+
+<picture picturediffer12pic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturediffer12
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer12pic2>
+	/erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturediffer12
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer12pic3>
+	/erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturediffer12
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer12pic4>
+	/erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturediffer12
+	/valign = center
+	/size = (300, 300)
+</picture>
+------------------------
+<picture picturediffer15pic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturediffer15
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer15pic2>
+	/erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturediffer15
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer15pic3>
+	/erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturediffer15
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer15pic4>
+	/erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturediffer15
+	/valign = center
+	/size = (300, 300)
+</picture>
+----------------------------------
+<picture picturediffer18pic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturediffer18
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer18pic2>
+	/erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturediffer18
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer18pic3>
+	/erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturediffer18
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer18pic4>
+	/erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturediffer18
+	/valign = center
+	/size = (300, 300)
+</picture>
+--------------------------------
+<picture picturediffer21pic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturediffer21
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer21pic2>
+	/erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturediffer21
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer21pic3>
+	/erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturediffer21
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer21pic4>
+	/erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturediffer21
+	/valign = center
+	/size = (300, 300)
+</picture>
+----------------------------------------
+<picture picturediffer24pic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturediffer24
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer24pic2>
+	/erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturediffer24
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer24pic3>
+	/erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturediffer24
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturediffer24pic4>
+	/erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturediffer24
+	/valign = center
+	/size = (300, 300)
+</picture>
+----------------------------
+<picture picturebasepic1>
+	/erase = True(0, 0, 0)
+	/hposition = (20%)
+	/items = picturebase
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturebasepic2>
+	/ erase = True(0, 0, 0)
+	/hposition = (40%)
+	/items = picturebase
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturebasepic3>
+	/ erase = True(0, 0, 0)
+	/hposition = (60%)
+	/items = picturebase
+	/valign = center
+	/size = (300, 300)
+</picture>
+
+<picture picturebasepic4>
+	/ erase = True(0, 0, 0)
+	/hposition = (80%)
+	/items = picturebase
+	/valign = center
+	/size = (300, 300)
+</picture>
+-----------------------------------
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 5.33%, false, false, false, false, 5, 1)
+	/txcolor = (255, 255, 255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text correctmsgtxt>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("Arial", 5.33%, false, false, false, false, 5, 1)
+	/txcolor = (255, 255, 255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsgtxt>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("Arial", 5.33%, false, false, false, false, 5, 1)
+	/txcolor = (255, 255, 255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+===============================================================================
+
+<trial picturediffer12trial1>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer12pic1; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer12pic1, picturebasepic2, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer12pic1)
+</trial>
+
+<trial picturediffer12trial2>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer12pic2; 1 = picturebasepic1; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer12pic2, picturebasepic1, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer12pic2)
+</trial>
+
+<trial picturediffer12trial3>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer12pic3; 1 = picturebasepic2; 1 = picturebasepic1; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer12pic3, picturebasepic2, picturebasepic1, picturebasepic4)
+	/correctresponse = (picturediffer12pic3)
+</trial>
+
+<trial picturediffer12trial4>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer12pic4; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic1]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer12pic4, picturebasepic2, picturebasepic3, picturebasepic1)
+	/correctresponse = (picturediffer12pic4)
+</trial>
+------------------------------------------------------------------------
+<trial picturediffer15trial1>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer15pic1; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer15pic1, picturebasepic2, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer15pic1)
+</trial>
+
+<trial picturediffer15trial2>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer15pic2; 1 = picturebasepic1; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer15pic2, picturebasepic1, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer15pic2)
+</trial>
+
+<trial picturediffer15trial3>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer15pic3; 1 = picturebasepic2; 1 = picturebasepic1; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer15pic3, picturebasepic2, picturebasepic1, picturebasepic4)
+	/correctresponse = (picturediffer15pic3)
+</trial>
+
+<trial picturediffer15trial4>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer15pic4; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic1]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer15pic4, picturebasepic2, picturebasepic3, picturebasepic1)
+	/correctresponse = (picturediffer15pic4)
+</trial>
+------------------------------------------------------------------------------------
+<trial picturediffer18trial1>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer18pic1; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer18pic1, picturebasepic2, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer18pic1)
+</trial>
+
+<trial picturediffer18trial2>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer18pic2; 1 = picturebasepic1; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer18pic2, picturebasepic1, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer18pic2)
+</trial>
+
+<trial picturediffer18trial3>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer18pic3; 1 = picturebasepic2; 1 = picturebasepic1; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer18pic3, picturebasepic2, picturebasepic1, picturebasepic4)
+	/correctresponse = (picturediffer18pic3)
+</trial>
+
+<trial picturediffer18trial4>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer18pic4; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic1]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer18pic4, picturebasepic2, picturebasepic3, picturebasepic1)
+	/correctresponse = (picturediffer18pic4)
+</trial>
+---------------------------------------------------------------------------------------------
+<trial picturediffer21trial1>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer21pic1; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer21pic1, picturebasepic2, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer21pic1)
+</trial>
+
+<trial picturediffer21trial2>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer21pic2; 1 = picturebasepic1; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer21pic2, picturebasepic1, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer21pic2)
+</trial>
+
+<trial picturediffer21trial3>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer21pic3; 1 = picturebasepic2; 1 = picturebasepic1; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer21pic3, picturebasepic2, picturebasepic1, picturebasepic4)
+	/correctresponse = (picturediffer21pic3)
+</trial>
+
+<trial picturediffer21trial4>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer21pic4; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic1]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer21pic4, picturebasepic2, picturebasepic3, picturebasepic1)
+	/correctresponse = (picturediffer21pic4)
+</trial>
+----------------------------------------------------------------------------------------------
+<trial picturediffer24trial1>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer24pic1; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer24pic1, picturebasepic2, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer24pic1)
+</trial>
+
+<trial picturediffer24trial2>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer24pic2; 1 = picturebasepic1; 1 = picturebasepic3; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer24pic2, picturebasepic1, picturebasepic3, picturebasepic4)
+	/correctresponse = (picturediffer24pic2)
+</trial>
+
+<trial picturediffer24trial3>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer24pic3; 1 = picturebasepic2; 1 = picturebasepic1; 1 = picturebasepic4]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer24pic3, picturebasepic2, picturebasepic1, picturebasepic4)
+	/correctresponse = (picturediffer24pic3)
+</trial>
+
+<trial picturediffer24trial4>
+	/pretrialpause = 500
+	/ stimulusframes = [1 = picturediffer24pic4; 1 = picturebasepic2; 1 = picturebasepic3; 1 = picturebasepic1]
+	/correctmessage = (correctmsgtxt, 500)
+	/errormessage = (errormsgtxt, 500)
+	/inputdevice = mouse
+	/validresponse = (picturediffer24pic4, picturebasepic2, picturebasepic3, picturebasepic1)
+	/correctresponse = (picturediffer24pic4)
+</trial>
+====================================================================
+
+<block picturediffer12blk>
+	/screencolor = (0, 0, 0)
+	/trials = [1-4 = replace(picturediffer12trial1, picturediffer12trial2, picturediffer12trial3, picturediffer12trial4)]
+</block>
+
+<block picturediffer15blk>
+	/screencolor = (0, 0, 0)
+	/trials = [1-4 = replace(picturediffer15trial1, picturediffer15trial2, picturediffer15trial3, picturediffer15trial4)]
+</block>
+
+<block picturediffer18blk>
+	/screencolor = (0, 0, 0)
+	/trials = [1-4 = replace(picturediffer18trial1, picturediffer18trial2, picturediffer18trial3, picturediffer18trial4)]
+</block>
+
+<block picturediffer21blk>
+	/screencolor = (0, 0, 0)
+	/trials = [1-4 = replace(picturediffer21trial1, picturediffer21trial2, picturediffer21trial3, picturediffer21trial4)]
+</block>
+
+<block picturediffer24blk>
+	/screencolor = (0, 0, 0)
+	/trials = [1-4 = replace(picturediffer24trial1, picturediffer24trial2, picturediffer24trial3, picturediffer24trial4)]
+</block>
+=================================================================
+
+<expt>
+	/blocks = [1 = picturediffer24blk, picturediffer21blk, picturediffer18blk, picturediffer15blk, picturediffer12blk]
+	/ preinstructions = (begininstruction)
+	/postinstructions = (endinstruction)
+</expt>
+
+
+
+
+

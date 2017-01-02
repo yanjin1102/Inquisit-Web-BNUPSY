@@ -1,0 +1,40 @@
+﻿
+<picture instructionpic>
+ 	/items = ("指导语.bmp")
+ 	/size = (1280,720)
+ 	/halign =  center
+ 	/valign =  center
+
+</picture>
+<picture endpic>
+ 	/items = ("结束语.bmp")
+ 	/size = (1280,720)
+ 	/halign =  center
+ 	/valign =  center
+
+</picture>
+<trial instruction>
+ 	/validresponse = (" ")
+	/stimulusframes = [1=instructionpic]
+
+</trial>
+<trial end>
+ 	/validresponse = (" ")
+ 	/stimulusframes = [1=endpic]
+
+ 
+</trial>
+<block instructionblk>
+ 	/screencolor = (255,255,255)
+ 	/trials = [1 = instruction]
+ 
+</block>
+<block endblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = end]
+</block>
+
+
+<expt >
+ 	/ blocks = [1=instructionblk;2=endblk]
+</expt>

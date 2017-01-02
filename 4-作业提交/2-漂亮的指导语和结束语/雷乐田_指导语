@@ -1,0 +1,26 @@
+<instruct beautifulinstruction>
+/nextkey = (" ")
+/fontstyle = ("幼圆体", 24pt, false, false, false, false, 5, 134)
+/txcolor = (170,50,100)
+/screencolor = (255,255,255)
+/lastlabel = "按空格键继续"
+/windowsize = (800,600)
+</instruct>
+
+<page instruct>
+我是一个漂亮的指导语
+
+</page>
+
+<page endinstruction>
+我是不是特别好看？
+
+
+^^    当然是啦！
+
+</page>
+
+<expt defaultinstruction>
+/preinstructions = (instruct)
+/postinstructions = (endinstruction)
+</expt>

@@ -1,0 +1,28 @@
+﻿<picture hello>
+	/items = ("ins1.bmp")
+</picture>
+<picture bye>
+	/items = ("ins2.bmp")
+</picture>
+
+<trial hello>
+	/validresponse = (" ")
+	/stimulusframes = [1=hello]
+	/recorddata = false
+</trial>
+<trial bye>
+	/validresponse = (" ")
+	/stimulusframes = [1=bye]
+	/recorddata = false
+</trial>
+<block hello>
+	/screencolor = (0,0,0)
+	/trials = [1=hello]
+</block>
+<block bye>
+	/screencolor = (0,0,0)
+	/trials = [1=bye]
+</block>
+<expt>
+	/blocks = [1=hello;2=bye]
+</expt>

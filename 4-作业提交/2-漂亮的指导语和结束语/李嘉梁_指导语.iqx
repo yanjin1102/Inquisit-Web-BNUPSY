@@ -1,0 +1,40 @@
+﻿<picture instructionbgpic>
+	/items = ("introduction.bmp")  
+	/ position = (50,50)  
+	/ size = (100%,100%)
+</picture>
+
+<picture endpic>
+/items = ("ending.bmp")
+/position = (50,50)
+/size = (100%,100%)
+</picture>
+
+
+<trial instruct>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic]  
+</trial>
+
+<trial end>
+	/validresponse = (anyresponse)
+	/recorddata = false
+	/stimulusframes = [1=endpic]  
+</trial>
+
+
+<block ins>
+	/ screencolor = (255,255,255)
+	/ trials = [1=instruct]
+</block>
+
+<block ed>
+	/ screencolor = (255,255,255)
+	/ trials = [1=end]
+</block>
+
+<expt in>
+	/ blocks = [1=ins;2=ed]
+</expt>
+

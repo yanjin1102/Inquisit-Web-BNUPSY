@@ -1,0 +1,32 @@
+﻿<picture instructionpicture>
+	/ items = ("instruction.png")
+	/size = (100%,100%)
+	/halign =  center
+	/valign =  center
+</picture>
+
+ <picture endpicture>
+ 	/items = ("end.png")
+ 	/size = (100%,100%)
+ </picture>
+
+ <trial instruction>
+ 	/validresponse = (anyresponse)
+ 	/stimulustimes = [1=instructionpicture]
+ 	/recorddata = false
+ </trial>
+
+ <trial end>
+ 	/validresponse = (anyresponse)
+ 	/stimulustimes = [1=endpicture]
+ 	/recorddata = false
+ </trial>
+
+ <block instructionblk>
+ 	/screencolor =/color = (255, 255, 255)
+ 	/trials = [1 = instruction;2=end]
+ </block>
+
+ <expt >
+ 	/ blocks = [1=instructionblk]
+ </expt>

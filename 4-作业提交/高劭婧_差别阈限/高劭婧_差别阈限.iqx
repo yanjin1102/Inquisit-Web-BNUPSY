@@ -1,0 +1,262 @@
+﻿<item doge>
+    /1 = "pictures/grey110.bmp"
+    /2 = "pictures/grey120.bmp"
+    /3 = "pictures/grey130.bmp"
+    /4 = "pictures/grey140.bmp"
+    /5 = "pictures/grey150.bmp"
+    /6 = "pictures/grey160.bmp"
+    /7 = "pictures/grey170.bmp"
+    /8 = "pictures/grey30.bmp"
+    /9 = "pictures/grey40.bmp"
+    /10 = "pictures/grey50.bmp"
+    /11 = "pictures/grey60.bmp"
+    /12 = "pictures/grey70.bmp"
+    /13 = "pictures/grey80.bmp"
+    /14 = "pictures/grey90.bmp"
+	/15 = "pictures/doge.jpg"
+</item>
+
+<item base>
+	/1 = "pictures/grey100.bmp"
+</item>
+
+
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (800,500)
+</instruct>
+
+
+<page instruction1>^^^^您好，非常欢迎您参与我们的研究！^^我们当前的研究是测验您对灰度的差别阈限。^^请您尽量准确快速的对我们呈现的刺激材料进行反应！^^</page>
+
+<page instruction2>^^^^在屏幕上会呈现四幅黑白图片，其中一幅与其他三幅是不一样的^^请用鼠标点击出您认为的正确答案。</page>
+
+<page rest>^^^^请您稍微休息一下!^^如果您休息好了，准备进入下一阶段的实验，请您按空格键！^^</page>
+
+<page end>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^再次感谢您的参与！^^</page>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+<picture base1>
+	/items = base
+	/size = (300,300)
+	/hposition = 25pct
+	/vposition = 25pct
+</picture>
+
+<picture base2>
+	/items = base
+	/size = (300,300)
+	/hposition = 25pct
+	/vposition = 75pct
+</picture>
+
+<picture base3>
+	/items = base
+	/size = (300,300)
+	/hposition = 75pct
+	/vposition = 25pct
+</picture>
+
+<picture base4>
+	/items = base
+	/size = (300,300)
+	/hposition = 75pct
+	/vposition = 75pct
+</picture>
+
+<picture target1>
+	/items = doge
+	/size = (300,300)
+	/hposition = 25pct
+	/vposition = 25pct
+</picture>
+
+<picture target2>
+	/items = doge
+	/size = (300,300)
+	/hposition = 25pct
+	/vposition = 75pct
+</picture>
+
+<picture target3>
+	/items = doge
+	/size = (300,300)
+	/hposition = 75pct
+	/vposition = 25pct
+</picture>
+
+<picture target4>
+	/items = doge
+	/size = (300,300)
+	/hposition = 75pct
+	/vposition = 75pct
+</picture>
+
+<shape blank>
+	/erase = True(255,255,255)
+	/color = (white)
+	/size = (300,300)
+    /shape = rectangle
+</shape>
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (255,255,255)
+	/txcolor = (0,0,0)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/txbgcolor = (255,255,255)
+</text>
+
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/txbgcolor = (255,255,255)
+</text>
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(200,300))
+</expressions>
+
+******************
+
+<trial 1>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+    /correctresponse = (target1)
+    /validresponse = (target1,base2,base3,base4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+    /ontrialbegin = [trial.1.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.1.insertstimulustime(shape.blank,values.fixationtime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.target1,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.base2,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.base3,values.shapetime)]
+    /ontrialbegin = [trial.1.insertstimulustime(picture.base4,values.shapetime)]
+    /ontrialend = [trial.1.clearstimulusframes()]
+    /beginresponsetime = values.shapetime
+</trial>
+
+<trial 2>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+    /correctresponse = (target2)
+    /validresponse = (base1,target2,base3,base4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+    /ontrialbegin = [trial.2.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.2.insertstimulustime(shape.blank,values.fixationtime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.base1,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.target2,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.base3,values.shapetime)]
+    /ontrialbegin = [trial.2.insertstimulustime(picture.base4,values.shapetime)]
+    /ontrialend = [trial.2.clearstimulusframes()]
+    /beginresponsetime = values.shapetime
+</trial>
+
+<trial 3>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+    /correctresponse = (target3)
+    /validresponse = (base1,base2,target3,base4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+    /ontrialbegin = [trial.3.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.3.insertstimulustime(shape.blank,values.fixationtime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.base1,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.base2,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.target3,values.shapetime)]
+    /ontrialbegin = [trial.3.insertstimulustime(picture.base4,values.shapetime)]
+    /ontrialend = [trial.3.clearstimulusframes()]
+    /beginresponsetime = values.shapetime
+</trial>
+
+<trial 4>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/inputdevice = mouse
+    /correctresponse = (target4)
+    /validresponse = (base1,base2,base3,target4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+    /ontrialbegin = [trial.4.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.4.insertstimulustime(shape.blank,values.fixationtime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.base1,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.base2,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.base3,values.shapetime)]
+    /ontrialbegin = [trial.4.insertstimulustime(picture.target4,values.shapetime)]
+    /ontrialend = [trial.4.clearstimulusframes()]
+    /beginresponsetime = values.shapetime
+</trial>
+
+<block startblk>
+	/screencolor = (255,255,255)
+	/preinstructions = (instruction2)
+</block>
+
+<block restblk>
+	/screencolor = (255,255,255)
+	/preinstructions = (rest)
+</block>
+
+<block exerciseblk>
+	/screencolor = (255,255,255)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-8 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+<block judgeblk>
+	/screencolor = (255,255,255)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-36 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+<expt>
+	/preinstructions = (instruction1)
+	/blocks = [1 = startblk;  2 = exerciseblk; 3 = restblk; 4 = judgeblk]
+	/postinstructions = (end)
+</expt>
+
+
+
+

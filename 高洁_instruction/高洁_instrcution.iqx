@@ -1,0 +1,37 @@
+﻿// 指导语要漂亮--采用默认的instruct标记符构建方法
+
+<picture zhidaoyupic>
+    /erase = false
+    /halign = center
+    /size = (800,550)
+    /transparentcolor = white
+    /items = ("zhidaoyu.jpg")
+</picture>
+
+<picture jieshuyupic>
+    /erase = false
+    /halign = center
+    /size = (800,550)
+    /items = ("jieshuyu.jpg")
+</picture>
+
+<trial zhidaoyutrial>
+    /stimulusframes = [1 = zhidaoyupic]
+    /validresponse = (" ")
+    
+</trial>
+
+<trial jieshuyutrial>
+    /stimulusframes = [1 = jieshuyupic]
+    /validresponse = (" ")
+</trial>
+
+<block instruction>
+    /trials = [1 = zhidaoyutrial, jieshuyutrial]
+
+</block>
+
+
+<expt instruction>
+	/blocks = [1 = instruction]
+</expt>

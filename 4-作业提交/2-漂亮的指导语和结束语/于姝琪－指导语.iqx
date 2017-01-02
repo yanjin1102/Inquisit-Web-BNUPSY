@@ -1,0 +1,29 @@
+<instruct inst>
+/ fontstyle = ("微软雅黑", 3.26%, false, false, false, false, 5, 1)
+/txcolor = (128,50,128)
+/screencolor = (255,255,255)
+/ inputdevice = keyboard
+/ lastlabel = "？"
+/ nextkey = ("5")
+/ windowsize = (750,500)
+</instruct>
+
+<page hello>
+	^Introduction
+    ^塔尔寺是中国西北地区藏传佛教的活动中心，在国内外均享有盛名。
+    ^问：它是中国？A级景区
+    ^[1~5]
+
+	^^输入正确数字才可进入下一页哦
+</page>
+
+<page bye>
+	^^^          天地有大美而不言
+
+	^^^^^           感谢您参加本次实验
+</page>
+
+<expt>
+/ preinstructions = (hello)
+/ postinstructions = (bye)
+</expt>

@@ -1,0 +1,23 @@
+<instruct instruction>
+	/ nextkey = (" ")
+	/ fontstyle = ("等线", 30pt, false, false, false, false, 5, 134)
+	/ txcolor = (0, 0, 0)
+	/ lastlabel = "Press [Space] to continue"
+	/ windowsize = (1200,900)
+</instruct>
+
+<page hello>
+	^^^欢迎参加我们的实验！
+	^^^请在“你是不是喜欢我”这句话中，找出重复出现的字。
+	^^^^当你明白要求之后，请按[空格键]继续。
+</page>
+
+<page bye>
+	^^^^^                                   感谢参加实验！
+	^^^^^^                         请呼叫主试，并告诉主试你的答案。
+</page>
+
+<expt>
+/ preinstructions = (hello)
+/ postinstructions = (bye)
+</expt>

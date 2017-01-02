@@ -1,0 +1,61 @@
+﻿<item instruction>
+	/1 = "我不管你要夸我漂酿ʅ（´◔౪◔）ʃ"
+</item>
+
+<item any>
+	/1 = "按任意键开始实验"
+</item>
+
+<item end>
+	/1 = "我是最漂酿的结束语ヾ(o◕∀◕)ﾉ"
+</item>
+
+<text instructiontxt>
+	/items = instruction
+	/fontstyle = ("微软雅黑", 4pct)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+	/size = (1000,300)
+</text>
+
+<text anytxt>
+	/items = any
+	/vposition = 70 pct
+	/fontstyle = ("微软雅黑", 24pt)
+	/txcolor = (170,170,127)
+	/txbgcolor = (transparent)
+</text>
+
+<text endtxt>
+	/items = end
+	/fontstyle = ("微软雅黑", 4pct)
+	/txbgcolor = (0,0,0)
+	/txcolor = (170,170,255)
+	/size = (1000,300)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anytxt]
+	/recorddata = false
+</trial>
+
+<trial end>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=endtxt]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block endblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = end]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = endblk]
+</expt>

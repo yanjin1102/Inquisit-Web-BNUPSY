@@ -1,0 +1,386 @@
+﻿<text instruct>
+ +	/hjustify = center
+ +	/vposition = 50
+ +	/items = ("欢迎参加实验！这是一个对灰度差别阈限的测量实验。稍后屏幕上将显示出四张图片，需要您用鼠标点选出你认为与其他三张不同的图片。如果您理解了实验要求，请按空格键开始实验。")
+ +	/size = (1000,300)
+ +	/fontstyle = ("楷体", 24pt)
+ +	/txbgcolor = (transparent)
+ +	/txcolor = (255,255,255)
+ +</text>
+ +
+ +<text goodbye>
+ +	/hjustify = center
+ +	/vposition = 50
+ +	/items = ("感谢您的参与！再见！按a键退出")
+ +	/size = (1000,300)
+ +	/fontstyle = ("楷体", 24pt)
+ +	/txbgcolor = (transparent)
+ +	/txcolor = (255,255,255)
+ +</text>
+ +
+ +
+ +<text fixation>
+ +	/items = fixation
+ +	/select = 1
+ +	/fontstyle = ("Arial", 80ptc)
+ +	/txbgcolor = (transparent)
+ +	/txcolor = (255,255,255)
+ +</text>
+ +
+ +<text correctmsg>
+ +	/items = correctmsg
+ +	/select = 1
+ +	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+ +	/txcolor = (255,255,255)
+ +	/txbgcolor = (0, 0, 0)
+ +</text>
+ +
+ +<text errormsg>
+ +	/items = errormsg
+ +	/select = 1
+ +	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+ +	/txcolor = (255,255,255)
+ +	/txbgcolor = (0, 0, 0)
+ +</text>
+<item correctmsg>
+ +	/1 = "√"
+ +</item>
+ +
+ +<item errormsg>
+ +	/1 = "×"
+ +</item>
+ +
+ +<item fixation>
+ +	/1 = "+"
+ +</item>
+<picture 001>
+ +	/items = ("001.jpg")
+ +	/position = (30,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 002>
+ +	/items = ("002.jpg")
+ +	/position = (30,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 003>
+ +	/items = ("003.jpg")
+ +	/position = (60,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 004>
+ +	/items = ("004.jpg")
+ +	/position = (60,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 005>
+ +	/items = ("005.jpg")
+ +	/position = (30,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 006>
+ +	/items = ("006.jpg")
+ +	/position = (30,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 007>
+ +	/items = ("N96.jpg")
+ +	/position = (60,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 008>
+ +	/items = ("008.jpg")
+ +	/position = (60,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 009>
+ +	/items = ("009.jpg")
+ +	/position = (30,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 010>
+ +	/items = ("010.jpg")
+ +	/position = (30,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 011>	
+/items = ("011.jpg")
+ +	/position = (60,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 012>
+ +	/items = ("012.jpg")
+ +	/position = (60,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 013>
+ +	/items = ("013.jpg")
+ +	/position = (30,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 014>
+ +	/items = ("014.jpg")
+ +	/position = (30,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 015>
+ +	/items = ("015.jpg")
+ +	/position = (60,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +<picture 016>
+ +	/items = ("016.jpg")
+ +	/position = (45,30)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +<picture deutschland>
+ +	/items = ("d1.jpg")
+ +	/position = (30,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +<picture deutschland2>
+ +	/items = ("d1.jpg")
+ +	/position = (30,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +<picture deutschland3>
+ +	/items = ("d1.jpg")
+ +	/position = (60,22)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +<picture deutschland4>
+ +	/items = ("d1.jpg")
+ +	/position = (60,52)
+ +	/valign = top
+ +	/halign = left
+ +</picture>
+ +
+ +
+ +
+ +
+ +
+ +
+ +
+ +
+ +<trial instruct>
+ +	/validresponse = (" ")
+ +	/stimulustimes = [1=instruct]
+ +	/recorddata = false
+ +</trial>
+ +
+ +<trial goodbye>
+ +	/validresponse = ("a")
+ +	/stimulustimes = [1=goodbye]
+ +	/recorddata = false
+ +</trial>
+ +
+ +<trial g00>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = 001,deutschland2,deutschland3,deutschland4,016]
+0  +	/validresponse = (lbuttondown)
+ +	/correctresponse = (001)
+ +</trial>
+ +
+ +<trial g01>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,N1,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse =(002)
+ +</trial> +
+ +<trial g02>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,003,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (003)
+ +</trial>
+ +
+ +<trial g03>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,deutschland3,004,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (004)
+ +</trial>
+ +
+ +<trial g04>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = 005,deutschland2,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (005)
+ +</trial>
+ +
+ +<trial g05>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,006,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (006)
+ +</trial>
+ +
+ +<trial g06>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,007,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (007)
+ +</trial>
+ +
+ +<trial g07>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,deutschland3,008,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (008)
+ +</trial>
+ +
+ +<trial g08>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = 009,deutschland2,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (009)
+ +</trial>
+ +
+ +<trial g09>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,010,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (010)
+ +</trial>
+ +
+ +<trial g10>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,011,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (011)
+ +</trial>
+ +
+ +<trial g11>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,deutschland3,012,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (012)
+ +</trial>
+ +
+ +<trial g12>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = 013,deutschland2,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (013)
+ +</trial>
+ +
+ +<trial g13>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,014,deutschland3,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (014)
+ +</trial>
+ +
+ +<trial g14>
+ +	/pretrialpause = 100
+ +	/correctmessage = (correctmsg,500)
+ +	/errormessage = (errormsg,500)
+ +	/inputdevice = mouse
+ +	/stimulusframes = [1=fixation;50 = deutschland1,deutschland2,015,deutschland4,016]
+ +	/validresponse = (lbuttondown)
+ +	/correctresponse = (015)
+ +</trial>
+ +
+ +<block instructionblk>
+ +	/screencolor = (0,0,0)
+ +	/trials = [1 = instruct]
+ +</block>
+ +
+ +<block picblk>
+ +	/screencolor = (0,0,0)
+ +	/blockfeedback = (meanlatency,correct)
+ +	/trials = [1-15 = noreplacenorepeat(g00,g01,g02,g03,g04,g05,g06,g07,g08,g09,g10,g11,g12,g13,g14)]
+ +</block>
+ +
+ +<block goodbyeblk>
+ +	/screencolor = (0,0,0)
+ +	/trials = [1 = goodbye]
+ +</block>
+ +<expt>
+ +	/ blocks = [1 = instructionblk; 2 = picblk;3 = goodbyeblk]
+ +</expt>
+ +
+ +
+ +
+ +
+ +
+ +
+ +
+ +
+ +

@@ -1,0 +1,461 @@
+﻿//定义标签
+<item attributeAlabel>
+  /1 = "好"
+</item>
+
+<item attributeBlabel>  
+  /1 = "坏"
+</item>
+
+<item targetALabel>
+	/1 = "白人"
+</item>
+
+<item targetBLabel>
+	/1 = "黑人"
+</item>
+
+//定义所用到的刺激
+<item attributeA> 
+  /1 = "完美"
+  /2 = "美好"
+  /3 = "极佳"
+  /4 = "很棒"
+</item>
+
+<item attributeB>
+	/1 = "可怕"
+	/2 = "糟糕"
+	/3 = "差劲"
+	/4 = "讨厌"
+</item>
+
+//定义图片
+<item caucasian>
+  /1="caucasianone.jpg"
+  /2="caucasiantwo.jpg"
+  /3="caucasianthree.jpg"
+  /4="caucasianfour.jpg"
+</item>
+
+<item negro>
+  /1="negroone.jpeg"
+  /2="negrotwo.jpg"
+  /3="negrothree.jpg"
+  /4="negrofour.jpg"
+</item>
+
+//插入刺激图片，白人黑人各四张
+<picture caucasian>
+  /erase = True(0,0,0) 
+  /halign = center
+  /items=caucasian
+  /size=(600,600)
+</picture>
+
+<picture negro>
+  /erase = True(0,0,0) 
+  /halign = center
+  /items=negro
+  /size=(600,600)
+</picture>
+
+//定义用到的指导语
+<item introinstructions>
+	/ 1 = "在这个任务中,需要你根据呈现的词汇做出按键反应，如果呈现的是'<%item.attributeALabel.item.1%>'的词汇或者<%item.targetALabel.item.1%> ， <%item.targetBLabel.1%>之中某个特定类别的词汇，请您按 ~"I~" 键，如果呈现的是'<%item.attributeBLabel.item.1%>' 的词汇，或者是跟前面要求<%item.targetALabel.1%> ， <%item.targetBLabel.1%>类别不同的词汇，请按~"E~" 键.最开始的几组练习会帮您熟悉这种按键设定，请您尽快的最初归类按键反应并尽量少的犯错。 如果您按错了按键，屏幕上会呈现一个红色的 ~"X~". 这样的情况下请尽快的按另外一个键来更正您的反应。~n~n请按空格键继续"
+	/ 2 = "看到<%item.attributeALabel.item.1%>类别的词汇是按 I 键~n~n看到其他类别的词汇请按 E 键~n~n~n您的反应越快越好~n~n请按空格键继续"
+</item>
+
+// 具体到每个block里，要求按键反应都是不一样的，可以通过一个指导语定义，根据具体的来定义具体的类型，例如下面的这个定义，用currentTarget变量来定义要求反应的类别，这个变量在block开始的时候进行赋值，那么在指导语里就能对应显示了。
+
+<item testinstructions>
+	/ 1 = "看到<%item.attributeALabel.item.1%> 的词汇 <%values.currentTarget%>类的图片，请按 I 键~n~n看到其他类别的词汇请按 E 键~n~n~n您的反应越快越好~n~n请按空格键开始"
+</item>
+
+<item attributeAFocusInstruct>
+	/ 1 = "<%item.attributeALabel.1%>~n<%item.attributeA.1%> <%item.attributeA.2%> <%item.attributeA.3%> <%item.attributeA.4%>"
+</item>
+//定义指导语的字体
+<text introinstructions>
+/ items = introinstructions
+/ size = (90%, 50%)
+/ position = (50%, 40%)
+/ select = sequence
+/ resetinterval = 20
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text testInstructions>
+/ items = testInstructions
+/ size = (90%, 50%)
+/ position = (50%, 50%)
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+// 指导语中需要显示 I 按键针对的刺激类别，因此这个地方是因block而定的，所以可以先把格式设置好，
+//具体item内容可以通过values.currentTarget进行定义调用。
+
+// items先设为空，在block中进行定义。
+
+<text topFocusInstruct>
+/ items = ("")
+/ valign = bottom
+/ halign = center
+/ position = (50%, 15%)
+/ size = (100%, 12%)
+/ txcolor = aqua
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text orInstruct>
+/ items = ("or")
+/ valign = center
+/ halign = center
+/ position = (50%, 17.5%)
+/ txcolor = white
+/ fontstyle = ("Arial", 3%)
+</text>
+
+<text bottomFocusInstruct>
+/ items = attributeAFocusInstruct
+/ valign = top
+/ halign = center
+/ position = (50%, 20%)
+/ size = (100%, 12%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 5%)
+</text>
+
+<text attributeA>
+/ items = attributeA
+/ fontstyle = ("Arial", 10%)
+/ txcolor = white
+</text>
+
+<text attributeB>
+/ items = attributeB
+/ fontstyle = ("Arial", 10%)
+/ txcolor = white
+</text>
+
+//定义错误提示标志
+<text error>
+/ position = (50%, 75%)
+/ items = ("×")
+/ color = red
+/ fontstyle = ("Arial", 10%)
+</text>
+
+// 在每个block中，都需要把正确按键反应对应的属性类别放在最上方，这个地方刺激呈现的方式也是需要定义的。
+
+// 这个放在第一页指导语上
+
+<text attributeAFocusLabel>
+/ items = attributeAlabel
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+// 这三个放在每个block开头的指导语上
+
+<text targetFocusLabel>
+/ items = ("<%values.currentTarget%>")
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ txcolor = aqua
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+<text orLabel>
+/ items = ("or")
+/ valign = top
+/ halign = center
+/ position = (50%, 10%)
+/ txcolor = white
+/ fontstyle = ("Arial", 3%)
+/ erase = false
+</text>
+
+<text orAttributeAFocusLabel>
+/ items = attributeAlabel
+/ valign = top
+/ halign = center
+/ position = (50%, 15%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+<text progress>
+/ position = (50%, 95%)
+/ items = ("(Block <%expressions.currentblocknumber%> of <%expressions.totalblockcount %>)")
+/ color = white
+/ fontstyle = ("Arial", 2%)
+</text>
+
+<shape eraseLabels>
+/ color = black
+/ shape = rectangle
+/ size = (50%, 20%)
+/ position = (50%,  10%)
+</shape>
+
+// 5- 前面已经定义所需要的刺激呈现方式，现在就可以放trial啦
+//呈现好的词汇
+<trial attributeA>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeA]
+/ posttrialpause = 250
+</trial>
+
+//呈现坏的词汇
+<trial attributeB>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeB]
+/ posttrialpause = 250
+</trial>
+
+//呈现白人图片，分左右按键
+<trial whitepeoright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = caucasian]
+/ posttrialpause = 250
+</trial>
+
+<trial whitepeoleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = caucasian]
+/ posttrialpause = 250
+</trial>
+
+//呈现黑人的图片，分左右按键
+<trial blackpeoright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = negro]
+/ posttrialpause = 250
+</trial>
+
+<trial blackpeoleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = negro]
+/ posttrialpause = 250
+</trial>
+
+<trial introinstructions>
+/ ontrialbegin = [if ( script.currentblock == "attributes" ) {text.bottomFocusInstruct.1 = item.attributeAFocusInstruct.1; values.currentTarget = item.attributeAlabel.1;} ]
+/ stimulustimes = [1=introinstructions, bottomFocusInstruct, progress]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial testinstructions>
+/ stimulustimes = [1=testinstructions, topFocusInstruct, orInstruct, bottomFocusInstruct, progress]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial showAttributeLabel>
+/ stimulusframes = [1=attributeAFocusLabel]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial showLabels>
+/ stimulusframes = [1=targetFocusLabel, orLabel, orAttributeAFocusLabel]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial eraseLabels>
+/ stimulusframes = [1=eraseLabels]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial summary>
+/ ontrialbegin = [values.magnitude = "little to no"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "a slight"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "a moderate"]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "a strong"]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.notpreferred= item.targetBLabel.1]
+/ stimulustimes = [0=summary]
+/ validresponse = (" ")
+/ recorddata = false
+/ skip = [values.skipsummary]
+</trial>
+
+<text summary>
+/ items = ("Your IAT score (D) was <% expressions.d %>, which suggests <% values.magnitude %> automatic preference for <% expressions.preferred %> compared to <% expressions.notpreferred %>.~n~n~nPress the spacebar to complete this session.")  
+/ size = (60%, 80%)
+/ hjustify = left
+ </text>
+
+//定义block
+<block intro>
+/ trials = [1 = introinstructions]
+</block>
+
+<block short_a>
+/ onblockbegin = [values.currentTarget = item.targetALabel.1; text.topFocusInstruct.1 = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-6 = noreplace(whitepeoRight, blackpeoLeft);
+  8,10,12,14 = noreplace(whitepeoRight, blackpeoLeft);
+  7,9,11,13 = noreplace(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block short_b>
+/ onblockbegin = [values.currentTarget = item.targetBLabel.1; text.topFocusInstruct.1 = item.targetBLabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-6 = noreplace(blackpeoRight, whitepeoLeft);
+  8,10,12,14 = noreplace(blackpeoRight, whitepeoLeft);
+  7,9,11,13 = noreplace(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+</block>
+
+<block A>
+/ skip = [values.extended == false && block.A.totalcount >=1]
+/ onblockbegin = [values.currentTarget = item.targetALabel.1; text.topFocusInstruct.1 = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-6 = noreplace(whitepeoRight, blackpeoLeft);
+  8,10,12,14,16,18,20,22 = noreplace(whitepeoRight, blackpeoLeft);
+  7,9,11,13,15,17,19,21 = noreplace(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.A.totalcount == 0 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A1sum =  values.A1sum + block.A.latency]
+/ ontrialend = [if (block.A.totalcount == 0 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A1n += 1]
+/ ontrialend = [if (block.A.totalcount == 0 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A1ss =  values.A1ss  + (block.A.latency * block.A.latency)]
+/ ontrialend = [if (block.A.totalcount == 1 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A2sum =  values.A2sum + block.A.latency]
+/ ontrialend = [if (block.A.totalcount == 1 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A2n += 1]
+/ ontrialend = [if (block.A.totalcount == 1 && block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.A2ss =  values.A2ss  + (block.A.latency * block.A.latency)]
+/ ontrialend = [if (block.A.latency  <= 10000 && block.A.currenttrialnumber >= 7 ) values.n_correct += block.a.correct]
+</block>
+
+<block B>
+/ skip = [values.extended == false && block.B.totalcount >=1]
+/ onblockbegin = [values.currentTarget = item.targetBLabel.1; text.topFocusInstruct.1 = item.targetBLabel.1]
+/ trials = [1=testInstructions;2=showLabels;
+  3-6 = noreplace(blackpeoRight, whitepeoLeft);
+  8,10,12,14,16,18,20,22= noreplace(blackpeoRight, whitepeoLeft);
+  7,9,11,13,15,17,19,21= noreplace(attributeA, attributeB)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.B.totalcount == 0 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B1sum =  values.B1sum + block.B.latency]
+/ ontrialend = [if (block.B.totalcount == 0 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B1n +=  1]
+/ ontrialend = [if (block.B.totalcount == 0 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B1ss =  values.B1ss  + (block.B.latency * block.B.latency)]
+/ ontrialend = [if (block.B.totalcount == 1 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B2sum =  values.B2sum + block.B.latency]
+/ ontrialend = [if (block.B.totalcount == 1 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B2n +=  1]
+/ ontrialend = [if (block.B.totalcount == 1 && block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.B2ss =  values.B2ss  + (block.B.latency * block.B.latency)]
+/ ontrialend = [if (block.B.latency  <= 10000 && block.B.currenttrialnumber >= 7 ) values.n_correct += block.B.correct]
+</block>
+
+<block summary>
+/ trials = [1=summary]
+/ recorddata = false
+</block>
+
+//被试随机
+<expt>
+/ subjects = (1 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1 = intro; 2= short_a; 3 = short_b; 4=A; 5=B; 6=A; 7=B; 8=summary]
+/onexptend = [values.completed = 1]
+</expt>
+
+<expt>
+/ subjects = (2 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1 = intro; 2= short_b; 3 = short_a; 4=B; 5=A; 6=B; 7=A; 8=summary]
+/onexptend = [values.completed = 1]
+</expt>
+
+<data>
+/file = "BriefIAT_rawdata.iqdat"
+/ columns = [date, time, group, subject, blockcode, blocknum, trialcode, trialnum, response, correct, latency, 
+					stimulusnumber, stimulusitem, expressions.d1, expressions.d2, expressions.d, expressions.percentcorrect]
+/separatefiles = true
+</data>
+
+<summarydata >
+/file = "BriefIAT_summary.iqdat"
+/columns = [script.filename, script.startdate, script.starttime, script.subjectid, script.groupid, script.elapsedtime, values.completed,
+expressions.d1, expressions.d2, expressions.d, expressions.percentcorrect]
+</summarydata>
+
+<values>
+/completed = 0
+/ A1sum = 0
+/ A2sum = 0
+/ B1sum = 0
+/ B2sum = 0
+/ A1n = 0
+/ A2n = 0
+/ B1n = 0
+/ B2n = 0
+/ A1ss = 0
+/ A2ss = 0
+/ B1ss = 0
+/ B2ss = 0
+/ magnitude = "unknown"
+/ currentTarget = ""
+/ n_correct = 0
+</values>
+
+<expressions>
+/ A1m = values.A1sum / values.A1n
+/ A2m = values.A2sum / values.A2n
+/ B1m = values.B1sum / values.B1n
+/ B2m = values.B2sum / values.B2n
+/ A1sd = sqrt((values.A1ss - (values.A1n* (expressions.A1m * expressions.A1m))) / (values.A1n - 1))
+/ A2sd = sqrt((values.A2ss - (values.A2n* (expressions.A2m * expressions.A2m))) / (values.A2n - 1))
+/ B1sd = sqrt((values.B1ss - (values.B1n* (expressions.B1m * expressions.B1m))) / (values.B1n - 1))
+/ B2sd = sqrt((values.B2ss - (values.B2n* (expressions.B2m * expressions.B2m))) / (values.B2n - 1))
+/ sd1 = sqrt((((values.A1n - 1) * (expressions.A1sd * expressions.A1sd) + (values.B1n - 1) * (expressions.B1sd * expressions.B1sd)) + ((values.A1n + values.B1n) * ((expressions.A1m - expressions.B1m) * (expressions.A1m - expressions.B1m)) / 4) ) / (values.A1n + values.B1n - 1) )
+/ sd2 = sqrt((((values.A2n - 1) * (expressions.A2sd * expressions.A2sd) + (values.B2n - 1) * (expressions.B2sd * expressions.B2sd)) + ((values.A2n + values.B2n) * ((expressions.A2m - expressions.B2m) * (expressions.A2m - expressions.B2m)) / 4) ) / (values.A2n + values.B2n - 1) )
+/ d1 = (expressions.B1m - expressions.A1m) / expressions.sd1
+/ d2 = (expressions.B2m - expressions.A2m) / expressions.sd2
+/ d = if ( values.extended ) { (d1+d2) / 2 } else { d1 }
+/ currentblocknumber = max(expt.1.currentblocknumber, expt.2.currentblocknumber)
+/ preferred = "unknown"
+/ notpreferred = "unknown"
+/ totalblockcount = if (values.extended) {expt.1.blockcount} else {expt.1.blockcount-2}
+/ percentcorrect = (values.n_correct/ (values.a1n + values.a2n + values.b1n + values.b2n)) * 100
+</expressions>
+
+<defaults>
+/ fontstyle = ("Arial", 3.5%)
+/ screencolor = black
+/ txbgcolor = black
+/ txcolor = white
+/ minimumversion = "4.0.0.0"
+</defaults>
+
+<values>
+/ skipsummary = false
+/ extended = true
+</values>
+
+ 

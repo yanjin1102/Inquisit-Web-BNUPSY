@@ -1,0 +1,41 @@
+﻿<item instruction>
+   /1 = "instruction.png"
+   /2 = "endingwords.png"
+</item>
+
+
+<picture instruction>
+   / items = instruction
+   / select = 1
+   / size =(100%,100%)
+</picture>
+
+<picture endingwords>
+   / items = instruction
+   / select = 2
+   / size = (100%,100%)
+</picture>
+
+
+
+<trial instructionimage>
+   / posttrialpause = 200
+   / validresponse = (" ")
+   / stimulusframes = [1 = instruction]
+</trial>
+
+<trial endingwordsimage>
+   / posttrialpause = 100
+   / validresponse = (" ")
+   / stimulusframes = [1 = endingwords]
+
+</trial>
+
+
+<block instructionblk>
+   / trials = [1= instructionimage;2 = endingwordsimage]
+</block>
+
+<expt instructionpresent>
+   / blocks = [1= instructionblk]
+</expt>

@@ -1,0 +1,25 @@
+// 胡一凡 201511060122
+
+<page instruction>
+	^您好，欢迎来到Eva的实验室！
+	^^这是一项有关情绪的小实验，需要您在图片呈现之后评定情绪类型及程度。
+	^^实验中可能会有一部分令人不愉快的刺激呈现，您可以随时选择退出实验
+	^^^同意进入实验，按Enter键继续
+</page>
+
+<page end>
+	^感谢您参与我们的实验！
+	^^注意不要触碰鼠标及任何按钮
+	^^然后找主试拿报酬吧~么么哒~
+</page>
+
+<instruct my>
+	/ fontstyle = ("楷体",24pt,true,false,false,false,5,134)
+	/ screencolor = (240,248,205)
+	/ txcolor = (70,130,180)
+</instruct>
+
+<expt>
+	/preinstructions = (instruction)
+	/postinstructions = (end)
+</expt>

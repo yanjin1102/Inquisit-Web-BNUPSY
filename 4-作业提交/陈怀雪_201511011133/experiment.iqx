@@ -1,0 +1,371 @@
+﻿<text instructiontxt>
+ 	/hjustify = center
+ 	/items = ("欢迎参加我们的实验！你将看见4张内容相同的黑白图片，请用鼠标选出1张与其他3张灰度不同的图片。")
+ 	/size = (1000,800)
+ 	/fontstyle = ("等线", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+ </text>
+ 
+ <text byetxt>
+ 	/hjustify = center
+ 	/items = ("感谢你参加我们的实验，请联系主试领取被试费")
+ 	/size = (1000,800)
+ 	/fontstyle = ("等线", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+ </text>
+ 
+ <text anykey1txt>
+ 	/items = ("请按任意键开始实验")
+ 	/vposition = 70 pct
+ 	/fontstyle = ("等线", 24pt)
+ 	/txcolor = (255,255,255)
+ 	/txbgcolor = (transparent)
+ </text>
+ 
+ <text anykey2txt>
+ 	/items = ("请按任意键退出")
+ 	/vposition = 70 pct
+ 	/fontstyle = ("等线", 24pt)
+ 	/txcolor = (255,255,255)
+ 	/txbgcolor = (transparent)
+ </text>
+ 
+ <text correctmsg>
+ 	/items = ("√")
+ 	/fontstyle = ("Arial", 10%)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (0,255,0)
+ </text>
+ 
+ <text errormsg>
+ 	/items = ("×")
+ 	/fontstyle = ("Arial", 10%)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,0,0)
+ </text>
+ 
+
+ <text fixation>
+ 	/items = ("+")
+ 	/fontstyle = ("Arial", 40ptc)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+ </text>
+ 
+//python大法好
+ <picture N0>
+ 	/items = ("P0.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N1>
+ 	/items = ("P16.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N2>
+ 	/items = ("P32.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N3>
+ 	/items = ("P48.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N4>
+ 	/items = ("P64.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N5>
+ 	/items = ("P80.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N6>
+ 	/items = ("P96.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N7>
+ 	/items = ("P112.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N8>
+ 	/items = ("P128.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N9>
+ 	/items = ("P144.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N10>
+ 	/items = ("P160.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N11>
+ 	/items = ("P176.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N12>
+ 	/items = ("P192.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N13>
+ 	/items = ("P208.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N14>
+ 	/items = ("P224.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N21>
+ 	/items = ("P240.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N22>
+ 	/items = ("P240.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N23>
+ 	/items = ("P240.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <picture N24>
+ 	/items = ("P240.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+ </picture>
+ 
+ <trial instruction>
+ 	/validresponse = (anyresponse)
+ 	/stimulusframes = [1=instructiontxt,anykey1txt]
+ 	/recorddata = false
+ </trial>
+ 
+ <trial bye>
+ 	/validresponse = (anyresponse)
+ 	/stimulusframes = [1=byetxt,anykey2txt]
+ 	/recorddata = false
+ </trial>
+ 
+ <trial T00>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N0,N22,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N0)
+ </trial>
+ 
+ <trial T01>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N1,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N1)
+ </trial>
+ 
+ <trial T02>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N2,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N2)
+ </trial>
+ 
+ <trial T03>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N23,N3]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N3)
+ </trial>
+ 
+ <trial T04>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N4,N22,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N4)
+ </trial>
+ 
+ <trial T05>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N5,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N5)
+ </trial>
+ 
+ <trial T06>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N6,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N6)
+ </trial>
+ 
+ <trial T07>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N23,N7]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N7)
+ </trial>
+ 
+ <trial T08>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N8,N22,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N8)
+ </trial>
+ 
+ <trial T09>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N9,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N9)
+ </trial>
+ 
+ <trial T10>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N10,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N10)
+ </trial>
+ 
+ <trial T11>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N23,N11]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N11)
+ </trial>
+ 
+ <trial T12>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N12,N22,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N12)
+ </trial>
+ 
+ <trial T13>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N13,N23,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N13)
+ </trial>
+ 
+ <trial T14>
+ 	/pretrialpause = 100
+ 	/correctmessage = (correctmsg,500)
+ 	/errormessage = (errormsg,500)
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = N21,N22,N14,N24]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (N14)
+ </trial>
+ 
+ <block instructionblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = instruction]
+ </block>
+ 
+ <block Tblk>
+ 	/screencolor = (0,0,0)
+ 	/blockfeedback = (meanlatency,correct)
+ 	/trials = [1-15 = noreplacenorepeat(T00,T01,T02,T03,T04,T05,T06,T07,T08,T09,T10,T11,T12,T13,T14)]
+ </block>
+ 
+ <block byeblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = bye]
+ </block>
+ 
+ <expt>
+ 	/ blocks = [1 = instructionblk; 2 = Tblk;3 = byeblk]
+ </expt>

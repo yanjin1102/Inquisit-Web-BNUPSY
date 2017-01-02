@@ -1,0 +1,442 @@
+﻿<text instructiontxt>
+	/hjustify = center
+	/items = (/1 = "欢迎来到我们的实验！
+在接下来的实验中,屏幕上会同时出现4张图片，请您用鼠标选出一张灰度不同的图片。")
+	/size=(1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,0)
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 90 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (255,255,255)
+</text>
+
+<picture one1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture one2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture one3>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture onegrey>
+/items = ("1.bmp")
+/position=(80,45)
+</picture>
+
+<picture two1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture twogrey>
+/items = ("2.bmp")
+/position=(40,45)
+</picture>
+
+<picture two2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture two3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture three1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture three2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture threegrey>
+/items = ("3.bmp")
+/position=(60,45)
+</picture>
+
+<picture three3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture fourgrey>
+/items = ("4.bmp")
+/position=(20,45)
+</picture>
+
+<picture four1>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture four2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture four3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture five1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture fivegrey>
+/items = ("5.bmp")
+/position=(40,45)
+</picture>
+
+<picture five2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture five3>
+/items = ("A.bmp")
+/position=(80,45)
+
+
+</picture><picture six1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture sixgrey>
+/items = ("6.bmp")
+/position=(40,45)
+</picture>
+
+<picture six2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture six3>
+/items = ("A.bmp")
+/position=(80,45)
+
+</picture><picture seven1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture sevengrey>
+/items = ("7.bmp")
+/position=(40,45)
+</picture>
+
+<picture seven2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture seven3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture eight1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture eight2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture eight3>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture eightgrey>
+/items = ("8.bmp")
+/position=(80,45)
+</picture>
+
+<picture ninegrey>
+/items = ("9.bmp")
+/position=(20,45)
+</picture>
+
+<picture nine1>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture nine2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture nine3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture tengrey>
+/items = ("10.bmp")
+/position=(20,45)
+</picture>
+
+<picture ten1>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture ten2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture ten3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture elevengrey>
+/items = ("11.bmp")
+/position=(20,45)
+</picture>
+
+<picture eleven1>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture eleven2>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture eleven3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture twelve1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture twelve2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture twelve3>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture twelvegrey>
+/items = ("12.bmp")
+/position=(80,45)
+</picture>
+
+<picture thirteen1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture thirteen2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture thirteen3>
+/items = ("A.bmp")
+/position=(60,45)
+</picture>
+
+<picture thirteengrey>
+/items = ("13.bmp")
+/position=(80,45)
+</picture>
+
+<picture fourteen1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture fourteen2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture fourteengrey>
+/items = ("14.bmp")
+/position=(60,45)
+</picture>
+
+<picture fourteen3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<picture fifteen1>
+/items = ("A.bmp")
+/position=(20,45)
+</picture>
+
+<picture fifteen2>
+/items = ("A.bmp")
+/position=(40,45)
+</picture>
+
+<picture fifteengrey>
+/items = ("15.bmp")
+/position=(60,45)
+</picture>
+
+<picture fifteen3>
+/items = ("A.bmp")
+/position=(80,45)
+</picture>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial one>
+/inputdevice=mouse
+/correctresponse = (onegrey)
+/validresponse = (one1, one2, one3, onegrey)
+/stimulusframes=[1=one1, one2, one3, onegrey]
+</trial>
+
+<trial two>
+/inputdevice=mouse
+/correctresponse = (twogrey)
+/validresponse = (two1, two2, two3, twogrey)
+/stimulusframes=[1=two1, two2, two3, twogrey]
+</trial>
+
+<trial three>
+/inputdevice=mouse
+/correctresponse = (threegrey)
+/validresponse = (three1, three2, three3, threegrey)
+/stimulusframes=[1=three1, three2, three3, threegrey]
+</trial>
+
+<trial four>
+/inputdevice=mouse
+/correctresponse = (fourgrey)
+/validresponse = (four1, four2, four3, fourgrey)
+/stimulusframes=[1=four1, four2, four3, fourgrey]
+</trial>
+
+<trial five>
+/inputdevice=mouse
+/correctresponse = (fivegrey)
+/validresponse = (five1, five2, five3, fivegrey)
+/stimulusframes=[1=five1, five2, five3, fivegrey]
+</trial>
+
+<trial six>
+/inputdevice=mouse
+/correctresponse = (sixgrey)
+/validresponse = (six1, six2, six3, sixgrey)
+/stimulusframes=[1=six1, six2, six3, sixgrey]
+</trial>
+
+<trial seven>
+/inputdevice=mouse
+/correctresponse = (sevengrey)
+/validresponse = (seven1, seven2, seven3, sevengrey)
+/stimulusframes=[1=seven1, seven2, seven3, sevengrey]
+</trial>
+
+<trial eight>
+/inputdevice=mouse
+/correctresponse = (eightgrey)
+/validresponse = (eight1, eight2, eight3, eightgrey)
+/stimulusframes=[1=eight1, eight2, eight3, eightgrey]
+</trial>
+
+<trial nine>
+/inputdevice=mouse
+/correctresponse = (ninegrey)
+/validresponse = (nine1, nine2, nine3, ninegrey)
+/stimulusframes=[1=nine1, nine2, nine3, ninegrey]
+</trial>
+
+<trial ten>
+/inputdevice=mouse
+/correctresponse = (tengrey)
+/validresponse = (ten1, ten2, ten3, tengrey)
+/stimulusframes=[1=ten1, ten2, ten3, tengrey]
+</trial>
+
+<trial eleven>
+/inputdevice=mouse
+/correctresponse = (elevengrey)
+/validresponse = (eleven1, eleven2, eleven3, elevengrey)
+/stimulusframes=[1=eleven1, eleven2, eleven3, elevengrey]
+</trial>
+
+<trial twelve>
+/inputdevice=mouse
+/correctresponse = (twelvegrey)
+/validresponse = (twelve1, twelve2, twelve3, twelvegrey)
+/stimulusframes=[1=twelve1, twelve2, twelve3, twelvegrey]
+</trial>
+
+<trial thirteen>
+/inputdevice=mouse
+/correctresponse = (thirteengrey)
+/validresponse = (thirteen1, thirteen2,thirteen3 ,thirteengrey)
+/stimulusframes=[1=thirteen1, thirteen2,thirteen3 ,thirteengrey]
+</trial>
+
+<trial fourteen>
+/inputdevice=mouse
+/correctresponse = (fourteengrey)
+/validresponse = (fourteen1, fourteen2,fourteen3 ,fourteengrey)
+/stimulusframes=[1=fourteen1, fourteen2,fourteen3 ,fourteengrey]
+</trial>
+
+<trial fifteen>
+/inputdevice=mouse
+/correctresponse = (fifteengrey)
+/validresponse = (fifteen1, fifteen2,fifteen3 ,fifteengrey)
+/stimulusframes=[1=fifteen1, fifteen2,fifteen3 ,fifteengrey]
+</trial>
+
+<block instructionblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = instruction]
+</block>
+
+<block choose>
+/screencolor = (0,0,0)
+/blockfeedback = (meanlatency,correct)
+/trials = [1-15=noreplace(one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen)]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = choose]
+</expt>

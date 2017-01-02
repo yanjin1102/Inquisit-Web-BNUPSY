@@ -1,0 +1,90 @@
+﻿<expt>
+  /blocks = [1=instructionblk;2=quitblk]
+</expt>
+
+
+
+<block instructionblk>
+     /screencolor = (0,0,0)
+     /trials = [1=instruction]
+</block>
+
+<block quitblk>
+    /screencolor = (0,0,0)
+    /trials = [1=quit]
+</block>
+
+
+
+<trial instruction>
+     /validresponse = (anyresponse)
+     /stimulustimes = [1=welcometxt,instructiontxt,starttxt]
+     /recorddata = false
+</trial>
+
+<trial quit>
+     /validresponse = (anyresponse)
+     /stimulustimes = [1=quittxt]
+     /recorddata = false
+</trial>
+
+
+
+<item welcome>
+    /1 = "欢迎参与宇宙无敌有趣的心理学实验"
+</item>
+
+<item instruction>
+    /1 ="请将手指放在键盘的“F”和“J”键上。屏幕中央会出现一些汉字，请判断该字是否描述了字体的颜色；是请按“F”，否请按“J”。"
+</item>
+
+<item start>
+    /1 = "按任意键开始实验！"
+</item>
+
+<item quit>
+    /1 = "实验到此结束，谢谢您的参与！请出门通知可爱的主试！"
+</item>
+
+
+
+<text welcometxt>
+    /items = welcome 
+    /vposition = 20 
+    /hposition = 50
+    /fontstyle = ("宋体",50ptc, true, false, false, false, 5, 1)
+    /txcolor = (255, 255, 255)
+    /txbgcolor = (transparent)
+</text>
+
+<text instructiontxt>
+    /items = instruction
+    /hjustify = center
+	/vjustify = center
+    /size = (1200,100)
+    /fontstyle = ("黑体", 60ptc, false, false, false, false, 5, 1)
+    /txcolor = (255, 255, 255)
+    /txbgcolor = (transparent)
+</text>
+
+<text starttxt>
+    /items = start
+    /vposition = 80 pct
+    /fontstyle = ("黑体", 50ptc, true, false, false, false, 5, 1)
+    /txcolor = (255,0,0)
+    /txbgcolor = (transparent)
+</text>
+
+<text quittxt>
+    /items = quit
+    /hjustify=center
+	/size=(1000,100)
+    /fontstyle = ("黑体", 60ptc, true, false, false, false, 5, 1)
+    /txcolor = (255,0,0)
+    /txbgcolor = (transparent)
+</text>
+
+
+
+
+

@@ -1,0 +1,81 @@
+﻿<text begintxt>
+/items = ("欢迎来到今天的实验，很高兴你来参加我们的实验。你会惊奇的发现这个实验如此无聊，你根本不知道他们做这个实验有什么意义。但你出于好心，还是会好好完成这个实验。")
+/size = (1000,300)
+/fontstyle = ("宋体", 5%)
+/txcolor = (0,0,0)
+</text>
+
+<text practisetxt>
+/items = ("接下来是刚开始的练习部分，我们当然是希望你是好好做这个部分的，要不然我们将会变得非常鬼畜，这个程序会一直停留在这个部分")
+/size=(1000,300)
+/fontstyle = ("宋体",5%)
+/txcolor = (0,0,0)
+</text>
+
+<text any>
+/items=("按下任意键开始我们的实验吧")
+/size=(1000,300)
+/fontstyle = ("宋体",5%)
+/txcolor = (0,0,0)
+</text>
+
+<text space>
+/items=("你的练习部分做的很不错呢，接下来我们要开始正式的实验部分了呢！想想做完就能拿到被试费出去浪，是不是一下子就激动起来了呢。回到正题上，请按下空格键进行下一阶段操作。")
+/size=(1000,300)
+/fontstyle = ("宋体",5%)
+/txcolor = (0,0,0)
+</text>
+
+<text endtxt>
+/items=("谢谢你来参加这次试验，比心，请按下任意键退出")
+/size=(1000,300)
+/fontstyle = ("宋体",5%)
+/txcolor = (0,0,0)
+</text>
+
+
+<picture break>
+/items=("IMG_5942.JPG")
+/size=(200,200)
+/hposition=10pt
+/vposition=10pt
+</pitcture>
+
+<picture begin >
+/items=("IMG_6141.JPG")
+/size=(200,200)
+/hposition=10pt
+/vposition=10pt
+</pitcture>
+
+<picture end>
+/items=("IMG_6139.JPG")
+/size=(200,200)
+/hposition=10pt
+/vposition=10pt
+</pitcture>
+
+<trial begin>
+ /validresponse = (" ")
+ /stimulusframes = [1 = begintxt, begin, any]
+ </trial>
+
+<trial practise>
+ /validresponse = (" ")
+ /stimulusframes = [1 = practisetxt, break, space]
+ </trial>
+
+<trial end>
+ /validresponse = (" ")
+ /stimulusframes = [1 = end, endtxt]
+ </trial>
+
+<block experiment>
+/trials = [1=begin, practise, end]
+</block
+
+<expt>
+/blocks=[1=experiment]
+</expt>
+
+

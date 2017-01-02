@@ -1,0 +1,35 @@
+﻿<picture instructionpic>
+/items = ("pic1.bmp")
+/size = (1024,768)
+</picture>
+
+<picture endinstructionpic>
+/items = ("pic2.bmp")
+/size = (1024,768)
+</picture>
+
+<trial instruction>
+/stimulusframes = [1 = instructionpic]
+/validresponse = (anyresponse)
+/recorddata = false
+</trial>
+
+<trial endinstruction>
+/stimulusframes = [1 = endinstructionpic]
+/validresponse = (anyresponse)
+/recorddata = false
+</trial>
+
+<block instruction>
+/ screencolor = (0,0,0)
+/ trials = [1=instruction] 
+</block>
+
+<block endinstruction>
+/ screencolor = (0,0,0)
+/ trials = [1=endinstruction] 
+</block>
+
+<expt defaultinstruction>
+	/blocks = [1=instruction;2=endinstruction]
+</expt>

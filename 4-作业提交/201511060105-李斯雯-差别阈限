@@ -1,0 +1,335 @@
+ <picture U0>
+	/items = ("N0.bmp")
+	/position = (30,22)
+	/valign = top
+	/halign = left
+</picture>
+
+<picture U1>
+	/items = ("N16.bmp")
+	/position = (30,52)
+	/valign = top
+	/halign = left
+</picture>
+
+<picture U2>
+ 	/items = ("N32.bmp")
+	/position = (60,22)
+ 	/valign = top
+	/halign = left
+</picture>
+ 
+<picture U3>
+	/items = ("N48.bmp")
+	/position = (60,52)
+    /valign = top
+	/halign = left
+</picture>
+ 
+<picture U4>
+ 	/items = ("N64.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U5>
+ 	/items = ("N80.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U6>
+ 	/items = ("N96.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U7>
+ 	/items = ("N112.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U8>
+ 	/items = ("N128.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U9>
+ 	/items = ("N144.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U10>
+ 	/items = ("N160.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U11>
+ 	/items = ("N176.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U12>
+ 	/items = ("N192.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U13>
+ 	/items = ("N208.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture U14>
+ 	/items = ("N224.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture black>
+ 	/items = ("N0.bmp")
+	/position = (45,35)
+ 	/valign = top
+ 	/halign = left
+</picture>
+
+<picture S1>
+ 	/items = ("N240.bmp")
+ 	/position = (30,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+ 
+<picture S2>
+ 	/items = ("N240.bmp")
+ 	/position = (30,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+
+<picture S3>
+ 	/items = ("N240.bmp")
+ 	/position = (60,22)
+ 	/valign = top
+ 	/halign = left
+</picture>
+
+<picture S4>
+ 	/items = ("N240.bmp")
+ 	/position = (60,52)
+ 	/valign = top
+ 	/halign = left
+</picture>
+
+<text instruct>
+	/hjustify = center
+	/vposition = 50
+	/items = ("欢迎参加差别阈限实验！实验过程中，屏幕上会呈现内容相同的四张黑白图片，其中一张图片与其他三张图片有灰度差异，请您用鼠标点选出有灰度差异的图片。请按空格键开始试验。")
+	/size = (1000,300)
+ 	/fontstyle = ("宋体", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+</text> 
+
+<text fixation>
+	/items = ("+")
+	/fontstyle = ("Arial", 40ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text endinstruct>
+ 	/hjustify = center
+	/vposition = 50
+ 	/items = ("实验已结束。感谢您的参与！请按空格键退出实验")
+ 	/size = (1000,300)
+ 	/fontstyle = ("宋体", 24pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,255,255)
+</text>
+ 
+<trial instruct>
+ 	/validresponse = (" ")
+ 	/stimulustimes = [1=instruct]
+ 	/recorddata = false
+</trial>
+ 
+
+<trial 00>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = U0,S2,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U0)
+</trial>
+ 
+<trial 01>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,U1,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U1)
+</trial>
+ 
+<trial 02>
+ 	/pretrialpause = 150
+	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,U2,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U2)
+</trial>
+ 
+<trial 03>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,S3,U3,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U3)
+</trial>
+ 
+<trial 04>
+	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = U4,S2,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U4)
+</trial>
+ 
+<trial 05>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,U5,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U5)
+</trial>
+ 
+<trial 06>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,U6,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U6)
+</trial>
+ 
+<trial 07>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,S3,U7,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U7)
+</trial>
+ 
+<trial 08>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = U8,S2,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U8)
+</trial>
+ 
+<trial 09>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,U9,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U9)
+</trial>
+ 
+<trial 10>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,U10,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U10)
+</trial>
+ 
+<trial 11>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,S3,U11,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U11)
+</trial>
+ 
+<trial 12>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = U12,S2,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U12)
+</trial>
+ 
+<trial 13>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,U13,S3,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U13)
+</trial>
+ 
+<trial 14>
+ 	/pretrialpause = 150
+ 	/inputdevice = mouse
+ 	/stimulusframes = [1=fixation;50 = S1,S2,U14,S4,black]
+ 	/validresponse = (lbuttondown)
+ 	/correctresponse = (U14)
+</trial>
+
+<trial endinstruct>
+ 	/validresponse = (" ")
+ 	/stimulustimes = [1=endinstruct]
+ 	/recorddata = false
+</trial>
+ 
+<block instructblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = instruct]
+</block>
+ 
+<block picblk>
+ 	/screencolor = (0,0,0)
+ 	/blockfeedback = (meanlatency,correct)
+ 	/trials = [1-15 = noreplacenorepeat(00,01,02,03,04,05,06,07,08,09,10,11,12,13,14)]
+</block>
+ 
+<block endblk>
+ 	/screencolor = (0,0,0)
+ 	/trials = [1 = endinstruct]
+</block>
+
+<expt>
+ 	/ blocks = [1 = instructblk; 2 = picblk;3 = endblk]
+</expt>
+
+//Pycharm部分
+from PIL import Image
+from pylab import *
+ 
+#设置当前工作路径
+work_dir = "C:/Users/untitled/"
+ 
+#读取图片,灰度化，并转为数组
+im = array(Image.open("C：/Users/01.jpg").convert('L'))
+ 
+#设置循环生成灰度图片
+for i in range(0, 255, 16):
+image = (i/255)*im
+out = Image.fromarray(uint8(image))
+out.save(work_dir+"N"+str(i)+".bmp")

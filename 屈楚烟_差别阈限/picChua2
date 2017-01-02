@@ -1,0 +1,28 @@
+#加载模块工具
+from PIL import Image
+from numpy import *
+import os
+
+#当前路径
+workdir = "C:\\Users\\mac\\Desktop\\inquisit\\灰度图像\\"
+
+#转化为灰度图像
+im = array(Image.open(workdir + "cat.jpg").convert('L'))
+
+#变化灰度梯度并生成16张图像
+for i in range(0,16):
+    j = i * 5
+    im2 = im + j
+    pic_im2 = Image.fromarray(im2)
+    pic_im3 = pic_im2.resize((700,500))
+    pic_im3.save(workdir+"grayChua\\"+str(j/5)+".jpg")
+    PicName = os.listdir(workdir + "grayChua\\")
+
+#打印inquisit所需代码
+    print("<item grey>")
+    for i in range(1, len(PicName)):
+        print('  ' + '/' + str(i) + ' = ' + '"' + PicName[i] + '"')
+    print("</item>")
+    print("\n")
+
+

@@ -1,0 +1,15 @@
+﻿<instruct>
+/windowsize = (1100,800)
+</instruct>
+<htmlpage introduction>
+ / file = "js.html"
+</htmlpage>
+<htmlpage introduction2>
+ / file = "新建文本文档.html"
+</htmlpage>
+<expt >
+/preinstructions = (introduction)
+/postinstructions = (introduction2)
+</expt>
+<defaults>
+</defaults>

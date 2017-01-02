@@ -1,0 +1,22 @@
+﻿<item pictrues>
+/1="instr1.jpg"
+/2="instr2.jpg"
+</item>
+
+<picture pictrues>
+/items=pictrues
+/vposition=50%
+/size=(1366px,768px)
+</picture>
+
+<trial instruction>
+/response=anyresponse
+</trial>
+
+<block instruction>
+/trials=[1,2=instruction]
+</block>
+
+<expt>
+/blocks=[1=instruction]
+</expt>

@@ -1,0 +1,654 @@
+﻿//先设置注视点，用于在每个trial开始前集中注意力
+<text fixation> 
+ 	/items = ("+") 
+ 	/fontstyle = ("Arial", 40ptc) 
+ 	/txbgcolor = (transparent) 
+ 	/txcolor = (255,255,255) 
+</text> 
+
+//设置判断正误的信息反馈
+<text correctmsg> 
+ 	/items = ("√") 
+ 	/fontstyle = ("Arial", 10%) 
+ 	/txbgcolor = (transparent) 
+ 	/txcolor = (0,255,0) 
+ </text> 
+ 
+<text errormsg> 
+	/items = ("×") 
+	/fontstyle = ("Arial", 10%) 
+ 	/txbgcolor = (transparent) 
+ 	/txcolor = (255,0,0) 
+</text> 
+
+<instruct my>
+	/ nextkey = (" ")  //将空格键设置为跳转到下一个页面的操作键
+	/ nextlabel = "按[空格]键进入下一页面"
+	/ lastlabel = "按[空格]键退出实验"
+	/ fontstyle = ("Adobe 明體 Std L", 3.48%, false, false, false, false, 5, 1)
+	/ txcolor = (0, 0, 0)
+	/ screencolor = (255, 255, 255)
+	/ windowsize = (1200,1000)
+	/ wait = 200
+</instruct>
+
+<page welcome>
+  亲爱的同学你好呀!
+  ^这是由可爱又可爱的胡仲琳同学设计的有关视觉能力的实验~
+  ^这个实验不会给你带来任何身体健康上的损伤哦
+  ^（当然啦你也不会得到被试费hhh~
+  ^^如果你没有任何疑问，只需要按[空格]键就可以进入实验说明咯~ 
+</page>
+
+<page exptintro>
+  这是一个有关视觉能力的实验。
+  ^在实验过程中，首先会出现一个“+”注视点，注视点消失后屏幕中会出现四张图片。
+  ^你需要做的是：首先注视着注视点，注视点消失后，观察屏幕中的四张图片，用鼠标选出你认为颜色与另外三张有所差异的图片。
+  ^如果你对实验过程中的操作没有任何问题的话，按[空格]键就可以进入正式实验咯
+</page>
+
+<page result>
+	你总共用时<%block.pictures.sumlatency/1000%>秒，平均用时<%block.pictures.meanlatency/1000%>秒，正确率为<%block.pictures.currenttrialnumber/20%>。
+</page>
+
+<page end>
+  本实验结束~
+  ^感谢你对伟大的科学事业作出的贡献！谢谢！
+</page>
+========================
+
+<picture picture1.1>
+	/ items = ("RGB015.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture1.2>
+	/ items = ("RGB240.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture1.3>
+	/ items = ("RGB240.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture1.4>
+	/ items = ("RGB240.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture1_225>
+	/stimulusframes = [1=fixation;100=picture1.1,picture1.2,picture1.3,picture1.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture1.1)
+	/ validresponse = (picture1.1,picture1.2,picture1.3,picture1.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture2.1>
+	/ items = ("RGB225.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture2.2>
+	/ items = ("RGB015.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture2.3>
+	/ items = ("RGB225.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture2.4>
+	/ items = ("RGB225.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture2_210>
+	/stimulusframes = [1=fixation;100=picture2.1,picture2.2,picture2.3,picture2.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture2.2)
+	/ validresponse = (picture2.1,picture2.2,picture2.3,picture2.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture3.1>
+	/ items = ("RGB030.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture3.2>
+	/ items = ("RGB030.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture3.3>
+	/ items = ("RGB225.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture3.4>
+	/ items = ("RGB030.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture3_195>
+	/stimulusframes = [1=fixation;100=picture3.1,picture3.2,picture3.3,picture3.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture3.3)
+	/ validresponse = (picture3.1,picture3.2,picture3.3,picture3.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture4.1>
+	/ items = ("RGB225.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture4.2>
+	/ items = ("RGB225.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture4.3>
+	/ items = ("RGB225.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture4.4>
+	/ items = ("RGB045.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture4_180>
+	/stimulusframes = [1=fixation;100=picture4.1,picture4.2,picture4.3,picture4.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture4.4)
+	/ validresponse = (picture4.1,picture4.2,picture4.3,picture4.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture5.1>
+	/ items = ("RGB210.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture5.2>
+	/ items = ("RGB210.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture5.3>
+	/ items = ("RGB210.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture5.4>
+	/ items = ("RGB045.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture5_165>
+	/stimulusframes = [1=fixation;100=picture5.1,picture5.2,picture5.3,picture5.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture5.4)
+	/ validresponse = (picture5.1,picture5.2,picture5.3,picture5.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture6.1>
+	/ items = ("RGB060.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture6.2>
+	/ items = ("RGB060.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture6.3>
+	/ items = ("RGB225.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture6.4>
+	/ items = ("RGB060.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture6_165>
+	/stimulusframes = [1=fixation;100=picture6.1,picture6.2,picture6.3,picture6.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture6.3)
+	/ validresponse = (picture6.1,picture6.2,picture6.3,picture6.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture7.1>
+	/ items = ("RGB240.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture7.2>
+	/ items = ("RGB090.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture7.3>
+	/ items = ("RGB240.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture7.4>
+	/ items = ("RGB240.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture7_150>
+	/stimulusframes = [1=fixation;100=picture7.1,picture7.2,picture7.3,picture7.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture7.2)
+	/ validresponse = (picture7.1,picture7.2,picture7.3,picture7.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture8.1>
+	/ items = ("RGB075.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture8.2>
+	/ items = ("RGB210.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture8.3>
+	/ items = ("RGB210.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture8.4>
+	/ items = ("RGB210.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture8_135>
+	/stimulusframes = [1=fixation;100=picture8.1,picture8.2,picture8.3,picture8.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture8.1)
+	/ validresponse = (picture8.1,picture8.2,picture8.3,picture8.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture9.1>
+	/ items = ("RGB075.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture9.2>
+	/ items = ("RGB195.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture9.3>
+	/ items = ("RGB195.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture9.4>
+	/ items = ("RGB195.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture9_120>
+	/stimulusframes = [1=fixation;100=picture9.1,picture9.2,picture9.3,picture9.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture9.1)
+	/ validresponse = (picture9.1,picture9.2,picture9.3,picture9.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture10.1>
+	/ items = ("RGB210.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture10.2>
+	/ items = ("RGB105.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture10.3>
+	/ items = ("RGB210.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture10.4>
+	/ items = ("RGB210.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture10_105>
+	/stimulusframes = [1=fixation;100=picture10.1,picture10.2,picture10.3,picture10.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture10.2)
+	/ validresponse = (picture10.1,picture10.2,picture10.3,picture10.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture11.1>
+	/ items = ("RGB090.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture11.2>
+	/ items = ("RGB090.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture11.3>
+	/ items = ("RGB180.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture11.4>
+	/ items = ("RGB090.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture11_90>
+	/stimulusframes = [1=fixation;100=picture11.1,picture11.2,picture11.3,picture11.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture11.3)
+	/ validresponse = (picture11.1,picture11.2,picture11.3,picture11.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture12.1>
+	/ items = ("RGB180.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture12.2>
+	/ items = ("RGB180.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture12.3>
+	/ items = ("RGB180.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture12.4>
+	/ items = ("RGB105.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture12_75>
+	/stimulusframes = [1=fixation;100=picture12.1,picture12.2,picture12.3,picture12.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture12.4)
+	/ validresponse = (picture12.1,picture12.2,picture12.3,picture12.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture13.1>
+	/ items = ("RGB135.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture13.2>
+	/ items = ("RGB135.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture13.3>
+	/ items = ("RGB135.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture13.4>
+	/ items = ("RGB195.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture13_60>
+	/stimulusframes = [1=fixation;100=picture13.1,picture13.2,picture13.3,picture13.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture13.4)
+	/ validresponse = (picture13.1,picture13.2,picture13.3,picture13.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture14.1>
+	/ items = ("RGB165.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture14.2>
+	/ items = ("RGB165.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture14.3>
+	/ items = ("RGB210.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture14.4>
+	/ items = ("RGB165.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture14_45>
+	/stimulusframes = [1=fixation;100=picture14.1,picture14.2,picture14.3,picture14.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture14.3)
+	/ validresponse = (picture14.1,picture14.2,picture14.3,picture14.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture15.1>
+	/ items = ("RGB150.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture15.2>
+	/ items = ("RGB180.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture15.3>
+	/ items = ("RGB150.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture15.4>
+	/ items = ("RGB150.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture15_30>
+	/stimulusframes = [1=fixation;100=picture15.1,picture15.2,picture15.3,picture15.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture15.2)
+	/ validresponse = (picture15.1,picture15.2,picture15.3,picture15.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture16.1>
+	/ items = ("RGB180.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture16.2>
+	/ items = ("RGB195.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture16.3>
+	/ items = ("RGB195.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture16.4>
+	/ items = ("RGB195.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture16_15>
+	/stimulusframes = [1=fixation;100=picture16.1,picture16.2,picture16.3,picture16.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture16.1)
+	/ validresponse = (picture16.1,picture16.2,picture16.3,picture16.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture17.1>
+	/ items = ("RGB090.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture17.2>
+	/ items = ("RGB105.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture17.3>
+	/ items = ("RGB090.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture17.4>
+	/ items = ("RGB090.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture17_15>
+	/stimulusframes = [1=fixation;100=picture17.1,picture17.2,picture17.3,picture17.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture17.2)
+	/ validresponse = (picture17.1,picture17.2,picture17.3,picture17.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture18.1>
+	/ items = ("RGB165.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture18.2>
+	/ items = ("RGB165.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture18.3>
+	/ items = ("RGB150.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture18.4>
+	/ items = ("RGB165.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture18_15>
+	/stimulusframes = [1=fixation;100=picture18.1,picture18.2,picture18.3,picture18.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture18.3)
+	/ validresponse = (picture18.1,picture18.2,picture18.3,picture18.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture19.1>
+	/ items = ("RGB030.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture19.2>
+	/ items = ("RGB030.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture19.3>
+	/ items = ("RGB030.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture19.4>
+	/ items = ("RGB045.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture19_15>
+	/stimulusframes = [1=fixation;100=picture19.1,picture19.2,picture19.3,picture19.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture19.4)
+	/ validresponse = (picture19.1,picture19.2,picture19.3,picture19.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<picture picture20.1>
+	/ items = ("RGB120.bmp")
+	/ position = (10.83%,50%)
+</picture>
+
+<picture picture20.2>
+	/ items = ("RGB120.bmp")
+	/ position = (38.33%,50%)
+</picture>
+
+<picture picture20.3>
+	/ items = ("RGB135.bmp")
+	/ position = (61.67%,50%)
+</picture>
+
+<picture picture20.4>
+	/ items = ("RGB120.bmp")
+	/ position = (85%,50%)
+</picture>
+
+<trial picture20_15>
+	/stimulusframes = [1=fixation;100=picture20.1,picture20.2,picture20.3,picture20.4]
+	/pretrialpause = 300
+	/ correctresponse = (picture20.3)
+	/ validresponse = (picture20.1,picture20.2,picture20.3,picture20.4)
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+</trial>
+
+<block pictures>
+	/trials = [1-16=noreplace(picture1_225,picture2_210,picture3_195,picture4_180,picture5_165,picture6_165,picture7_150,picture8_135,picture9_120,picture10_105,picture11_90,picture12_75,picture13_60,picture14_45,picture15_30,picture16_15,picture17_15,picture18_15,picture19_15,picture20_15)]
+	/ blockfeedback =(meanlatency,correct)
+</block>
+
+<expt>
+
+	/preinstructions = (welcome,exptintro)
+	/blocks = [1=pictures]
+    /postinstructions = (result,end) 
+</expt>
+
+<defaults>
+	/inputdevice = mouse
+</defaults>

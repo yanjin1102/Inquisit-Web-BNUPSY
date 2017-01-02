@@ -1,0 +1,322 @@
+<picture 011>
+    /items = ("pic_01.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 25pct
+</picture>
+<picture 012>
+    /items = ("pic_01.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 25pct
+</picture>
+<picture 013>
+    /items = ("pic_01.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 75pct
+</picture>
+<picture 014>
+    /items = ("pic_01.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 75pct
+</picture>
+<picture 021>
+    /items = ("pic_02.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 25pct
+</picture>
+<picture 022>
+    /items = ("pic_02.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 25pct
+</picture>
+<picture 023>
+    /items = ("pic_02.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 75pct
+</picture>
+<picture 024>
+    /items = ("pic_02.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 75pct
+</picture>
+<picture 031>
+    /items = ("pic_03.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 25pct
+</picture>
+<picture 032>
+    /items = ("pic_03.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 25pct
+</picture>
+<picture 033>
+    /items = ("pic_03.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 75pct
+</picture>
+<picture 034>
+    /items = ("pic_03.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 75pct
+</picture>
+<picture 041>
+    /items = ("pic_04.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 25pct
+</picture>
+<picture 042>
+    /items = ("pic_04.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 25pct
+</picture>
+<picture 043>
+    /items = ("pic_04.jpg")
+    /size = (300,300)
+    /hposition = 25pct
+    /vposition = 75pct
+</picture>
+<picture 044>
+    /items = ("pic_04.jpg")
+    /size = (300,300)
+    /hposition = 75pct
+    /vposition = 75pct
+</picture>
+<trial 1>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (012)
+    /validresponse = (012, 023, 024, 021)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.1.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.1.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.1.insertstimulustime(picture.012,values.shapetime)]
+	   /ontrialbegin = [trial.1.insertstimulustime(picture.023,values.shapetime)]
+	   /ontrialbegin = [trial.1.insertstimulustime(picture.024,values.shapetime)]
+	   /ontrialbegin = [trial.1.insertstimulustime(picture.021,values.shapetime)]
+	   /ontrialend = [trial.1.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 2>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (014)
+    /validresponse = (014, 033, 031, 032)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.2.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.2.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.2.insertstimulustime(picture.014,values.shapetime)]
+	   /ontrialbegin = [trial.2.insertstimulustime(picture.033,values.shapetime)]
+	   /ontrialbegin = [trial.2.insertstimulustime(picture.031,values.shapetime)]
+	   /ontrialbegin = [trial.2.insertstimulustime(picture.032,values.shapetime)]
+	   /ontrialend = [trial.2.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 3>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (011)
+    /validresponse = (011, 044, 042, 043)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.3.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.3.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.3.insertstimulustime(picture.011,values.shapetime)]
+	   /ontrialbegin = [trial.3.insertstimulustime(picture.044,values.shapetime)]
+	   /ontrialbegin = [trial.3.insertstimulustime(picture.042,values.shapetime)]
+	   /ontrialbegin = [trial.3.insertstimulustime(picture.043,values.shapetime)]
+	   /ontrialend = [trial.3.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 4>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (022)
+    /validresponse = (022, 014, 011, 013)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.4.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.4.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.4.insertstimulustime(picture.022,values.shapetime)]
+	   /ontrialbegin = [trial.4.insertstimulustime(picture.014,values.shapetime)]
+	   /ontrialbegin = [trial.4.insertstimulustime(picture.011,values.shapetime)]
+	   /ontrialbegin = [trial.4.insertstimulustime(picture.013,values.shapetime)]
+	   /ontrialend = [trial.4.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 5>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (021)
+    /validresponse = (021, 032, 034, 033)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.5.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.5.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.5.insertstimulustime(picture.021,values.shapetime)]
+	   /ontrialbegin = [trial.5.insertstimulustime(picture.032,values.shapetime)]
+	   /ontrialbegin = [trial.5.insertstimulustime(picture.034,values.shapetime)]
+	   /ontrialbegin = [trial.5.insertstimulustime(picture.033,values.shapetime)]
+	   /ontrialend = [trial.5.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 6>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (021)
+    /validresponse = (021, 044, 043, 042)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.6.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.6.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.6.insertstimulustime(picture.021,values.shapetime)]
+	   /ontrialbegin = [trial.6.insertstimulustime(picture.044,values.shapetime)]
+	   /ontrialbegin = [trial.6.insertstimulustime(picture.043,values.shapetime)]
+	   /ontrialbegin = [trial.6.insertstimulustime(picture.042,values.shapetime)]
+	   /ontrialend = [trial.6.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 7>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (032)
+    /validresponse = (032, 014, 013, 011)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.7.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.7.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.7.insertstimulustime(picture.032,values.shapetime)]
+	   /ontrialbegin = [trial.7.insertstimulustime(picture.014,values.shapetime)]
+	   /ontrialbegin = [trial.7.insertstimulustime(picture.013,values.shapetime)]
+	   /ontrialbegin = [trial.7.insertstimulustime(picture.011,values.shapetime)]
+	   /ontrialend = [trial.7.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 8>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (034)
+    /validresponse = (034, 023, 021, 022)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.8.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.8.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.8.insertstimulustime(picture.034,values.shapetime)]
+	   /ontrialbegin = [trial.8.insertstimulustime(picture.023,values.shapetime)]
+	   /ontrialbegin = [trial.8.insertstimulustime(picture.021,values.shapetime)]
+	   /ontrialbegin = [trial.8.insertstimulustime(picture.022,values.shapetime)]
+	   /ontrialend = [trial.8.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 9>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (034)
+    /validresponse = (034, 041, 042, 043)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.9.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.9.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.9.insertstimulustime(picture.034,values.shapetime)]
+	   /ontrialbegin = [trial.9.insertstimulustime(picture.041,values.shapetime)]
+	   /ontrialbegin = [trial.9.insertstimulustime(picture.042,values.shapetime)]
+	   /ontrialbegin = [trial.9.insertstimulustime(picture.043,values.shapetime)]
+	   /ontrialend = [trial.9.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 10>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (043)
+    /validresponse = (043, 014, 012, 011)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.10.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.10.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.10.insertstimulustime(picture.043,values.shapetime)]
+	   /ontrialbegin = [trial.10.insertstimulustime(picture.014,values.shapetime)]
+	   /ontrialbegin = [trial.10.insertstimulustime(picture.012,values.shapetime)]
+	   /ontrialbegin = [trial.10.insertstimulustime(picture.011,values.shapetime)]
+	   /ontrialend = [trial.10.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 11>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (041)
+    /validresponse = (041, 023, 024, 022)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.11.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.11.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.11.insertstimulustime(picture.041,values.shapetime)]
+	   /ontrialbegin = [trial.11.insertstimulustime(picture.023,values.shapetime)]
+	   /ontrialbegin = [trial.11.insertstimulustime(picture.024,values.shapetime)]
+	   /ontrialbegin = [trial.11.insertstimulustime(picture.022,values.shapetime)]
+	   /ontrialend = [trial.11.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial 12>
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+	   /pretrialpause = 500
+	   /inputdevice = mouse
+	   /correctresponse = (041)
+    /validresponse = (041, 033, 032, 034)
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [trial.12.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.12.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.12.insertstimulustime(picture.041,values.shapetime)]
+	   /ontrialbegin = [trial.12.insertstimulustime(picture.033,values.shapetime)]
+	   /ontrialbegin = [trial.12.insertstimulustime(picture.032,values.shapetime)]
+	   /ontrialbegin = [trial.12.insertstimulustime(picture.034,values.shapetime)]
+	   /ontrialend = [trial.12.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<block exerciseblk1>
+     /screencolor = (0,0,0)
+	    /blockfeedback = (meanlatency,correct)
+	    /trials = [1=11;2=4;3=7;4=5;5=12;6=3]
+</block>
+<block exerciseblk2>
+     /screencolor = (0,0,0)
+	    /blockfeedback = (meanlatency,correct)
+	    /trials = [1=9;2=1;3=2;4=8;5=6;6=10]
+</block>

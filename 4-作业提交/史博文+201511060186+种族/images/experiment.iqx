@@ -1,0 +1,414 @@
+﻿// 1-首先定义用到的标签
+**************************************************************************************************************
+**************************************************************************************************************
+<item attributeAlabel>
+	/1 = "好"
+</item>
+
+<item attributeBlabel>
+	/1 = "坏"
+</item>
+
+<item targetALabel>
+	/1 = "白人"
+</item>
+
+<item targetBLabel>
+	/1 = "黑人"
+</item>
+
+// 2-其次定义用到的刺激
+**************************************************************************************************************
+**************************************************************************************************************
+<item attributeA>
+	/1 = "有趣"
+	/2 = "极佳"
+	/3 = "豪华"
+	/4 = "完美"
+	/5 = "优秀"
+	/6 = "善良"
+	/7 = "温柔"
+	/8 = "富裕"
+</item>
+
+<item attributeB>
+	/1 = "可怕"
+	/2 = "糟糕"
+	/3 = "差劲"
+	/4 = "讨厌"
+	/5 = "垃圾"
+	/6 = "邪恶"
+	/7 = "凶狠"
+	/8 = "贫穷"
+</item>
+
+<item targetA>
+    /1 = "a1.jpg"
+    /2 = "a2.jpg"
+    /3 = "a3.jpg"
+    /4 = "a4.jpg"
+    /5 = "a5.jpg"
+    /6 = "a6.jpg"
+    /7 = "a7.jpg"
+    /8 = "a8.jpg"
+</item>
+
+<item targetB>
+	/1 = "1.jpg"
+    /2 = "2.jpg"
+    /3 = "3.jpg"
+    /4 = "4.jpg"
+    /5 = "5.jpg"
+    /6 = "6.jpg"
+    /7 = "7.jpg"
+    /8 = "8.jpg"
+</item>
+
+
+// 3-再次，定义用到的指导语，这个部分非常复杂，涉及到item的相互引用，请一定注意跟上学习！
+**************************************************************************************************************
+**************************************************************************************************************
+// 实验开始前的总指导语,这个地方用到了很多引用，即在字符串中加入特定的值，实现联动修改功能，只要变化item定义中的值，自然的后续内容也会自动更新。
+
+// 注意转义语法结构，~是转义字符，关键字前加上~就变成了常规字符。比如引号前加~，打出来就是引号了，而不再是代表字符串的开始或结束。~n代表换行，这个跟HTML一样
+
+// 注意引用语法结构，<%item.attributealabel.item.1%>的含义就是引用attributeAlable这个item中的第一个item的值，插入到字符串当中。
+
+*****************************************
+实验结束后的绩效显示
+*****************************************
+<instruct>
+	/nextlabel = "继续"
+	/lastlabel = "退出"
+	/nextkey = (" ")
+	/prevkey = (0)
+	/inputdevice = mouse
+	/windowsize = (80%,80%)
+	/screencolor = (0,0,0)
+	/fontstyle = ("宋体",3%)
+	/txcolor = (255,255,255)
+</instruct>
+
+<page summary>
+	^^^^^	   下面是为你对于白人黑人及形容词类别的平均反应时间给出的数据统计：
+	^^	   联合任务一（相容任务）：“<%item.targetAlabel.1%>”和“<%item.attributeAlabel.1%>”，
+“<%item.targetBlabel.1%>”和“<%item.attributeBlabel.1%>”
+	^				   平均反应时为：<%block.compatibletest.meanlatency%> 毫秒
+	^^	   联合任务二（不相容任务）：“<%item.targetAlabel.1%>”和“<%item.attributeBlabel.1%>”,
+“<%item.targetBlabel.1%>”和“<%item.attributeAlabel.1%>”
+	^				   平均反应时为：<%block.incompatibletest.meanlatency%> 毫秒
+	^^	   你是否在某联合任务中平均反应时明显少于另一种联合任务的平均反应时？
+	^	   如果是的话,那种形容词类别就是你对白人或黑人的内隐态度。
+	^^	   非常感谢您参加这个实验，请用鼠标点击“退出”来结束本实验。
+</page>
+
+*****************************************
+定义指导语
+*****************************************
+//定义计数器,重置计数器间隔为10
+<counter instructions>
+	/resetinterval = 10
+	/select = sequence(1,2,3,4,5,6,7)
+</counter>
+
+//定义指导语trial的对象
+<trial instructions>
+	/stimulusframes = [1=instructions,spacebar]
+	/correctresponse = (" ")
+	/errormessage = false
+	/recorddata = false
+</trial>
+
+//定义指导语文本对象,根据计数器对象instructions的选择方式进行选择
+<text instructions>
+	/items = instructions
+	/size = (70%,40%)
+	/position = (50%,80%)
+	/valign = bottom
+	/vjustify = center
+	/hjustify = left
+	/select = instructions
+	/fontstyle = ("宋体",3.5%)
+</text>
+
+<item instructions>
+	/1 = "	您好！请把您左右手的食指放在键盘的“E”键和“I”键上，可以看到，屏幕上方分别为好和坏两个类别，其对应的形容词会在屏幕的中间逐一显示，当屏幕中间的形容词属于屏幕左边类别的时候，请按“E”键。当属于右边类别的时候，请按“I”键。每个形容词只能归入一个类别。
+	如果您做错的话，屏幕的中间就会出现一个×来提示您，您只需要按另外一个键来更正错误（如果您是左手按E时出现错误，只需右手按I键即可更正）。
+	这是一个按照反应时间进行归类的任务，请尽可能快地完成任务，并且尽可能地准确，如果您的速度过慢或者错误过多，那么所得的测验结果将因为无法解释而作废。~n 	整个实验大概会消耗您5分钟左右的时间(●'◡'●)"
+	/2 = "	请注意屏幕上方，类别词已经改变为白人或黑人，屏幕中间会显示各种白人或黑人图片。但是按键的规则不变，和开始时提到的一样。
+	当中间显示的是白人时，请按“E”键。当显示的是黑人时，请按“I”键。每个图片只能属于一个类别。当你做错时屏幕中间同样会出现×号，和上面的一样，按另外一个键即可修正错误。请尽可能又快又准确地完成。"
+	/3 = "	从屏幕上方可以看到，前面您所看到的单独呈现的四个类别词现在是一起呈现的。请您依然按照前面的对应关系归类。
+	标签和项目都会标出绿色或者蓝色，这样可以帮助你做出适宜的判断。和前面一样，分别按“E”键和“I”键做出反应。更正错误的方式和前面也是一样的。"
+	/4 = "	重复一次上面的归类过程，请尽快并且尽可能地保证正确率。
+	分别以绿色和蓝色标出的类别名称可以帮助你做出适宜的判断。和前面一样，分别按“E”键和“I”键做出反应。更正错误的方式和前面也是一样的。"
+	/5 = "	请注意上方，现在类别又变成了白人和黑人，但和前面不同的是，它们的位置对调了。原来在右边的调到了左边，而原来在左边的调到了右边。请训练一下这种配置。
+	反应方式和前面一样，依旧是“E”键对应左边，“I”键对应右边。"
+	/6 = "请注意上方，四个词又开始一起呈现，但是呈现的方式有所改变。请您依然按照前面的对应关系归类。
+	分别以绿色和蓝色标出的类别名称可以帮助你做出适宜的判断。和前面一样，分别按“E”键和“I”键做出反应。更正错误的方式和前面也是一样的。"
+	/7 = "	重复一次上面的归类过程，请尽快并且尽可能地保证正确率。
+	分别以绿色和蓝色标出的类别名称可以帮助你做出适宜的判断。和前面一样，分别按“E”键和“I”键做出反应。更正错误的方式和前面也是一样的。"
+</item>
+
+<text spacebar>//按键提示文本对象
+	/items = ("如果您清楚上面的含义，请按空格键开始实验，否则请咨询主试寻求帮助")
+	/txcolor = (255,0,0)
+	/position = (50%,95%)
+	/valign = bottom
+	/fontstyle = ("宋体",3.5%)
+</text>
+
+<text attributeA>
+	/items = attributeA
+	/txcolor = (0,255,0)
+</text>
+
+<text attributeB>
+	/items = attributeB
+	/txcolor = (0,255,0)
+</text>
+
+<picture targetA>
+	/items = targetA
+	/size = (50%,50%)
+</picture>
+
+<picture targetB>
+	/items = targetB
+	/size = (50%,50%)
+</picture>
+
+//错误提示文本对象
+<text error>
+	/position = (50%,80%)
+	/items = ("×")
+	/color = (255,0,0)
+	/fontstyle = ("Arial",10%,true)
+</text>
+
+<text attributeAleft>
+	/items = attributeAlabel
+	/valign = top
+	/halign = left
+	/position = (15%,15%)
+	/txcolor = (0,255,0)
+</text>
+
+<text attributeBright>
+	/items = attributeBlabel
+	/valign = top
+	/halign = right
+	/position = (85%,15%)
+	/txcolor = (0,255,0)
+</text>
+
+//混合显示概念词和属性词
+<text attributeAleftmixed>
+	/items = attributeAlabel
+	/valign = top
+	/halign = left
+	/position = (15%,30%)
+	/txcolor = (0,255,0)
+</text>
+
+<text attributeBrightmixed>
+	/items = attributeBlabel
+	/valign = top
+	/halign = right
+	/position = (85%,30%)
+	/txcolor = (0,255,0)
+</text>
+
+//概念词分类标签
+<text targetAleft>
+	/items = targetAlabel
+	/valign = top
+	/halign = left
+	/position = (15%,15%)
+	/txcolor = (0,0,255)
+</text>
+
+<text targetAright>
+	/items = targetAlabel
+	/valign = top
+	/halign = right
+	/position = (85%,15%)
+	/txcolor = (0,0,255)
+</text>
+
+<text targetBleft>
+	/items = targetBlabel
+	/valign = top
+	/halign = left
+	/position = (15%,15%)
+	/txcolor = (0,0,255)
+</text>
+
+<text targetBright>
+	/items = targetBlabel
+	/valign = top
+	/halign = right
+	/position = (85%,15%)
+	/txcolor = (0,0,255)
+</text>
+
+<text orleft>
+	/items = ("或")
+	/valign = top
+	/halign = left
+	/position = (15%,23%)
+</text>
+
+<text orright>
+	/items = ("或")
+	/valign = top
+	/halign = right
+	/position = (85%,23%)
+</text>
+
+*****************************************
+定义试次
+*****************************************
+<trial attributeA>
+	/validresponse = ("E","I")
+	/correctresponse = ("E")
+	/stimulusframes = [1=attributeA]
+	/posttrialpause = 250
+</trial>
+
+<trial attributeB>
+	/validresponse = ("E","I")
+	/correctresponse = ("I")
+	/stimulusframes = [1=attributeB]
+	/posttrialpause = 250
+</trial>
+
+<trial targetAleft>
+	/validresponse = ("E","I")
+	/correctresponse = ("E")
+	/stimulusframes = [1=targetA]
+	/posttrialpause = 250
+</trial>
+
+<trial targetAright>
+	/validresponse = ("E","I")
+	/correctresponse = ("I")
+	/stimulusframes = [1=targetA]
+	/posttrialpause = 250
+</trial>
+
+<trial targetBleft>
+	/validresponse = ("E","I")
+	/correctresponse = ("E")
+	/stimulusframes = [1=targetB]
+	/posttrialpause = 250
+</trial>
+
+<trial targetBright>
+	/validresponse = ("E","I")
+	/correctresponse = ("I")
+	/stimulusframes = [1=targetB]
+	/posttrialpause = 250
+</trial>
+
+*****************************************
+定义区组
+*****************************************
+//属性词练习，左右上角呈现分类标签作为背景
+<block attributepractice>
+	/bgstim = (attributeAleft,attributeBright)
+	/trials = [1=instructions;2-21=noreplace(attributeA,attributeB)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+	/recorddata = false
+</block>
+
+//概念词相容任务练习
+<block targetcompatiblepractice>  
+	/bgstim = (targetAleft,targetBright)
+	/trials = [1=instructions;2-21=noreplace(targetAleft,targetBright)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+	/recorddata = false
+</block>
+
+//概念词不相容任务练习
+<block targetincompatiblepractice>
+	/bgstim = (targetAright,targetBleft)
+	/trials = [1=instructions;2-21=noreplace(targetAright,targetBleft)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+	/recorddata = false
+</block>
+
+//相容任务练习
+<block compatiblepractice>  
+	/bgstim = (targetAleft,orleft,attributeAleftmixed,targetBright,orright,attributeBrightmixed)
+	/trials = [1=instructions;2,4,6,8,10,12,14,16,18,20=noreplace(targetAleft,targetBright);3,5,7,9,11,13,15,17,19,21=noreplace(attributeA,attributeB)]
+	/errormessage = true(error,200)	
+	/responsemode = correct
+	/recorddata = false
+</block>
+
+//不相容任务练习
+<block incompatiblepractice>
+	/bgstim = (targetBleft,orleft,attributeAleftmixed,targetAright,orright,attributeBrightmixed)
+	/trials = [1=instructions;2,4,6,8,10,12,14,16,18,20=noreplace(targetBleft,targetAright);3,5,7,9,11,13,15,17,19,21=noreplace(attributeA,attributeB)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+	/recorddata = false
+</block>
+
+//相容性测试指导语
+<block compatibletestinstructions>
+	/bgstim = (targetAleft,orleft,attributeAleftmixed,targetBright,orright,attributeBrightmixed)
+	/trials = [1=instructions]
+	/recorddata = false
+</block>
+
+//相容性测试
+<block compatibletest>
+	/bgstim = (targetAleft,orleft,attributeAleftmixed,targetBright,orright,attributeBrightmixed)
+	/trials = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40=noreplace(targetAleft,targetBright);1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39=noreplace(attributeA,attributeB)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+</block>
+
+//不相容性测试指导语
+<block incompatibletestinstructions>
+	/bgstim = (targetBleft,orleft,attributeAleftmixed,targetAright,orright,attributeBrightmixed)
+	/trials = [1=instructions]
+	/recorddata = false
+</block>
+
+//不相容性测试
+<block incompatibletest>
+	/bgstim = (targetBleft,orleft,attributeAleftmixed,targetAright,orright,attributeBrightmixed)
+	/trials = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40=noreplace(targetBleft,targetAright);1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39=noreplace(attributeA,attributeB)]
+	/errormessage = true(error,200)
+	/responsemode = correct
+</block>
+
+*****************************************
+定义实验
+*****************************************
+//默认参数设置
+<defaults>
+	/screencolor = (0,0,0)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+	/fontstyle = ("宋体",5%)
+</defaults>
+
+<expt>
+	/ subjects = (1 of 2)
+	/ groupassignment = groupnumber
+	/ blocks = [1=attributepractice; 2 = targetcompatiblepractice; 3 = compatiblepractice; 4 = compatibletestinstructions; 5 = compatibletest; 6 = targetincompatiblepractice; 7 = incompatiblepractice; 8 = incompatibletestinstructions; 9 = incompatibletest]
+	/postinstructions = (summary)
+</expt>
+
+<expt>
+	/ subjects = (2 of 2)
+	/ groupassignment = groupnumber
+	/ blocks = [1=attributepractice; 2 = targetincompatiblepractice; 3 = incompatiblepractice; 4 = incompatibletestinstructions; 5 = incompatibletest; 6 = targetcompatiblepractice; 7 = compatiblepractice; 8 = compatibletestinstructions; 9 = compatibletest]
+	/postinstructions = (summary)
+</expt>

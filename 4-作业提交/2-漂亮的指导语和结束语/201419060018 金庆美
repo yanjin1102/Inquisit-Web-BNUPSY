@@ -1,0 +1,14 @@
+		 +<instruct instruction>
+ +	/nextkey = (" ")
+ +	/fontstyle = ("楷体", 3.14%, false, false, false, false, 5, 1)
+ +	/txcolor = (0,0,255)
+ +	/screencolor = (255,255,255)
+ +	/lastlabel = "请按空格键继续"
+ +	/windowsize = (800,640)
+ +</instruct>
+ +<page instruction>"欢迎你来到我们的实验！听说做了我们实验的人都变帅变美了~\(≧▽≦)/~啦啦啦"</page>
+ +<page endinstruction>"谢谢你来参加我们的实验~现在实验结束啦~去找主试签收被试费吧！辛苦了么么哒！"</page>
+ +<expt defaultinstruction>
+ +	/preinstructions = (instruction)
+ +	/postinstructions = (endinstruction)
+ +</expt>

@@ -1,0 +1,78 @@
+﻿
+
+<picture instructionpic>
+	/items = ("castle.jpg")
+	/size = (685,950)
+</picture>
+
+<picture concludingpic>
+	/items = ("bye.jpg")
+	/size = (825,563)
+</picture>
+
+<text instructiontxt>
+	/items = ("这是一个漂亮的指导语")
+	/position = ( 70%, 40%)
+	/fontstyle = ("黑体", 2.76%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = coral
+	/size = (1300,800)
+	/hjustify = left
+</text>
+
+<text instructionkey>
+	/items = ("请按【空格键】继续")
+	/position = ( 70%, 120%)
+	/fontstyle = ("黑体", 2.76%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = aquamarine
+	/size = (1300,800)
+	/hjustify = left
+</text>
+
+<text concludingtxt>
+	/items = ("同样，这是一个漂亮的结束语")
+	/fontstyle = ("黑体", 2.76%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = coral
+	/size = (1300,800)
+	/hjustify = left
+</text>
+
+<text concludingkey>
+	/items = ("请按任意键结束")
+	/position = ( 70%, 120%)
+	/fontstyle = ("黑体", 2.76%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = coral
+	/size = (1300,800)
+	/ hjustify = left
+</text>
+
+<trial instruction>
+	/validresponse = (" ")
+	/stimulustimes = [1=instructionpic,instructiontxt,instructionkey]
+	/recorddata = false
+</trial>
+
+<trial concluding>
+	/validresponse = (anyresponse)
+	/stimulustimes = [1=concludingpic,concludingtxt,concludingkey]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = cornflowerblue
+	/trials = [1 = instruction]
+</block>
+
+<block concludingblk>
+	/ screencolor = blueviolet
+	/ trials = [1 = concluding]
+</block>
+
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = concludingblk]
+</expt>
+

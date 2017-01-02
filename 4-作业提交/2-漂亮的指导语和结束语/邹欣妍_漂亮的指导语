@@ -1,0 +1,92 @@
+//用自带的指导语格式
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 5%, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/screencolor = (100,100,100)
+	/lastlabel = "按空格继续哦"
+	/windowsize = (1366,768)
+</instruct>
+<page instruction>
+			我是一个漂亮的指导语^^			没错，请认真地注视着我^^			快！夸我好看^^
+</page>
+<page endinstruction>
+			你是不是在期待一个漂亮的实验^^			哈哈哈你想多了！^^			再见哦~
+</page>
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>
+
+
+
+//这个是自定义呈现的
+<item instruction>
+	/1 = "我是一个漂亮的指导语
+没错，请认真地注视着我
+快！夸我好看"
+</item>
+
+<item any>
+	/1 = "请按任意键开始实验"
+</item>
+
+<item endinstruction>
+	/1 = "你是不是在期待着一个漂亮的实验
+哈哈哈你想多了
+再见哦"
+</item>
+
+<text instructiontxt>
+	/items = instruction
+	/fontstyle = ("楷体", 4pct)
+	/txbgcolor = (100,100,100)
+	/txcolor = (255,255,255)
+	/size = (1366,768)
+	/hjustify = center
+	
+</text>
+
+<text anykeytxt>
+	/items = any
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<text endinstructiontxt>
+	/items = endinstruction
+	/fontstyle = ("楷体", 4pct)
+	/txbgcolor = (100,100,100)
+	/txcolor = (255,255,255)
+	/size = (1366,768)
+	/hjustify = center
+</text>
+
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial endinstruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=endinstructiontxt]
+	/recorddata = false
+</trial>
+
+
+<block instructionblk>
+	/trials = [1=instruction]
+</block>
+
+<block endinstructionblk>
+	/trials = [1=endinstruction]
+</block>
+
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = endinstructionblk]
+</expt>

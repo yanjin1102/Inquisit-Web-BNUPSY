@@ -1,0 +1,33 @@
+﻿<picture start>
+	/items = ("纪麟_指导语.jpg")
+	/size = (100pct,100pct)
+</picture>
+<picture end>
+	/items = ("纪麟_结束语.jpg")
+	/size = (100pct,100pct)
+</picture>
+
+<trial start>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=start]
+</trial>
+<trial end>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=end]
+</trial>
+
+<block start>
+	/trials = [1 = start]
+</block>
+<block end>
+	/trials = [1 = end]
+</block>
+
+<htmlpage introduction>
+	/ file = "纪麟index.html"
+</htmlpage>
+
+<expt>
+	/preinstructions = (introduction)
+	/ blocks = [1 = start; 2 = end]
+</expt>

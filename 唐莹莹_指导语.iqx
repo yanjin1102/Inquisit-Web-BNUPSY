@@ -1,0 +1,29 @@
+﻿<instruct my>
+	/nextkey = (" ")
+	/fontstyle = ("宋体", 24pt, false, false, false, false, 5, 1)
+	/txcolor = black
+	/screencolor = white
+	/lastlabel = "请按空格键继续"
+	/windowsize = (1000,800)
+</instruct>
+
+<page instruction>
+^^^^^
+                 您好，欢迎你来参加我们的实验^
+^          本实验目的为向您展示我们漂亮的指导语和结束语^
+^               可能我们的指导语和结束语并不漂亮^
+^                    但你一定要说它们很漂亮^^ 
+</page>
+
+<page endinstruction>
+^^^^^^
+                          实验结束^
+^                    恭喜您完成了我们的实验^
+^                    非常感谢您的参与，再见^^ 
+</page>
+
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

@@ -1,0 +1,692 @@
+﻿<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+=======================================================================================================================================================
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/screencolor = (0,0,0)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (1366,768)
+</instruct>
+
+
+<page begininstruction>^^^^您好，非常欢迎您参与我们的研究！^^我们当前的研究是测验您对灰度的差别阈限。^^请您用鼠标左键点击从屏幕中的四张图中选择一张您认为灰度和其他图片不同的！^^</page>
+
+<page endinstruction>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^</page>
+
+====================================================================================================================
+//接下来我们就需要用图片刺激的定义方式定义我们的刺激材料啦！我们要定义两类刺激，一类是呈现正常的R，一类是定义镜像过的R
+
+<picture lefttop1>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop1>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic1.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom1>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic1.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom1>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic1.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop2>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop2>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom2>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic2.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom2>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop3>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic2.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop3>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom3>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom3>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop4>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop4>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom4>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic16.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom4>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic4.bmp")
+	/size = (300,300)
+</picture>
+
+
+<picture lefttop5>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic2.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop5>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic13.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom5>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic2.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom5>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic2.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop6>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop6>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic4.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom6>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom6>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop7>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic13.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop7>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic13.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom7>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic13.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom7>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic4.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop8>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop8>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom8>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic6.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom8>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic14.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop9>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic12.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop9>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic5.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom9>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic12.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom9>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic12.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop10>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic7.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop10>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic7.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom10>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic7.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom10>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic13.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop11>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic4.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop11>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom11>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom11>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+
+<picture lefttop12>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop12>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic11.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom12>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom12>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic15.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop13>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic5.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop13>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic8.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom13>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic8.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom13>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic8.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop14>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop14>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom14>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic9.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom14>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic7.bmp")
+	/size = (300,300)
+</picture>
+
+<picture lefttop15>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = top
+	/items = ("changepic5.bmp")
+	/size = (300,300)
+</picture>
+
+<picture righttop15>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = top
+	/items = ("changepic5.bmp")
+	/size = (300,300)
+</picture>
+
+<picture leftbottom15>
+	/erase = True(0,0,0) 
+	/halign = left
+	/valign = bottom
+	/items = ("changepic6.bmp")
+	/size = (300,300)
+</picture>
+
+<picture rightbottom15>
+	/erase = True(0,0,0)
+	/halign = right
+	/valign = bottom
+	/items = ("changepic5.bmp")
+	/size = (300,300)
+</picture>
+
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<trial pic1>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop1,righttop1,leftbottom1,rightbottom1]
+	/validresponse = (lefttop1,righttop1,leftbottom1,rightbottom1)
+	/correctresponse = (lefttop1)
+</trial>
+
+<trial pic2>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop2,righttop2,leftbottom2,rightbottom2]
+	/validresponse = (lefttop2,righttop2,leftbottom2,rightbottom2)
+	/correctresponse = (leftbottom2)
+</trial>
+
+<trial pic3>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop3,righttop3,leftbottom3,rightbottom3]
+	/validresponse = (lefttop3,righttop3,leftbottom3,rightbottom3)
+	/correctresponse = (lefttop3)
+</trial>
+
+<trial pic4>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop4,righttop4,leftbottom4,rightbottom4]
+	/validresponse = (lefttop4,righttop4,leftbottom4,rightbottom4)
+	/correctresponse = (rightbottom4)
+</trial>
+
+<trial pic5>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop5,righttop5,leftbottom5,rightbottom5]
+	/validresponse = (lefttop5,righttop5,leftbottom5,rightbottom5)
+	/correctresponse = (righttop5)
+</trial>
+
+<trial pic6>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop6,righttop6,leftbottom6,rightbottom6]
+	/validresponse = (lefttop6,righttop6,leftbottom6,rightbottom6)
+	/correctresponse = (righttop6)
+</trial>
+
+<trial pic7>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop7,righttop7,leftbottom7,rightbottom7]
+	/validresponse = (lefttop7,righttop7,leftbottom7,rightbottom7)
+	/correctresponse = (rightbottom7)
+</trial>
+
+<trial pic8>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop8,righttop8,leftbottom8,rightbottom8]
+	/validresponse = (lefttop8,righttop8,leftbottom8,rightbottom8)
+	/correctresponse = (leftbottom8)
+</trial>
+
+<trial pic9>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop9,righttop9,leftbottom9,rightbottom9]
+	/validresponse = (lefttop9,righttop9,leftbottom9,rightbottom9)
+	/correctresponse = (righttop9)
+</trial>
+
+<trial pic10>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop10,righttop10,leftbottom10,rightbottom10]
+	/validresponse = (lefttop10,righttop10,leftbottom10,rightbottom10)
+	/correctresponse = (rightbottom10)
+</trial>
+
+<trial pic11>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop11,righttop11,leftbottom11,rightbottom11]
+	/validresponse = (lefttop11,righttop11,leftbottom11,rightbottom11)
+	/correctresponse = (lefttop11)
+</trial>
+
+<trial pic12>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop12,righttop12,leftbottom12,rightbottom12]
+	/validresponse = (lefttop12,righttop12,leftbottom12,rightbottom12)
+	/correctresponse = (righttop12)
+</trial>
+
+<trial pic13>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop13,righttop13,leftbottom13,rightbottom13]
+	/validresponse = (lefttop13,righttop13,leftbottom13,rightbottom13)
+	/correctresponse = (lefttop13)
+</trial>
+
+<trial pic14>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop14,righttop14,leftbottom14,rightbottom14]
+	/validresponse = (lefttop14,righttop14,leftbottom14,rightbottom14)
+	/correctresponse = (rightbottom14)
+</trial>
+
+<trial pic15>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/inputdevice = mouse
+	/stimulusframes = [1=fixation; 200=lefttop15,righttop15,leftbottom15,rightbottom15]
+	/validresponse = (lefttop15,righttop15,leftbottom15,rightbottom15)
+	/correctresponse = (leftbottom15)
+</trial>
+
+//定义blocks,我们在这里定义三个block，一个是instruction，一个是练习block，一个是正式实验的block。
+=============================================================================================================================================================
+
+
+
+<block judgeblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1=pic1;2=pic2;3=pic3;4=pic4;5=pic5;6=pic6;7=pic7;8=pic8;9=pic9;10=pic10;11=pic11;12=pic12;13=pic13;14=pic14;15=pic15]
+</block>
+
+
+//定义experiment, 加入blocks
+======================================================================================================================================================================
+<expt>
+	/preinstructions = (begininstruction)
+	/ blocks = [1 = judgeblk]
+	/postinstructions = (endinstruction)
+</expt>

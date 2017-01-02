@@ -1,0 +1,70 @@
+﻿<item instruction>
+	/1 = "在屏幕中央会出现一个汉字，如果汉字意思和颜色一致按F键，不一致按J键"
+</item>
+<item key>
+	/1 = "如果对指导语没有疑问,请按任意键开始实验"
+</item>
+
+<item colorwords>
+	/1 = "黑"
+	/2 = "白"
+</item>
+<text blacksame>
+	/items = colorwords
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,0)
+</text>
+
+<text whitesame>
+	/items = colorwords
+	/select = 2
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+<text noblack>
+	/items = colorwords
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text nowhite>
+	/items = colorwords
+	/select = 2
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,0)
+</text>
+
+
+<trial black right>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/stimulusframes = [1 = blacksame]
+</trial>
+
+<trial black wrong>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulusframes = [1 = noblack]
+</trial>
+<trial white right>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/stimulusframes = [1 = whitesame]
+</trial>
+
+<trial white wrong>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulusframes = [1 = nowhite]
+</trial>
+

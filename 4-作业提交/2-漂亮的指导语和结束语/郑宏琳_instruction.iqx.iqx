@@ -1,0 +1,20 @@
+﻿<instruct myinstruct>
+/nextkey = (" ")
+/ fontstyle = ("Arial Narrow", 2.08%, true, false, false, false, 5, 1)
+/ txcolor = (0, 0, 0)
+/screencolor = (255,255,255)
+/lastlabel = "感谢您的耐心配合"
+/windowsize = (800,500)
+</instruct>
+
+<page instruction> 
+                                                                                          指导语                                                                                     
+                    欢迎来到北师大心理实验室，我们今天将要完成的实验是stroop实验。实验开始后，屏幕中央出现注视点，请您将注意力集中在注视点上，
+紧接着将会出现颜色字，请您判断颜色字的字意和显示颜色是否一致，如果是一致的按“F”键，如果是不一致的则按“J”键。按键后，程序将会自动显示您的答案的正误，随后出现下一个注视点。您一共需要判断18次，一致的和不一致的将会随机呈现。如果您已阅读完毕，请按空格键进入正式的实验！
+</page>
+<page endinstruction> 感谢您的配合，本次实验已结束，请寻找实验人员，我们将支付您一定的报酬！</page>
+
+<expt defaultinstruction>
+/preinstructions = (instruction)
+/postinstructions = (endinstruction)
+</expt>

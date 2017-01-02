@@ -1,0 +1,139 @@
+﻿// 定义刺激呈现的内容列表，item定义
+======================================================================================================================================================================
+<item instruction>
+	/1 = "请将左数和右手的食指分别放在键盘的“F”键和“J”键上；在屏幕的中央会随机出现屏幕中央出现颜色字，请判断颜色字的字意和显示颜色是否一致，如果是一致的按“F”键，如果是不一致的则按“J”键。"
+</item>
+
+
+<item any>
+	/1 = "请按任意键开始实验"
+</item>
+
+
+<item colorwords>
+	/1 = "红"
+    /2 = "蓝"
+</item>
+
+<item fix>
+    /1="+"
+</item>
+=====================================================================================================================================================================
+
+
+//定义刺激呈现的方式，text定义
+======================================================================================================================================================================
+<text instructiontxt>
+	/items = instruction
+	/fontstyle = ("宋体", 4pct)
+	/txbgcolor = (255,255,255)
+	/txcolor = (0,0,0)
+	/size = (1000,500)
+	/hjustify = left
+</text>
+
+
+<text anykeytxt>
+	/items = any
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (255,255,255)
+</text>
+
+<text fixation>
+	/items =fix
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+</text>
+
+
+<text redfittxt>
+	/items = colorwords
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (255,255,255)
+	/txcolor = (255,0,0)
+</text>
+
+<text bluefittxt>
+	/items = colorwords
+	/select = 2
+	/ fontstyle = ("Arial",60ptc)
+	/txbgcolor = (255,255,255)
+	/txcolor = (0,0,255)
+</text>
+
+<text redunfittxt>
+	/items = colorwords
+	/select = 1
+	/fontstyle = ("Arial",60ptc)
+	/txbgcolor = (255,255,255)
+	/txcolor = (0,0,255)
+</text>
+
+<text blueunfittxt>
+	/items = colorwords
+	/select = 2
+	/ fontstyle = ("Arial",60ptc)
+	/txbgcolor = (255,255,255)
+	/txcolor = (255,0,0)
+</text>
+
+//定义trials，定义有效的按键反应，正确的按键反应，刺激呈现顺序等信息
+======================================================================================================================================================================
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial redfittrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+    /stimulustimes=[1=fixation;500=redfittxt]
+
+</trial>
+
+<trial bluefittrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/stimulustimes=[1=fixation;500=bluefittxt]
+</trial>
+
+<trial redunfittrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulustimes=[1=fixation;500=redunfittxt]
+</trial>
+
+<trial blueunfittrial>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/stimulustimes=[1=fixation;500=blueunfittxt]
+</trial>
+
+//定义blocks,定义属性信息，加入trials
+======================================================================================================================================================================
+<block instructionblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = instruction]
+</block>
+
+
+<block redblueblk>
+	/screencolor = (255,255,255)
+	/blockfeedback = (meanlatency,correct)
+    /trials = [1-48 = noreplacenorepeat(redfittrial, bluefittrial,redunfittrial,blueunfittrial)]
+</block>
+
+//定义experiment, 加入blocks
+======================================================================================================================================================================
+<expt>
+	/ blocks = [1 = instructionblk; 2 = redblueblk]
+</expt>

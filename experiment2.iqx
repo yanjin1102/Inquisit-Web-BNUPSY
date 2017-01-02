@@ -1,0 +1,18 @@
+﻿<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("宋体", 3.14%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,255)
+	/screencolor = (255,255,255)
+	/lastlabel = ("看我这么可爱，按不按空格❤不按的话你的电脑就会被小胡萝卜的魔力卡在这里哟")
+	/windowsize = (1000,800)
+</instruct>
+
+<page instruction>您好，这里是小胡萝卜的实验，看着我的指导语哟，看到我的小胡萝卜了吗☃虽然它不像胡萝卜，但是你就不能把它当作胡萝卜吗···</page>
+
+<page endinstruction>小胡萝卜的实验结束啦，什么，你说没看到实验程序？这可是一个伟大的穿越实验哟~</page>
+
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

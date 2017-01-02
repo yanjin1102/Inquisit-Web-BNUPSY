@@ -1,0 +1,25 @@
++// 201511060206 李燕玲
+ +
+ +<page instruction>
+ +^人生若只如初见。欢迎您“山一程,水一程”地来到实验！
+ +^^世人都说，人间最美不过纳兰词，这是关于诗词判断的小实验。
+ +^^您需要在两组诗句呈现后，按第一印象对其意境进行主观审美。F键代表喜欢左边，J键代表喜欢右边。
+ +^^^请按Enter键开始实验吧。
+ +</page>
+ +
+ +<page end>
+ +^感谢您“风一更,雪一更”地参与我们的实验！
+ +^^当时只道是寻常。实验已经完结啦！
+ +^^记得找我们的主试拿报酬。小小心意，见笑了。
+ +</page>
+ +
+ +<instruct my>
+ +	/ fontstyle = ("楷体",24pt,true,false,false,false,5,126)
+ +	/ screencolor = (173,246,220)
+ +	/ txcolor = (60,120,170)
+ +</instruct>
+ +
+ +<expt>
+ +	/preinstructions = (instruction)
+ +	/postinstructions = (end)
+ +</expt>

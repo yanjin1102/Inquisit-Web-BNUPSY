@@ -1,0 +1,35 @@
+<instruct myinstruct>
+
+	/nextkey = (" ")
+
+	/fontstyle = ("楷体", 3.14%, false, false, false, false, 5, 1)
+
+	/txcolor = (180,180,255)
+
+	/screencolor = (0,0,30)
+
+	/lastlabel = "请按空格键继续哈"
+
+	/windowsize = (1000,800)
+
+</instruct>
+
+
+
+<page instruction>这是一个好好看的指导语^^你觉得呐？^^这里难道要念首诗吗？^^那你跟我念：^^沧海月明珠有泪，蓝田日暖玉生烟。^^此情可待成追忆？只是当时已惘然。^^ </page>
+
+
+
+<page endinstruction>哎呀，做完啦！！！^^今天的作业又写完了，老师们又要开始改作业了。^^ </page>
+
+
+
+
+
+<expt defaultinstruction>
+
+	/preinstructions = (instruction)
+
+	/postinstructions = (endinstruction)
+
+</expt>

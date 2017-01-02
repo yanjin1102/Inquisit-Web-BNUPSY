@@ -1,0 +1,130 @@
+﻿<item picture>
+	/1="wallg.jpg"
+</item>
+<item gpicture>
+	/1="gray1.jpg"
+	/2="gray2.jpg"
+	/3="gray3.jpg"
+	/4="gray4.jpg"
+	/5="gray5.jpg"
+	/6="gray6.jpg"
+</item>
+
+<picture samelu>
+	/items = picture
+	/position = (25pct,25pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture sameld>
+	/items = picture
+	/position = (25pct,75pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture sameru>
+	/items = picture
+	/position = (75pct,25pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture samerd>
+	/items = picture
+	/position = (75pct,75pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+
+<picture glu>
+	/items = gpicture
+	/position = (25pct,25pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture gld>
+	/items = gpicture
+	/position = (25pct,75pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture gru>
+	/items = gpicture
+	/position = (75pct,25pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+<picture grd>
+	/items = gpicture
+	/position = (75pct,75pct)
+	/valign = center
+	/halign = center
+	/size = (600,450)
+</picture>
+
+<trial ru>
+	/correctresponse = (gru)
+    /validresponse = (samelu,samerd,sameld,gru)
+	/stimulusframes = [1=samelu,samerd,sameld,gru]
+</trial>
+<trial ld>
+	/correctresponse = (gld)
+	/validresponse = (samelu,samerd,sameru,gld)
+	/stimulusframes = [1=samelu,samerd,sameru,gld]
+</trial>
+<trial rd>
+	/correctresponse = (grd)
+	/validresponse = (samelu,sameru,sameld,grd)
+	/stimulusframes = [1=samelu,sameru,sameld,grd]
+</trial>
+<trial lu>
+	/correctresponse = (glu)
+	/validresponse = (sameld,sameru,samerd,glu)
+	/stimulusframes = [1=sameld,sameru,samerd,glu]
+</trial>
+
+
+<block normal>
+	/screencolor = (0,0,0)
+	/trials = [1-24 = noreplacenorepeat(ru,ld,rd,lu)]]
+</block>
+<expt>
+	/ blocks = [1 = start;2 = normal;3 = end]
+</expt>
+<defaults>
+	/inputdevice = mouse
+</defaults>
+
+<picture start>
+	/items = ("指导语.png")
+	/size = (100pct,100pct)
+</picture>
+<picture end>
+	/items = ("结束语.png")
+	/size = (100pct,100pct)
+</picture>
+
+<trial start>
+	/validresponse = (lbuttondown)
+	/stimulusframes = [1=start]
+</trial>
+<trial end>
+	/validresponse = (lbuttondown)
+	/stimulusframes = [1=end]
+</trial>
+
+<block start>
+	/trials = [1 = start]
+</block>
+<block end>
+	/trials = [1 = end]
+</block>
+
+
+

@@ -1,0 +1,152 @@
+﻿//颜色的stroop效应
+
+<item red>
+	/1 = "红"
+	/2 = "绿"
+	/3 = "蓝"
+	/4 = "黄"
+</item>
+
+<item green>
+	/1 = "红"
+	/2 = "绿"
+	/3 = "蓝"
+	/4 = "黄"
+</item>
+
+<item blue>
+	/1 = "红"
+	/2 = "绿"
+	/3 = "蓝"
+	/4 = "黄"
+</item>
+
+<item yellow>
+	/1 = "红"
+	/2 = "绿"
+	/3 = "蓝"
+	/4 = "黄"
+</item>
+
+<item fixation>
+/1="+"
+</item>
+
+<item instruction>
+/1="请对将要呈现的数字的颜色进行判断
+红色请按F键，绿色请按G键，蓝色请按H键，黄色请按J键.
+清晰规则后，请按任意键继续"
+</item>
+
+
+<text red>
+	/items = red
+	/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,0,0)
+</text>
+
+<text green>
+	/items = green
+	/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (0,255,0)
+</text>
+
+<text blue>
+	/items = blue
+	/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (0,0,255)
+</text>
+
+<text yellow>
+	/items = yellow
+	/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,0)
+</text>
+
+<text instruction>
+/items=instruction
+/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text fixation>
+	/items=fixation
+	/ fontstyle = ("Arial",40ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text anykeys>
+	/items = ("按任意键继续")
+	/vposition= 70%
+	/txcolor = (255,0,0)
+	/txbgcolor = (0,0,0)
+	/fontstyle = ("宋体",24pt)
+</text>
+
+
+<trial red>
+	/pretrialpause = 500
+	/validresponse = ("G","H","F","J")
+	/correctresponse = ("F")
+	/stimulustimes = [1 = fixation;500=red]
+</trial>
+
+<trial green>
+	/pretrialpause = 500
+	/validresponse = ("G","H","F","J")
+	/correctresponse = ("G")
+	/stimulustimes = [1 = fixation;500=green]
+</trial>
+
+<trial blue>
+	/pretrialpause = 500
+	/validresponse = ("G","H","F","J")
+	/correctresponse = ("H")
+	/stimulustimes = [1 = fixation;500=blue]
+</trial>
+
+<trial yellow>
+	/pretrialpause = 500
+	/validresponse = ("G","H","F","J")
+	/correctresponse = ("J")
+	/stimulustimes = [1 = fixation;500=yellow]
+</trial>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes =[1=instruction]
+</trial>
+
+<block stroop>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-30 = noreplace(red,green,blue,yellow)]
+</block>
+
+<block instruction>
+	/screencolor = (0,0,0)
+	/trials = [1=instruction]
+</block>
+
+<expt>
+	/blocks = [1=instruction;2=stroop]
+</expt>
+
+
+
+
+
+
+
+
+
+
+
+
+

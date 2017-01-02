@@ -1,0 +1,67 @@
+<picture inspic>
+	/ items = ("instruction.jpeg")
+	/ size = (200,200)
+</picture>
+
+<picture instpic>
+	/ vposition = 85
+	/ items = ("instru.jpeg")
+	/ size = (150,150)
+</picture>
+
+<picture endpic>
+	/ items = ("end.jpg")
+	/ size = (200,200)
+</picture>
+
+<text instxt>
+	/items = ("我是指导语,我不管,我最漂亮！")
+	/size = (1000,300)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键结束实验")
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=inspic,instxt,anykeytxt,instpic]
+	/recorddata = false
+</trial>
+
+<text end>
+	/items = ("我是结束语,我不管，我比指导语漂亮！")
+	/size = (1000,300)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<trial end>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=endpic,end,anykeytxt]
+	/recorddata =false
+</trial>
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block endinstructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = end]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = endinstructionblk]
+</expt>
+
+

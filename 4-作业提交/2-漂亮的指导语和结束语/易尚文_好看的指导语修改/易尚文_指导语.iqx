@@ -1,0 +1,115 @@
+﻿<picture sign>
+	/erase = True(0,0,0) 
+	/position = (15%,15%)
+	/items = ("校徽.jpg")
+/size=(150,150)
+</picture>
+
+<picture sign2>
+	/erase = True(0,0,0) 
+	/position = (80%,15%)
+	/items = ("院徽.jpg")
+    /size=(200,200)
+</picture>
+<text title>
+    / vjustify = top
+	/vposition= 45pct
+	/hjustify = center
+	/items = ("指导语")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 48pt,true)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text endtitle>
+    / vjustify = top
+	/vposition= 45pct
+	/hjustify = center
+	/items = ("实验结束")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 48pt,true)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text instructiontxt>
+	/hjustify = left
+	/items = ("   欢迎来到心理学院！请将左手和右手的食指分别放在键盘的“F”键和“J”键上。
+   在屏幕的中央会随机出现有颜色的汉字，请判断汉字的颜色。")
+	/size = (800,150)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text endtxt>
+	/hjustify = center
+	/items = ("感谢您参与本次实验！")
+	/size = (800,150)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text yellow>
+/hjustify = left
+	/items = ("   如果是黄色，请按“F”键；")
+	/size = (800,150)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,0)
+/vposition = 71.5 pct
+</text>
+
+<text blue>
+/hjustify = left
+	/items = ("                           如果是蓝色，请按“J”键。")
+	/size = (800,150)
+	/fontstyle = ("楷体", 30pt)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,255)
+/vposition = 71.5 pct
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 80 pct
+	/fontstyle = ("宋体", 24pt,false,false,true)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+<text space>
+	/items = ("请按空格键退出")
+	/vposition = 60 pct
+	/fontstyle = ("宋体", 24pt,false,false,true)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=title,instructiontxt,anykeytxt,yellow,blue,sign,sign2]
+	/recorddata = false
+</trial>
+
+<block instruction>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<trial end>
+	/validresponse = (" ")
+	/stimulusframes = [1=endtitle,endtxt,space,sign,sign2]
+	/recorddata = false
+</trial>
+
+<block end>
+	/screencolor = (0,0,0)
+	/trials = [1 = end]
+</block>
+
+<expt>
+	/ blocks = [1 = instruction; 2 = end]
+</expt>

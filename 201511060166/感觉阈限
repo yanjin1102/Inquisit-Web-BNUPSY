@@ -1,0 +1,264 @@
+<item black>
+   /1 = "greykirk0.jpg"
+</item>
+
+<item captain>
+    /1 = "greykirk1.jpg"
+    /2 = "greykirk2.jpg"
+    /3 = "greykirk3.jpg"
+    /4 = "greykirk4.jpg"
+    /5 = "greykirk5.jpg"
+    /6 = "greykirk6.jpg"
+    /7 = "greykirk7.jpg"
+    /8 = "greykirk8.jpg"
+    /9 = "greykirk9.jpg"
+</item>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<text fixation>
+    /items = fixation
+    /select = 1
+    /txcolor = (255,255,255)
+    /fontstyle = ("Arial", 60ptc, false, false, false, false, 5, 1)
+    /txbgcolor = (0, 0, 0)
+</text>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+<text errormsg>
+    /items = errormsg
+    /select = 1
+    /txcolor = (255,0,0)
+    /fontstyle = ("Arial", 60ptc, false, false, false, false, 5, 1)
+    /txbgcolor = (0, 0, 0)
+</text>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+
+<text correctmsg>
+    /items = correctmsg
+    /select = 1
+    /txcolor = (255,0,0)
+    /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+    /txbgcolor = (0, 0, 0)
+</text>
+
+//instruction
+
+<instruct theinstruction>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "点击继续"
+	/windowsize = (1000,800)
+</instruct>
+
+<page instruction1>
+^^欢迎参加本次实验
+^^这是一个视觉阈限研究实验
+</page>
+
+<page instruction2>
+^^您将看到四张内容一致的黑白图片 
+^^有一张图片的灰度与其他图片不同
+^^请选出您认为不同的图片
+^^</page>
+
+<page instruction3>
+^^请您稍事休息
+^^按空格键继续
+</page>
+
+<page endinstruction>
+^^感谢您参加本次实验
+^^ 下回还来哦！
+</page>
+
+//å¼å§
+<picture gray1>
+    /items = black
+    /erase = True(0,0,0)
+    /position = (25,25)
+    /size = (600,450)
+</picture>
+
+<picture gray2>
+    /items = black
+    /erase = True(0,0,0)
+    /position = (75,25)
+    /size = (600,450)
+</picture>
+
+<picture gray3>
+    /items = black
+    /erase = True(0,0,0)
+    /position = (25,75)
+    /size = (600,450)
+</picture>
+
+<picture gray4>
+    /items = black
+    /erase = True(0,0,0)
+    /position = (75,75)
+    /size = (600,450)
+</picture>
+
+<picture target1>
+    /items = captain
+	/erase = True(0,0,0) 
+	/position = (25,25)
+	/size = (600,450)
+</picture>
+
+<picture target2>
+    /items = captain
+    /erase = True(0,0,0)
+    /position = (75,25)
+    /size = (600,450)
+</picture>
+
+<picture target3>
+    /items = captain
+    /erase = True(0,0,0)
+    /position = (25,75)
+    /size = (600,450)
+</picture>
+
+<picture target4>
+    /items = captain
+    /erase = True(0,0,0)
+    /position = (75,75)
+    /size = (600,450)
+</picture>
+
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+	/size = (600,600)
+    /shape = rectangle
+</shape>
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(100,150))
+</expressions>
+
+
+<trial 1>
+    /pretrialpause = 500
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+    /validresponse = (target1,gray2,gray3,gray4)
+    /correctresponse = (target1)
+    /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [values.stimulustimep = values.shapetime + 200]
+	/ontrialbegin = [trial.1.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.1.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.1.insertstimulustime(picture.target1,values.shapetime)]
+	/ontrialbegin = [trial.1.insertstimulustime(picture.gray2,values.shapetime)]
+	/ontrialbegin = [trial.1.insertstimulustime(picture.gray3,values.shapetime)]
+	/ontrialbegin = [trial.1.insertstimulustime(picture.gray4,values.shapetime)]
+	/ontrialend = [trial.1.clearstimulusframes()]
+</trial>
+
+<trial 2>
+    /pretrialpause = 500
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+    /validresponse = (target2,gray2,gray3,gray4)
+    /correctresponse = (target2)
+    /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+    /ontrialbegin =  [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.2.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.2.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.2.insertstimulustime(picture.target2,values.shapetime)]
+	/ontrialbegin = [trial.2.insertstimulustime(picture.gray1,values.shapetime)]
+	/ontrialbegin = [trial.2.insertstimulustime(picture.gray3,values.shapetime)]
+	/ontrialbegin = [trial.2.insertstimulustime(picture.gray4,values.shapetime)]
+	/ontrialend = [trial.2.clearstimulusframes()]
+</trial>
+
+<trial 3>
+    /pretrialpause = 500
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+    /validresponse = (target3,gray2,gray3,gray4)
+    /correctresponse = (target3)
+    /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+    /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.3.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.3.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.3.insertstimulustime(picture.target3,values.shapetime)]
+	/ontrialbegin = [trial.3.insertstimulustime(picture.gray1,values.shapetime)]
+	/ontrialbegin = [trial.3.insertstimulustime(picture.gray2,values.shapetime)] 
+	/ontrialbegin = [trial.3.insertstimulustime(picture.gray4,values.shapetime)]
+	/ontrialend = [trial.3.clearstimulusframes()]
+</trial>
+
+<trial 4>
+    /pretrialpause = 500
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+    /validresponse = (target4,gray2,gray3,gray4)
+    /correctresponse = (target4)
+    /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+    /ontrialbegin = [values.shapetime = values.shapetime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.4.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.4.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.4.insertstimulustime(picture.target4,values.shapetime)]
+	/ontrialbegin = [trial.4.insertstimulustime(picture.gray1,values.shapetime)]
+	/ontrialbegin = [trial.4.insertstimulustime(picture.gray2,values.shapetime)] 
+	/ontrialbegin = [trial.4.insertstimulustime(picture.gray3,values.shapetime)]
+	/ontrialend = [trial.4.clearstimulusframes()]
+</trial>
+
+//block
+<block startblk>
+	/screencolor = (255,255,255)
+	/preinstructions = (instruction2)
+</block>
+
+<block midblk>
+	/screencolor = (255,255,255)
+	/preinstructions = (instruction3)
+</block>
+
+<block exerciseblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-5 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+
+<block judgeblk>
+    /screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-36 = noreplacenorepeat(1,2,3,4)]
+</block>
+
+//experiment
+<expt>
+	/preinstructions = (instruction1)
+	/blocks = [1 = startblk;  2 = exerciseblk; 3 = midblk; 4 = judgeblk]
+	/postinstructions = (endinstruction)
+</expt>
+
+<defaults>
+	/inputdevice = mouse
+</defaults>

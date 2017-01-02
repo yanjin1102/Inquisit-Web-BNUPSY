@@ -1,0 +1,262 @@
+﻿<item target>
+    /1 = "1.bmp"
+    /2 = "2.bmp"
+    /3 = "3.bmp"
+    /4 = "4.bmp"
+  
+</item>
+
+
+<item standard>
+    /1 = "原图.bmp"
+    
+</item>
+
+<instruct myinstruct>
+	/ inputdevice = mouse
+	/ fontstyle = ("微软雅黑", 4.81%, true, false, false, false, 5, 1)
+	/ txcolor = (255, 255, 255)
+	/ screencolor = (0,0,0)
+	/ windowsize = (1920,1080)
+	/ lastlabel = "点击此处继续 "
+</instruct>
+
+
+<page begininstruction1>^^^^同学你好，很高兴你参与我们的研究！^^接下来你进行的研究是测验感知能力的。^^请你尽量准确快速的对我们呈现的刺激材料进行反应！^^</page>
+
+<page begininstruction2>^^^^第一步将进行的是练习实验，每次会为你同时呈现四幅图，仔细观察哪幅图与其余图片灰度不同，请用鼠标点击该图</page>
+
+<page endinstruction1>^^^^现在是休息时间^^如果你休息足够了，请按鼠标进入下一阶段的实验^^</page>
+
+<page endinstruction2>^^^^感谢你的参与，你提供的行为数据对我们的研究特别重要!^^实验结束后你可以找主试领取被试费！^^</page>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+====================================================================================================================
+//定义刺激 两个item分别出现在左上、右上、左下和右下 共八个
+
+<picture target_1>
+	/items = target
+	/position=(25,25)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture target_2>
+	/items = target
+	/position=(75,25)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture target_3>
+	/items = target
+	/position=(25,75)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture target_4>
+	/items = target
+	/position=(75,75)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+
+<picture standard_1>
+	/items = standard
+	/position=(25,25)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture standard_2>
+	/items = standard
+	/position=(75,25)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture standard_3>
+	/items = standard
+	/position=(25,75)
+	/erase = True(0,0,0) 
+	/size = (700,500)
+</picture>
+
+<picture standard_4>
+	/items = standard
+	/position = (75,75)
+	/ erase = ture(0,0,0)
+	/size = (700,500)
+</picture>
+//定义注视点及其遮蔽物
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+	/size = (600,600)
+    /shape = rectangle
+</shape>
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+
+//定义values & expressions，使注视点随即呈现
+==========================================================================================================================================
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(100,150))
+</expressions>
+
+
+
+//定义trials，我们需要定义4类trial，
+===========================================================================================================================================
+
+<trial top_left>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/correctresponse = (target_1)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.top_left.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.top_left.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.top_left.insertstimulustime(picture.target_1,values.shapetime)]
+	/ontrialbegin = [trial.top_left.insertstimulustime(picture.standard_2,values.shapetime)]
+	/ontrialbegin = [trial.top_left.insertstimulustime(picture.standard_3,values.shapetime)]
+	/ontrialbegin = [trial.top_left.insertstimulustime(picture.standard_4,values.shapetime)]
+	/ontrialend = [trial.top_left.clearstimulusframes()]
+	/validresponse = (target_1,standard_2,standard_3,standard_4)
+</trial>
+
+<trial top_right>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/correctresponse = (target_2)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.top_right.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.top_right.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.top_right.insertstimulustime(picture.target_2,values.shapetime)]
+	/ontrialbegin = [trial.top_right.insertstimulustime(picture.standard_1,values.shapetime)]
+	/ontrialbegin = [trial.top_right.insertstimulustime(picture.standard_3,values.shapetime)]
+	/ontrialbegin = [trial.top_right.insertstimulustime(picture.standard_4,values.shapetime)]
+	/ontrialend = [trial.top_right.clearstimulusframes()]
+	/validresponse = (target_2,standard_1,standard_3,standard_4)
+</trial>
+
+<trial bottom_left>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/correctresponse = (target_3)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(picture.target_3,values.shapetime)]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(picture.standard_1,values.shapetime)]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(picture.standard_2,values.shapetime)]
+	/ontrialbegin = [trial.bottom_left.insertstimulustime(picture.standard_4,values.shapetime)]
+	/ontrialend = [trial.bottom_left.clearstimulusframes()]
+	/validresponse = (target_3,standard_1,standard_2,standard_4)
+</trial>
+
+<trial bottom_right>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/correctresponse = (target_4)
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(picture.target_4,values.shapetime)]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(picture.standard_1,values.shapetime)]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(picture.standard_2,values.shapetime)]
+	/ontrialbegin = [trial.bottom_right.insertstimulustime(picture.standard_3,values.shapetime)]
+	/ontrialend = [trial.bottom_right.clearstimulusframes()]
+	/validresponse = (target_4,standard_1,standard_2,standard_3)
+</trial>
+
+
+
+//定义blocks,我们在这里定义三个block，一个是instruction，一个是练习block，一个是正式实验的block。
+=============================================================================================================================================================
+
+<block startblock>
+	/screencolor = (255,255,255)
+	/preinstructions = (begininstruction2)
+</block>
+
+
+<block exerciseblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-4= noreplacenorepeat(top_left,top_right,bottom_left,bottom_right)]
+</block>
+
+<block restblock>
+	/screencolor = (255,255,255)
+	/postinstructions = (endinstruction1)
+</block>
+
+<block judgeblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-16 = noreplacenorepeat(top_left,top_right,bottom_left,bottom_right)]
+</block>
+
+
+//定义experiment, 加入blocks
+======================================================================================================================================================================
+<expt>
+	/preinstructions = (begininstruction1)
+	/ blocks = [1 = startblock; 2=exerciseblk; 3 = restblock; 4 = startblock; 5 = judgeblk]
+	/postinstructions = (endinstruction2)
+</expt>
+//定义默认输入设备
+<defaults>
+	/inputdevice = mouse
+</defaults>

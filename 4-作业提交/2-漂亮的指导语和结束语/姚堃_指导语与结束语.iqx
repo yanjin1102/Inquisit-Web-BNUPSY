@@ -1,0 +1,26 @@
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("幼圆", 3.14%, true, false, false, false, 5, 134)
+	/txcolor = (0,0,28)
+	/screencolor = (244,154,193)
+	/lastlabel = "请按空格键继续"
+</instruct>
+
+<page instruction>
+^^终于等到你n(*≧▽≦*)n
+^^请将左手和右手的食指分别放在键盘的“F”键和“J”键上
+^^在屏幕的中央会随机出现有关颜色的词
+^^如果这个词的颜色和这个词所表示的颜色一致，请按“F”键，如果不一致请按“J”键
+^^Are you ready?
+^^Let's go!
+</page>
+
+<page endinstruction>
+^^^^^^挑战结束
+^^^^^^恭喜你完成了所有挑战d=====(￣▽￣*)b
+</page>
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

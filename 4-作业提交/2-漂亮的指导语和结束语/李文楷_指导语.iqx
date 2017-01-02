@@ -1,0 +1,28 @@
+﻿<instruct my>
+/nextkey = (" ")
+/fontstyle = ("黑体",12pt,false,false,true,false,5,134)
+/lastlabel = "按空格退出"
+/inputdevice = keyboard
+/txcolor = (0,137,167)
+</instruct>
+
+<page 指导语>
+^这是一个非常漂亮的指导语。
+^^是的，请你相信我，这真的很漂亮。
+^^请将左右手的食指放在F和J键上。
+^^一会儿，屏幕中央会呈现一个“十”字，请注视屏幕中央的十字。
+^^请回忆刚才的指导语，若觉得漂亮，请按F键；若觉得非常漂亮，请按J键。
+^^在此过程中，请摸着良心反应。
+</page>
+
+<page 结束语>
+^希望你像我一样，
+^^^也能发自内心地觉得，
+^^^这真的是一个很漂亮的指导语。
+^^^谢谢你的参与，和你的真诚。
+</page>
+
+<expt>
+/preinstructions = (指导语)
+/postinstructions = (结束语)
+</expt>

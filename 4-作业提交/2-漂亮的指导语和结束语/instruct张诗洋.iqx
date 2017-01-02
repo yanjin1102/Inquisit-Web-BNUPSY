@@ -1,0 +1,99 @@
+﻿<item welcome>
+/1="欢迎参加实验！"
+</item>
+
+<item color>
+/2="如果文字为“红”，请按f键；如果文字为“绿”，请按j键。"
+</item>
+
+<item any>
+/3="请按任意键进入实验练习。"
+</item>
+
+<item bye>
+/4="感谢您参与实验！再见。"
+</item>
+
+<item quit>
+/5="请按任意键退出实验程序。"
+</item>
+
+<text instructiontxt>
+	/items = welcome
+    /fontstyle = ("宋体", 5%, false, false, false, false, 5, 1)
+    /txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+	/size = (1920,380)
+    /hposition = 50pct
+    /vposition = 30pct
+</text>
+
+<text colortxt>
+	/items = color
+    /fontstyle = ("宋体", 6%, true, false, false, false, 5, 1)
+    /txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+	/size = (1920,400)
+    /hposition = 50pct
+    /vposition = 50pct
+</text>
+
+<text anytxt>
+	/items = any
+    /fontstyle = ("宋体", 5%, false, false, false, false, 5, 1)
+    /txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+	/size = (1920,400)
+ 
+    /vposition = 98pct
+</text>
+
+<text byetxt>
+	/items = bye
+    /fontstyle = ("宋体", 6%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = (0,0,0)
+	/size = (1300,500)
+    /hposition = 50pct
+    /vposition = 50pct
+</text>
+
+<text quittxt>
+	/items = quit
+    /fontstyle = ("宋体", 5%, true, false, false, false, 5, 1)
+	/txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+	/size = (1920,500)
+
+    /vposition = 98pct
+</text>
+
+****************************************************************************************
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,colortxt,anytxt]
+</trial>
+
+<trial ending>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=byetxt,quittxt]
+</trial>
+
+*****************************************************************************************
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block endingblk>
+    /screencolor = (220,220,220)
+    /trials = [1 = ending]
+</block>
+
+***********************************************************************************
+
+<expt>
+	/ blocks = [1 = instructionblk;2 = endingblk]
+</expt>

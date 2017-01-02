@@ -1,0 +1,29 @@
+<instruct myinstruct>
+/nextkey = (" ")
+/fontstyle = ("Arial", 24pt, false, false, false, false, 5, 1)
+/txcolor = (255,255,255)
+/screencolor = (0,0,0)
+/lastlabel = " Please press the space key"
+/windowsize = (1280,720)
+</instruct>
+
+<page instruct>
+Welcome to our experiment!
+^Here's a beautiful poem:
+^Where, perhaps some beauty lies,
+^The cynosure of neighboring eyes.
+
+</page>
+
+<page endinstruction>
+Thanks for attending our experiment!
+^Here's another beautiful poem:
+^And what's the good of an escape
+^If honour find him in the wintry blast?
+^I am content to live it all again
+</page>
+
+<expt defaultinstruction>
+/preinstructions = (instruct)
+/postinstructions = (endinstruction)
+</expt>

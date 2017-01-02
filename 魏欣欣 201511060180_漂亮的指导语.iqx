@@ -1,0 +1,26 @@
+// 201511060180 魏欣欣
+   不知道在expt中的设定对不对，不过好有趣
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3.14%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,255)
+	/screencolor = (255,255,255)
+	/ prevlabel = "*^_^*"
+	/ nextlabel = "再戳戳"
+	/lastlabel = "戳戳  空格"
+	/windowsize = (850,500)
+</instruct>
+
+<page instruction>Hey！Baby！^^当你来到这个页面，那说明你是这个世界上最幸运的人……之一~~^^因为接下来你将会享受到一次有趣的经历，极其有趣！！！^^辣么辣么，是不是迫不及待了呢@_@^^戳戳嘛~戳戳</page>
+
+<page midinstruction>当你以为戳过之后，会出现什么可爱的事情^^结果你就戳了……戳了^^然而什么都没有^^哈哈哈！上当了吧！^^  ^^  ^^其实一切只是上帝给你开的一个小玩笑^^不信你再戳一下，一定会出现可爱的事情呦~</page>
+
+<page endinstruction>^^   ^^   ^^   ^^                        愿世间再无编程！！！^^  ^^</page>
+
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (midinstruction)
+	/postinstructions = (endinstruction)
+</expt>

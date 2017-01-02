@@ -1,0 +1,191 @@
+﻿//指导语
+<instruct mine>
+/nextkey = (" ")
+/ fontstyle = ("微软雅黑 Light", 3.65%, false, false, false, false, 5, 1)
+/ txcolor = (255, 99, 71)
+/screencolor = (255,255,255)
+/lastlabel = "点击鼠标继续"
+/windowsize = (800,600)
+</instruct>
+
+<page instruction>
+^^
+在屏幕上将呈现四张内容相同图片^^有一张与其他三张存在灰度差异^^请您找出并用鼠标点击^^
+^^
+点击鼠标开始实验
+</page>
+
+//灰度差异图片
+<item group1>
+	/1 = "1.0.jpg"
+	/2 = "2.0.jpg"
+	/3 = "3.0.jpg"
+	/4 = "4.0.jpg"
+	/5 = "5.0.jpg"
+</item>
+
+//灰度图片
+<item group2>
+	/1 = "grey.jpg"
+</item>
+
+//刺激图片位置	
+//position是百分比
+<picture stim1>
+    /items=group1
+    /position = (10,10)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+
+<picture stim2>
+    /items=group1
+    /position = (60,10)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+<picture stim3>
+    /items=group1
+    /position = (10,50)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+
+<picture stim4>
+    /items=group1
+    /position = (60,50)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+//其他图片位置
+<picture compare1>
+    /items=group2
+    /position = (10,10)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+<picture compare2>
+    /items=group2
+    /position = (60,10)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+<picture compare3>
+    /items=group2
+    /position = (10,50)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+
+<picture compare4>
+    /items=group2
+    /position = (60,50)
+	/size=(400,300)
+    /valign = top
+    / halign = left
+</picture>
+
+
+
+//在这里加入需要反馈给被试的信息，例如是否正确作答，正确的就打一个对号，做错的就打一个错号。
+
+<text correctmsg>
+	/items = ("√")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (0,255,0)
+</text>
+
+<text errormsg>
+	/items = ("×")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+</text>
+
+//这里增加一个注视点，在每次图片出现之前，让被试集中精力。
+
+<text fixation>
+	/items = ("+")
+	/fontstyle = ("Arial", 40ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+//覆盖注视点
+<shape cover>
+    /position = (50,50)
+	/size=(100,100)
+    /valign = center
+    / halign = center
+	/color = (0,0,0)
+</shape>
+
+//同时呈现四张图的trial
+<trial trial1>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/validresponse = (stim1,compare2,compare3,compare4)
+	/correctresponse = (stim1)
+	/stimulusframes = [1 = fixation; 100 = cover,stim1,compare2,compare3,compare4]
+</trial>
+
+<trial trial2>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/validresponse = (compare1,stim2,compare3,compare4)
+	/correctresponse = (stim2)
+	/stimulusframes = [1 = fixation; 100 = cover,compare1,stim2,compare3,compare4]
+</trial>
+
+<trial trial3>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/validresponse = (compare1,compare2,stim3,compare4)
+	/correctresponse = (stim3)
+	/stimulusframes = [1 = fixation; 100 = cover,compare1,compare2,stim3,compare4]
+</trial>
+
+<trial trial4>
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+	/validresponse = (compare1,compare2,compare3,stim4)
+	/correctresponse = (stim4)
+	/stimulusframes = [1 = fixation; 100 = cover,compare1,compare2,compare3,stim4]
+</trial>
+
+
+<block all>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-20 = noreplace(trial1, trial2,trial3,trial4)]
+</block>
+
+
+<expt>
+	/preinstructions = (instruction)
+	/ blocks = [1 = all]
+</expt>
+
+<defaults>
+	/inputdevice = mouse
+</defaults>
+

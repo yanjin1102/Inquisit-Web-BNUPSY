@@ -1,0 +1,491 @@
+﻿<<<<<<< HEAD
+﻿<instruct myinstruct>
+	/nextkey = (" ")
+	/ fontstyle = ("微软雅黑", 4.81%, true, false, false, false, 5, 1)
+	/ txcolor = (255, 255, 255)
+	/ screencolor = (0,0,0)
+	/ windowsize = (1920,1080)
+	/lastlabel = "请按空格键继续"
+</instruct>
+
+
+<page begininstruction1>^^^^您好，非常欢迎您参与我们的研究！^^我们当前的研究是测验您数字认知的能力。^^请您尽量又快又准地对我们呈现的刺激材料进行反应！^^</page>
+
+<page begininstruction2>^^^^首先进行的是第一个实验的练习^^请您将左手和右手的食指分别放在键盘的“F”键和“J”键上；^^在屏幕的中央会出现0到9的数字，请判断其奇偶.^^如果是【偶数】，请按“F”键；^^如果是【奇数】，请按“J”键。</page>
+
+<page begininstruction3>^^^^第一个正式试验开始^^请您将左手和右手的食指分别放在键盘的“F”键和“J”键上；^^在屏幕的中央会出现0到9的数字，请判断其奇偶.^^如果是【偶数】，请按“F”键；^^如果是【奇数】，请按“J”键。</page>
+
+<page begininstruction2R>^^^^现在进行第二个实验的练习^^请您将左手和右手的食指分别放在键盘的“F”键和“J”键上；^^在屏幕的中央会出现0到9的数字，请判断其奇偶.^^如果是【偶数】，请按“J”键；^^如果是【奇数】，请按“F”键。</page>
+
+<page begininstruction3R>^^^^第二个正式试验开始^^请您将左手和右手的食指分别放在键盘的“F”键和“J”键上；^^在屏幕的中央会出现0到9的数字，请判断其奇偶.^^如果是【偶数】，请按“J”键；^^如果是【奇数】，请按“F”键。</page>
+
+<page endinstruction1>^^^^请您稍微休息一下!^^如果您休息好了，准备进入下一阶段的实验，请您按空格键！^^【请注意仔细阅读指导语】^^</page>
+
+<page endinstruction2>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^再次感谢您的参与！^^</page>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+====================================================================================================================
+//接下来我们就需要用图片刺激的定义方式定义我们的刺激材料啦！我们要定义两类刺激，一类是呈现正常的R，一类是定义镜像过的R
+<text 0>
+    /items = ("0")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 1>
+    /items = ("1")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 2>
+    /items = ("2")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 3>
+    /items = ("3")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 4>
+    /items = ("4")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 5>
+    /items = ("5")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 6>
+    /items = ("6")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 7>
+    /items = ("7")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 8>
+    /items = ("8")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+<text 9>
+    /items = ("9")
+	   /fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	   /txcolor = (255,255,255)
+    /txbgcolor = (0, 0, 0)
+</text>
+
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+	/size = (600,600)
+    /shape = rectangle
+</shape>
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+
+//定义values & expressions，让我们的注视点呈现时间任性起来。
+==========================================================================================================================================
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(100,150))
+</expressions>
+
+
+
+//定义trials，我们需要定义两类trial，一个是正常R的trial，一个是镜像R的trial
+===========================================================================================================================================
+
+
+<trial F0>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F0.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F0.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F0.insertstimulustime(text.0,values.shapetime)]
+	   /ontrialbegin = [trial.F0.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F0.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F1>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F1.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F1.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F1.insertstimulustime(text.1,values.shapetime)]
+	   /ontrialbegin = [trial.F1.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F1.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F2>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F2.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F2.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F2.insertstimulustime(text.2,values.shapetime)]
+	   /ontrialbegin = [trial.F2.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F2.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F3>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F3.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F3.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F3.insertstimulustime(text.3,values.shapetime)]
+	   /ontrialbegin = [trial.F3.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F3.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F4>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F4.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F4.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F4.insertstimulustime(text.4,values.shapetime)]
+	   /ontrialbegin = [trial.F4.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F4.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F5>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F5.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F5.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F5.insertstimulustime(text.5,values.shapetime)]
+	   /ontrialbegin = [trial.F5.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F5.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F6>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F6.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F6.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F6.insertstimulustime(text.6,values.shapetime)]
+	   /ontrialbegin = [trial.F6.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F6.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F7>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F7.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F7.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F7.insertstimulustime(text.7,values.shapetime)]
+	   /ontrialbegin = [trial.F7.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F7.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F8>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F8.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F8.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F8.insertstimulustime(text.8,values.shapetime)]
+	   /ontrialbegin = [trial.F8.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F8.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial F9>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.F9.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.F9.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.F9.insertstimulustime(text.9,values.shapetime)]
+	   /ontrialbegin = [trial.F9.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.F9.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J0>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J0.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J0.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J0.insertstimulustime(text.0,values.shapetime)]
+	   /ontrialbegin = [trial.J0.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J0.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J1>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J1.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J1.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J1.insertstimulustime(text.1,values.shapetime)]
+	   /ontrialbegin = [trial.J1.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J1.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J2>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J2.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J2.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J2.insertstimulustime(text.2,values.shapetime)]
+	   /ontrialbegin = [trial.J2.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J2.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J3>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J3.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J3.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J3.insertstimulustime(text.3,values.shapetime)]
+	   /ontrialbegin = [trial.J3.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J3.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J4>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J4.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J4.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J4.insertstimulustime(text.4,values.shapetime)]
+	   /ontrialbegin = [trial.J4.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J4.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J5>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J5.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J5.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J5.insertstimulustime(text.5,values.shapetime)]
+	   /ontrialbegin = [trial.J5.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J5.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J6>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J6.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J6.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J6.insertstimulustime(text.6,values.shapetime)]
+	   /ontrialbegin = [trial.J6.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J6.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J7>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J7.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J7.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J7.insertstimulustime(text.7,values.shapetime)]
+	   /ontrialbegin = [trial.J7.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J7.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J8>
+	   /pretrialpause = 500
+	   /correctresponse =("J")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J8.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J8.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J8.insertstimulustime(text.8,values.shapetime)]
+	   /ontrialbegin = [trial.J8.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J8.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+<trial J9>
+	   /pretrialpause = 500
+	   /correctresponse =("F")
+    /validresponse = ("F","J")
+	   /ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	   /ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	   /ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	   /ontrialbegin = [trial.J9.insertstimulustime(text.fixation, 0)]
+	   /ontrialbegin = [trial.J9.insertstimulustime(shape.blank,values.fixationtime)]
+	   /ontrialbegin = [trial.J9.insertstimulustime(text.9,values.shapetime)]
+	   /ontrialbegin = [trial.J9.insertstimulustime(shape.blank,values.stimulustimep)]
+	   /ontrialend = [trial.J9.clearstimulusframes()]
+	   /beginresponsetime = values.shapetime
+</trial>
+//定义blocks,我们在这里定义三个block，一个是instruction，一个是练习block，一个是正式实验的block。
+=============================================================================================================================================================
+<block restblock>
+	/screencolor = (255,255,255)
+	/postinstructions = (endinstruction1)
+</block>
+<block startblock1>
+	/screencolor = (255,255,255)
+	/preinstructions = (begininstruction2)
+</block>
+
+<block startblock2>
+	/screencolor = (255,255,255)
+	/preinstructions = (begininstruction2R)
+</block>
+
+<block exerciseblk1>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1=F6;2=F8;3=F2;4=F0;5=F3;6=F7;7=F1;8=F4;9=F9;10=F5;11=F2;12=F1]
+	/postinstructions = (begininstruction3)
+    /correctmessage = (correctmsg,500)
+    /errormessage = (errormsg,500)
+ 
+</block>
+<block judgeblk1>
+     /screencolor = (0,0,0)
+	    /blockfeedback = (meanlatency,correct)
+	    /trials = [1=F7;2=F1;3=F2;4=F9;5=F8;6=F5;7=F2;8=F3;9=F2;10=F0;11=F5;12=F4;13=F8;14=F2;15=F6;16=F4;17=F9;18=F5;19=F9;20=F3;21=F9;22=F1;23=F8;24=F4;25=F1;26=F6;27=F3;28=F7;29=F9;30=F2;31=F4;32=F2;33=F7;34=F6;35=F9;36=F4;37=F5;38=F8;39=F6;40=F1;41=F3;42=F8;43=F3;44=F0;45=F9;46=F7;47=F2;48=F1;49=F4;50=F3;51=F6;52=F7;53=F0;54=F4;55=F7;56=F3;57=F4;58=F0;59=F6;60=F2;61=F5;62=F3;63=F5;64=F7;65=F4;66=F6;67=F8;68=F9;69=F6;70=F0;71=F8;72=F7;73=F5;74=F0;75=F2;76=F8;77=F0;78=F1;79=F9;80=F0;81=F3;82=F1;83=F5;84=F6;85=F5;86=F1;87=F7;88=F8;89=F1;90=F0]
+</block>
+<block exerciseblk2>
+     /screencolor = (0,0,0)
+	 /blockfeedback = (meanlatency,correct)
+	 /trials = [1=J4;2=J1;3=J3;4=J5;5=J6;6=J2;7=J7;8=J8;9=J0;10=J9;11=J7;12=J8]
+     /postinstructions = (begininstruction3R)
+     /correctmessage = (correctmsg,500)
+     /errormessage = (errormsg,500)
+</block>
+<block judgeblk2>
+     /screencolor = (0,0,0)
+	    /blockfeedback = (meanlatency,correct)
+	    /trials = [1=J6;2=J7;3=J3;4=J4;5=J9;6=J7;7=J6;8=J3;9=J9;10=J8;11=J7;12=J0;13=J8;14=J6;15=J1;16=J3;17=J7;18=J8;19=J5;20=J4;21=J7;22=J1;23=J2;24=J4;25=J0;26=J7;27=J4;28=J8;29=J4;30=J1;31=J9;32=J0;33=J5;34=J6;35=J4;36=J6;37=J0;38=J9;39=J4;40=J3;41=J1;42=J0;43=J1;44=J5;45=J2;46=J8;47=J9;48=J6;49=J5;50=J7;51=J9;52=J1;53=J6;54=J9;55=J5;56=J1;57=J8;58=J2;59=J9;60=J2;61=J1;62=J7;63=J5;64=J8;65=J0;66=J4;67=J5;68=J9;69=J3;70=J8;71=J3;72=J2;73=J7;74=J2;75=J0;76=J6;77=J8;78=J1;79=J4;80=J2;81=J5;82=J3;83=J5;84=J0;85=J3;86=J0;87=J2;88=J6;89=J2;90=J3]
+</block>
+
+//定义experiment, 加入blocks
+======================================================================================================================================================================
+<expt>
+	/preinstructions = (begininstruction1)
+	/subjects = (1 of 2)
+	/ blocks = [1 = startblock1; 2=exerciseblk1; 3 = judgeblk1;4 = restblock; 5 = startblock2;6=exerciseblk2;7 = judgeblk2]
+	/postinstructions = (endinstruction2)
+</expt>
+
+<expt>
+	/preinstructions = (begininstruction1)
+	/subjects = (2 of 2)
+	/ blocks = [1 = startblock2; 2=exerciseblk2; 3 = judgeblk2;4 = restblock; 5= startblock1;6=exerciseblk1;7 = judgeblk1]
+	/postinstructions = (endinstruction2)
+</expt>

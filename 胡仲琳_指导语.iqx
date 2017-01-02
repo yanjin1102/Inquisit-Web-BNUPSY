@@ -1,0 +1,36 @@
+﻿<instruct my>
+	/ nextkey = ("J")  //将J键设置为跳转到下一个页面的操作键
+	/ nextlabel = "press [J] to nexe page"
+	/ prevkey = ("F")
+	/ prevlabel = "press [F] to previous page"
+	/ lastlabel = "press [J] to exit"
+	/ fontstyle = ("Bradley Hand ITC", 6.48%, false, false, false, false, 5, 1)
+	/ txcolor = (255, 255, 255)
+	/ screencolor = (0, 0, 0)
+	/ windowsize = (1200,1000)
+	/ wait = 200
+</instruct>
+
+<page welcome>
+  HELLO!
+  ^This is an experiment conducted by KiCo from the school of psychology.
+  ^No harm will be caused.
+  ^Besides,You will get 50RMB for your kindness.
+  ^^If you have no questions,press [J] to the details of this experiment. 
+</page>
+
+<page exptintro>
+  This experiment is about visual ability.
+  ^Two pictures will be shown at the same time,if you think the left one is bigger than the right one,then press [1];if the opposite,then [2].
+  ^If you now fully understand the requirement,press [J] to have a try.
+</page>
+
+<page end>
+  This is the end of the experiment.
+  ^Thanks for coming!
+</page>
+
+<expt>
+	/preinstructions = (welcome,exptintro)
+    /postinstructions = (end) 
+</expt>

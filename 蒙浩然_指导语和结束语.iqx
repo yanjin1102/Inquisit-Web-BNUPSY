@@ -1,0 +1,23 @@
+﻿//instruct 建构指导语
+
+<instruct instruntion>
+	/ nextkey = (" ")
+	/ fontstyle = ("SimSun", 5pct, false, false, false, false, 5, 0)
+	/ txcolor = (255, 255, 255)
+	/ lastlabel = ("请按空格键继续")
+	/ screencolor = (0,0,0)
+	/ windowsize = (1440,900)
+</instruct>
+
+<page instruction1>
+您好，实验开始时，在屏幕的中央会随机出现红色、绿色或蓝色的汉字，如果颜色字的字义和颜色一致，请用左手的食指按“F”键，如果不一致，请用右手的食指按“J”键。
+</page>
+
+<page instruction2>
+谢谢您参与我们的实验！
+</page>
+
+<expt defaltinstruction>
+	/ preinstructions = (instruction1)
+	/ postinstructions = (instruction2)
+</expt>

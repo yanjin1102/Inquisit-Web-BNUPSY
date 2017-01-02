@@ -1,0 +1,93 @@
+//指导语图片
+<picture openingpic>
+    /items=("http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1310/16/c5/27563807_27563807_1381901166678_mthumb.jpg")
+    /position = (43 pct,50 pct)
+    /valign = center
+    /halign = left
+    /size = (800,400)
+</picture>
+
+//结束语图片
+<picture endingpic>
+    /items=("http://images.517best.com/UploadFiles/images/s/20150128/208315397020150128105022684106807.jpg")
+    /position = (12 pct,50 pct)
+    /valign = center
+    /halign = left
+    /size = (800,400)
+</picture>
+ 
+//指导语文字
+<text instructiontext>
+    /halign = left
+    /valign = center
+    /vposition = 50 pct
+    /hposition = 11 pct
+    /hjustify = left
+    /vjustify = center
+ 	/items = ("我希望有个如你一般的人
+如山间清爽的风
+如古城温暖的光
+从清晨到夜晚
+从山野到书房
+只要最后是你
+就好
+
+欢迎您来到实验室
+请按【空格键】进入实验")
+ 	/fontstyle = ("微软雅黑", 25pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,0,102)
+ </text>
+
+//结束语文字
+<text endtext>
+ 	/halign = left
+    /valign = center
+    /vposition = 50 pct
+    /hposition = 62 pct
+    /hjustify = left
+    /vjustify = center
+ 	/items = ("在季节的车上
+如果你要提前下车
+请别推醒装睡的我
+这样我可以沉睡到终点
+假装不知道
+你已经离开
+
+请按【空格键】退出")
+ 	/size = (1000,500)
+ 	/fontstyle = ("微软雅黑", 25pt)
+ 	/txbgcolor = (transparent)
+ 	/txcolor = (255,0,102)
+</text>
+ 
+//指导语trial
+<trial instruction>
+ 	/validresponse = (57)
+ 	/stimulusframes = [1=instructiontext,openingpic]
+ 	/recorddata = false
+</trial>
+
+//结束语trail
+<trial end>
+ 	/validresponse = (57)
+ 	/stimulusframes = [1=endingpic,endtext]
+    /recorddata = false
+</trial>
+ 
+//指导语block
+<block instructionblk>
+ 	/screencolor = (204,255,255)
+ 	/trials = [1 = instruction]
+</block>
+ 
+//结束语block
+<block endblk>
+ 	/screencolor = (204,255,255)
+ 	/trials = [1 = end]
+</block>
+ 
+
+<expt>
+ 	/blocks = [1 = instructionblk;2=endblk]
+</expt>

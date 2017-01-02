@@ -1,0 +1,56 @@
+﻿<item instruction>
+   /1 = "屏幕上呈现的一个有颜色的字，请判断字的颜色和字的意义是否一致，
+     如果是一致就点击键盘按键'F'，如果不一致就点击键盘按键'J'。"
+
+</item>
+<item any>
+    /1="请按任意键开始实验。"
+</item>
+<item end>
+    /1="实验结束！谢谢您的参与。"
+</item>
+
+<text instructiontxt>
+   /items = instruction
+   /fontstyle = ("宋体",40ptc)
+   /txbgcolor = (0,0,0)
+   /txcolor = (85, 255, 255) 
+   /hjustify = left
+</text>
+<text anytxt>
+   /items = any
+   /vposition = 80pct
+   /fontstyle = ("宋体",30ptc)
+   /txbgcolor = (0,0,0)
+   /txcolor =(255, 255, 127)
+
+</text>
+<text endtxt>
+   /items = end
+   /vposition = 50pct
+   /fontstyle = ("宋体",50ptc)
+   /txbgcolor = (0,0,0)
+   /txcolor = (255, 85, 127)
+
+</text>
+<trial instructiontrial>
+  /validresponse = (anyresponse)
+  /stimulusframes = [1 = instructiontxt,anytxt]
+  /recorddata = false
+</trial>
+<trial endtrial>
+  /validresponse = (anyresponse)
+  /stimulusframes = [1 = endtxt]
+  /recorddata = false
+</trial>
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instructiontrial]
+</block>
+<block endblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = endtrial]
+</block>
+<expt>
+	/ blocks = [1 = instructionblk;2=endblk]
+</expt>

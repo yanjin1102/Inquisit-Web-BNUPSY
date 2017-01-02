@@ -1,0 +1,23 @@
+﻿<instruct instruction>
+	/ nextkey = (" ")
+	/ fontstyle = ("方正卡通简体", 20pt, false, false, false, false, 5, 134)
+	/ txcolor = black
+	/screencolor = green
+    /lastlabel = "按空格退出"
+</instruct>
+
+<page 指导语>
+	^^                        欢迎参加实验！
+	^^^          你觉得指导语漂亮之后，请按[空格键]继续。
+</page>
+
+<page 再见>
+	^^                             感谢参加实验！
+	^^^           请呼叫主试，并告诉主试指导语很漂亮。
+    ^^^                            ┑(￣Д ￣)┍
+</page>
+
+<expt>
+/ preinstructions = (指导语)
+/ postinstructions = (再见)
+</expt>

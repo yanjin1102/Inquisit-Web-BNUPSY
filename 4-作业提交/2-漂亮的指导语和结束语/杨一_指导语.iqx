@@ -1,0 +1,74 @@
+<picture instruction>
+    /items=("http://img.haote.com/upload/201412/13/1418458246_250_180_s.jpg")
+    /position = (40,20)
+    /valign = top
+    / halign = left
+</picture>
+
+<picture end>
+    /items=("http://img3.duitang.com/uploads/item/201508/14/20150814084811_YfjJi.thumb.700_0.jpeg")
+    /position = (28,13)
+    /valign = top
+    / halign = left
+</picture>
+
+<text hellotxt>
+	/hjustify = left
+    /vposition = 20 pct
+	/items = ("萌萌哒指导语来啦~~~欢迎大家来参加我们的实验~~~你们会有福报哒！！~")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,170,255)
+</text>
+<text byetxt>
+	/hjustify = center
+    /vposition = 20 pct
+	/items = ("结束语")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (170,170,255)
+</text>
+
+<text anykey1>
+	/items = ("按任意键切换到结束语")
+	/vposition = 85 pct
+	/fontstyle = ("宋体", 18pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<text anykey2>
+	/items = ("按任意键开始实验")
+	/vposition = 97 pct
+	/fontstyle = ("宋体", 20pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instruction,hellotxt,anykey1]
+	/recorddata = false
+</trial>
+
+<trial bye>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=end,byetxt,anykey2]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block byeblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = bye]
+</block>
+
+<expt>
+	/ blocks = [1 = instructionblk;2=byeblk]
+</expt>

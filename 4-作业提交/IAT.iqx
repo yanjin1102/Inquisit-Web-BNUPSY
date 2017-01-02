@@ -1,0 +1,462 @@
+﻿//created by Jiting Liu 刘继婷  12/6/2016 
+
+//种族IAT测验     
+
+=============默认值和定义变量
+
+<defaults>
+/ fontstyle = ("Arial", 3.5%)
+/ screencolor = white
+/ txbgcolor = white
+/ txcolor = black
+/ minimumversion = "4.0.0.0"
+</defaults>
+
+
+<values>
+/ skipsummary = false
+/ extended = true
+</values>
+
+<values>
+/completed = 0
+/ A1sum = 0
+/ A2sum = 0
+/ B1sum = 0
+/ B2sum = 0
+/ A1n = 0
+/ A2n = 0
+/ B1n = 0
+/ B2n = 0
+/ A1ss = 0
+/ A2ss = 0
+/ B1ss = 0
+/ B2ss = 0
+/ magnitude = "unknown"
+/ currentTarget = ""
+/ n_correct = 0
+</values>
+
+<variables>
+	/ group = (1 of 2)(block3= leftcom;block4=leftincom;block6=rightcom;block7=rightincom)
+	/ group = (2 of 2)(block4= leftcom;block3=leftincom;block7=rightcom;block6=rightincom)
+</variables>
+
+=====================定义刺激=============
+
+<item attriALabel>
+	/ 1 = "褒义"
+</item>
+
+<item attriBLabel>
+	/ 1 = "贬义"
+</item>
+
+<item targetALabel>
+	/ 1 = "白人"
+</item>
+
+<item targetBLabel>
+	/ 1 = "黑人"
+</item>
+
+<item attributeA>
+	/ 1= "聪明"
+	/ 2= "光荣"
+	/ 3= "友善"
+	/ 4= "愉悦"
+	/ 5= "可爱"
+</item>
+
+<item attributeB>
+	/ 1= "悲惨"
+	/ 2= "可怕"
+	/ 3= "苦恼"
+	/ 4= "痛苦"
+	/ 5= "丑陋"
+</item>
+
+<item targetA>
+  / 1 = "21.jpg"
+  / 2 = "22.jpg" 
+  / 3 = "23.jpg"
+  / 4 = "24.jpg"
+</item>
+
+<item targetB>
+  / 1 =  "11.jpg"
+  / 2 = "12.jpg"
+  / 3 = "13.jpg"
+  / 4 = "14.jpg"
+</item>
+
+//定义指导语
+
+<item instruction>
+	/ 1= "您好，欢迎参加实验。屏幕左侧和右侧将分别呈现“褒义”和“贬义”两个类别，
+对应的形容词会逐一显示在屏幕中间。
+词语属于左侧类别时，请您按“E”键反应；词语属于左侧类别时，请您按“I”键反应。
+每个形容词只能被归入一种类别。如果按键错误，将会出现一个“×”，
+此时按另一个键即可消除错误。请您尽可能快地做出反应。
+按空格键继续。"
+</item>
+
+<item oninstruct>
+	/ 1 =  "现在，屏幕上将呈现一系列词语和图片。看到<%item.attriALabel.1%>和<%item.targetALabel.1%>的图片请按“E”键反应~n~n<%item.attriBLabel.1%>和<%item.targetBLabel.1%>的图片请按“I”键反应~n~n您的反应越快越好~n~n按空格键继续。"
+	/ 2 =  "现在，屏幕上将呈现一系列词语和图片。看到<%item.attriALabel.1%>和<%item.targetBLabel.1%>的图片请按“E”键反应~n~n<%item.attriBLabel.1%>和<%item.targetALabel.1%>的图片请按“I”键反应~n~n您的反应越快越好~n~n按空格键继续。"
+	/ 3 =  "现在，屏幕上将呈现一系列词语和图片。看到<%item.attriBLabel.1%>和<%item.targetBLabel.1%>的图片请按“E”键反应~n~n<%item.attriALabel.1%>和<%item.targetALabel.1%>的图片请按“I”键反应~n~n您的反应越快越好~n~n按空格键继续。"
+	/ 4 =  "现在，屏幕上将呈现一系列词语和图片。看到<%item.attriBLabel.1%>和<%item.targetALabel.1%>的图片请按“E”键反应~n~n<%item.attriALabel.1%>和<%item.targetBLabel.1%>的图片请按“I”键反应~n~n您的反应越快越好~n~n按空格键继续。"
+</item>
+
+==============定义控件========
+<text attriA>
+	/ items = attributeA
+</text>
+
+<text attriB>
+	/ items = attributeB
+</text>
+
+<text Alabelleft>
+/ items = attriALabel
+/halign = left
+/valign = top
+</text>
+
+<text Blabelright>
+/ items = attriBLabel
+/halign = right
+/valign = top
+</text>
+
+<text Alabelright>
+/ items = attriALabel
+/halign = right
+/valign = top
+</text>
+
+<text Blabelleft>
+/ items = attriBLabel
+/halign = left
+/valign = top
+</text>
+
+<picture targetA>
+	/ items = targetA
+	/ size = (50%,50%)
+</picture>
+
+<picture targetB>
+	/ items = targetB
+	/ size = (50%,50%)
+</picture>
+
+<text instruction>
+/ items = instruction
+/ size = (90%, 50%)
+/ select = sequence
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text oninstruct>
+/ items = oninstruct
+/select = sequence
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text error>
+/ position = (50%, 75%)
+/ items = ("×")
+/ color = red
+/ fontstyle = ("Arial", 10%)
+</text>
+
+<text topFocus>
+/ items = ("")
+/ halign = center
+/ position = (50%, 15%)
+/ size = (100%, 12%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 5%)
+/erase = false
+</text>
+
+<text or>
+/ items = ("or")
+/ halign = center
+/ position = (50%, 17.5%)
+/ txcolor = black
+/ fontstyle = ("Arial", 3%)
+/erase = false
+</text>
+
+<text bottomFocus>
+/ items = ("")
+/ halign = center
+/ position = (50%, 20%)
+/ size = (100%, 12%)
+/ txcolor = green
+/ fontstyle = ("Arial", 5%)
+/erase = false
+</text>
+
+<text summary>
+/ items = ("Your IAT score (D) was <% expressions.d %>, which suggests <% values.magnitude %> automatic preference for <% expressions.preferred %> compared to <% expressions.notpreferred %>.~n~n~nPress the spacebar to complete this session.")  
+/ size = (60%, 80%)
+/ hjustify = left
+ </text>
+
+<text progress>
+/ position = (50%, 95%)
+/ items = ("(Block <%expressions.currentblocknumber%> of <%expressions.totalblockcount %>)")
+/ color = white
+/ fontstyle = ("Arial", 2%)
+</text>
+
+<shape eraseLabels>
+/ color = white
+/ shape = rectangle
+/ size = (50%, 20%)
+/ position = (50%, 10%)
+</shape>
+
+==============定义trial==========
+
+<trial attributeAright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attriA]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeBleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attriB]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeBright>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attriB]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeAleft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attriA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetALeft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetARight>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBLeft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBRight>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial instruction>
+/ stimulustimes = [1=instruction]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial oninstruct>
+/ stimulustimes = [1=oninstruct,progress]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial showLabels>
+/ stimulusframes = [1=topFocus, or, bottomFocus]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial summary>
+/ ontrialbegin = [values.magnitude = "little to no"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "a slight"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "a moderate"]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "a strong"]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.notpreferred= item.targetBLabel.1]
+/ stimulustimes = [0=summary]
+/ validresponse = (" ")
+/ recorddata = false
+/ skip = [values.skipsummary]
+</trial>
+
+=============定义block==================
+
+<block rightpractice>
+    / bgstim = (Alabelright,Blabelleft)
+	/ trials = [1=instruction; 2-11 = noreplace(attributeAright,attributeBleft)]
+	/ errormessage = true(error,200)
+	/ responsemode = correct
+	/ recorddata = false
+</block>
+
+<block leftpractice>
+    / bgstim = (Alabelleft,Blabelright)
+	/ trials = [1=instruction; 2-11 = noreplace(attributeAleft,attributeBright)]
+	/ errormessage = true(error,200)
+	/ responsemode = correct
+	/ recorddata = false
+</block>
+
+<block leftcom>
+/ onblockbegin = [values.currentTarget = item.targetALabel.1; text.topFocus.1 = item.attriALabel.1;text.bottomFocus.1 = item.targetALabel.1;]
+/ trials = [1=oninstruct; 2=showlabels;
+  3-6 = noreplace(targetALeft, targetBRight);
+  8,10,12,14,16,18,20 = noreplace(targetALeft, targetBRight);
+  7,9,11,13,15,17,19 = noreplace(attributeAleft, attributeBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.leftcom.totalcount == 0 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B1sum =  values.B1sum + block.leftcom.latency]
+/ ontrialend = [if (block.leftcom.totalcount == 0 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B1n +=  1]
+/ ontrialend = [if (block.leftcom.totalcount == 0 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B1ss =  values.B1ss  + (block.leftcom.latency * block.leftcom.latency)]
+/ ontrialend = [if (block.leftcom.totalcount == 1 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B2sum =  values.B2sum + block.leftcom.latency]
+/ ontrialend = [if (block.leftcom.totalcount == 1 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B2n +=  1]
+/ ontrialend = [if (block.leftcom.totalcount == 1 && block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.B2ss =  values.B2ss  + (block.leftcom.latency * block.leftcom.latency)]
+/ ontrialend = [if (block.leftcom.latency  <= 10000 && block.leftcom.currenttrialnumber >= 7 ) values.n_correct += block.leftcom.correct]
+</block>
+
+<block rightcom>
+/ onblockbegin = [values.currentTarget = item.targetBLabel.1; text.topFocus.1 = item.attriBLabel.1;text.bottomFocus.1 = item.targetBLabel.1;]
+/ trials = [1=oninstruct; 2=showlabels;
+  3-6 = noreplace(targetARight, targetBLeft);
+  8,10,12,14,16,18,20 = noreplace(targetARight, targetBLeft);
+  7,9,11,13,15,17,19 = noreplace(attributeAright,attributeBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.rightcom.totalcount == 0 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A1sum =  values.A1sum + block.rightcom.latency]
+/ ontrialend = [if (block.rightcom.totalcount == 0 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A1n += 1]
+/ ontrialend = [if (block.rightcom.totalcount == 0 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A1ss =  values.A1ss  + (block.rightcom.latency * block.rightcom.latency)]
+/ ontrialend = [if (block.rightcom.totalcount == 1 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A2sum =  values.A2sum + block.rightcom.latency]
+/ ontrialend = [if (block.rightcom.totalcount == 1 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A2n += 1]
+/ ontrialend = [if (block.rightcom.totalcount == 1 && block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.A2ss =  values.A2ss  + (block.rightcom.latency * block.rightcom.latency)]
+/ ontrialend = [if (block.rightcom.latency  <= 10000 && block.rightcom.currenttrialnumber >= 7 ) values.n_correct += block.rightcom.correct]
+</block>
+
+<block leftincom>
+/ onblockbegin = [values.currentTarget = item.targetALabel.1; text.topFocus.1 = item.attriALabel.1;text.bottomFocus.1 = item.targetBLabel.1;]
+/ trials = [1=oninstruct; 2=showlabels;
+  3-6 = noreplace(targetARight, targetBLeft);
+  8,10,12,14,16,18,20 = noreplace(targetBLeft, targetARight);
+  7,9,11,13,15,17,19 = noreplace(attributeAleft, attributeBright)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.leftincom.totalcount == 0 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B1sum =  values.B1sum + block.leftincom.latency]
+/ ontrialend = [if (block.leftincom.totalcount == 0 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B1n +=  1]
+/ ontrialend = [if (block.leftincom.totalcount == 0 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B1ss =  values.B1ss  + (block.leftincom.latency * block.leftincom.latency)]
+/ ontrialend = [if (block.leftincom.totalcount == 1 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B2sum =  values.B2sum + block.leftincom.latency]
+/ ontrialend = [if (block.leftincom.totalcount == 1 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B2n +=  1]
+/ ontrialend = [if (block.leftincom.totalcount == 1 && block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.B2ss =  values.B2ss  + (block.leftincom.latency * block.leftincom.latency)]
+/ ontrialend = [if (block.leftincom.latency  <= 10000 && block.leftincom.currenttrialnumber >= 7 ) values.n_correct += block.leftincom.correct]
+</block>
+
+<block rightincom>
+/ onblockbegin = [values.currentTarget = item.targetBLabel.1; text.topFocus.1 = item.attriBLabel.1;text.bottomFocus.1 = item.targetALabel.1;]
+/ trials = [1=oninstruct; 2=showlabels;
+  3-6 = noreplace(targetBRight, targetALeft);
+  8,10,12,14,16,18,20= noreplace(targetBRight, targetALeft);
+  7,9,11,13,15,17,19= noreplace(attributeAright,attributeBleft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.rightincom.totalcount == 0 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A1sum =  values.A1sum + block.rightincom.latency]
+/ ontrialend = [if (block.rightincom.totalcount == 0 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A1n += 1]
+/ ontrialend = [if (block.rightincom.totalcount == 0 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A1ss =  values.A1ss  + (block.rightincom.latency * block.rightincom.latency)]
+/ ontrialend = [if (block.rightincom.totalcount == 1 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A2sum =  values.A2sum + block.rightincom.latency]
+/ ontrialend = [if (block.rightincom.totalcount == 1 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A2n += 1]
+/ ontrialend = [if (block.rightincom.totalcount == 1 && block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.A2ss =  values.A2ss  + (block.rightincom.latency * block.rightincom.latency)]
+/ ontrialend = [if (block.rightincom.latency  <= 10000 && block.rightincom.currenttrialnumber >= 7 ) values.n_correct += block.rightincom.correct]
+</block>
+
+<block summary>
+/ trials = [1=summary]
+/ recorddata = false
+</block>
+
+=============定义实验=======
+<expt>
+/ subjects = (1 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1=leftpractice; 2 = leftcom; 3=leftincom; 4=rightpractice; 5=rightcom; 6=rightincom; 7=summary]
+/onexptend = [values.completed = 1]
+</expt>
+
+<expt>
+/ subjects = (2 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1=leftpractice; 2 = leftincom; 3=leftcom; 4=rightpractice; 5=rightincom; 6=rightcom;7=summary]
+/onexptend = [values.completed = 1]
+</expt>
+
+==============定义data file===========
+<data>
+/file = "IAT_data.iqdat"
+/ columns = [date, time, group, subject, blockcode, blocknum, trialcode, trialnum, response, correct, latency, 
+					stimulusnumber, stimulusitem, expressions.d1, expressions.d2, expressions.d, expressions.percentcorrect]
+/separatefiles = true
+</data>
+
+<summarydata >
+/file = "IAT_summary.iqdat"
+/columns = [script.filename, script.startdate, script.starttime, script.subjectid, script.groupid, script.elapsedtime, values.completed,
+expressions.d1, expressions.d2, expressions.d, expressions.percentcorrect]
+</summarydata>
+
+
+<expressions>
+/ A1m = values.A1sum / values.A1n
+/ A2m = values.A2sum / values.A2n
+/ B1m = values.B1sum / values.B1n
+/ B2m = values.B2sum / values.B2n
+/ A1sd = sqrt((values.A1ss - (values.A1n* (expressions.A1m * expressions.A1m))) / (values.A1n - 1))
+/ A2sd = sqrt((values.A2ss - (values.A2n* (expressions.A2m * expressions.A2m))) / (values.A2n - 1))
+/ B1sd = sqrt((values.B1ss - (values.B1n* (expressions.B1m * expressions.B1m))) / (values.B1n - 1))
+/ B2sd = sqrt((values.B2ss - (values.B2n* (expressions.B2m * expressions.B2m))) / (values.B2n - 1))
+/ sd1 = sqrt((((values.A1n - 1) * (expressions.A1sd * expressions.A1sd) + (values.B1n - 1) * (expressions.B1sd * expressions.B1sd)) + ((values.A1n + values.B1n) * ((expressions.A1m - expressions.B1m) * (expressions.A1m - expressions.B1m)) / 4) ) / (values.A1n + values.B1n - 1) )
+/ sd2 = sqrt((((values.A2n - 1) * (expressions.A2sd * expressions.A2sd) + (values.B2n - 1) * (expressions.B2sd * expressions.B2sd)) + ((values.A2n + values.B2n) * ((expressions.A2m - expressions.B2m) * (expressions.A2m - expressions.B2m)) / 4) ) / (values.A2n + values.B2n - 1) )
+/ d1 = (expressions.B1m - expressions.A1m) / expressions.sd1
+/ d2 = (expressions.B2m - expressions.A2m) / expressions.sd2
+/ d = if ( values.extended ) { (d1+d2) / 2 } else { d1 }
+/ currentblocknumber = max(expt.1.currentblocknumber, expt.2.currentblocknumber)
+/ preferred = "unknown"
+/ notpreferred = "unknown"
+/ totalblockcount = if (values.extended) {expt.1.blockcount} else {expt.1.blockcount-2}
+/ percentcorrect = (values.n_correct/ (values.a1n + values.a2n + values.b1n + values.b2n)) * 100
+</expressions>
+
+

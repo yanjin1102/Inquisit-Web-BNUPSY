@@ -1,0 +1,65 @@
+<item instruction>
+         /1="hhhh"
+</item>
+
+<item ending>
+         /1="congratulations!you've finished and you can get the fee!happy"
+</item>
+
+<picture  happypic>
+         / items =("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=73661356,4073740082&fm=21&gp=0.jpg")
+         / position =(40,40)
+         / valign = top
+         / halign = left
+</picture>
+
+<picture unhappypic>
+         / items =("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3175007752,1487421653&fm=21&gp=0.jpg")
+         / position =(40,40)
+         / valign = top
+         / halign = left
+</picture>
+
+<text instructiontxt>
+         / hjustify = center
+         / items = instruction
+         / size = (1000,300)
+         / fontstyle = ("隶书", 2.73%, false, false, false, false, 5, 1)
+         / txcolor = (255,255,255)
+         / txbgcolor = (0,0,0)
+</text>
+
+<text endingtxt>
+         / hjustify = center
+         / items = ending
+         / size = (1000,300)
+         / fontstyle = ("隶书", 2.73%, false, false, false, false, 5, 1)
+         / txcolor = (255, 255, 255)
+         / txbgcolor = (0,0,0)
+</text>
+
+<trial instruction>
+         / validresponse = (anyresponse)
+         / stimulusframes = [1 = instructiontxt,happypic]
+         / recorddata = false
+</trial>
+
+<trial ending>
+         / validresponse = (anyresponse)
+         / stimulusframes = [1 = endingtxt,unhappypic]
+         / recorddata = false
+</trial>
+
+<block instructionblk>
+         / screencolor = (0,0,0)
+         / trials = [1 = instruction ]
+</block>
+
+<block endingblk>
+         / screencolor =(0,0,0)
+         / trials = [1 = ending ]
+</block>
+
+<expt>
+         / blocks = [1 = instructionblk; 2 = endingblk ]
+</expt>

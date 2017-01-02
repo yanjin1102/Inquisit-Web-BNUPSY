@@ -1,0 +1,787 @@
+﻿<item OPics1>
+    /1 = "OPic/Opic1.jpg"
+    /2 = "OPic/Opic2.jpg"
+    /3 = "OPic/Opic3.jpg"
+    /4 = "OPic/Opic4.jpg"
+    /5 = "OPic/Opic5.jpg"
+    /6 = "OPic/Opic6.jpg"
+    /7 = "OPic/Opic7.jpg"
+    /8 = "OPic/Opic8.jpg"
+    /9 = "OPic/Opic9.jpg"
+    /10 = "OPic/Opic10.jpg"
+    /11 = "OPic/Opic11.jpg"
+    /12 = "OPic/Opic12.jpg"
+    /13 = "OPic/Opic13.jpg"
+    /14 = "OPic/Opic14.jpg"
+    /15 = "OPic/Opic15.jpg"
+    /16 = "OPic/Opic16.jpg"
+          
+
+</item>
+
+<item OPics2>
+    /1 = "OPic/Opic1.jpg"
+    /2 = "OPic/Opic2.jpg"
+    /3 = "OPic/Opic3.jpg"
+    /4 = "OPic/Opic4.jpg"
+    /5 = "OPic/Opic5.jpg"
+    /6 = "OPic/Opic6.jpg"
+    /7 = "OPic/Opic7.jpg"
+    /8 = "OPic/Opic8.jpg"
+    /9 = "OPic/Opic9.jpg"
+    /10 = "OPic/Opic10.jpg"
+    /11 = "OPic/Opic11.jpg"
+    /12 = "OPic/Opic12.jpg"
+    /13 = "OPic/Opic13.jpg"
+    /14 = "OPic/Opic14.jpg"
+    /15 = "OPic/Opic15.jpg"
+    /16 = "OPic/Opic16.jpg"
+</item>
+
+<item OPics3>
+    /1 = "OPic/Opic1.jpg"
+    /2 = "OPic/Opic2.jpg"
+    /3 = "OPic/Opic3.jpg"
+    /4 = "OPic/Opic4.jpg"
+    /5 = "OPic/Opic5.jpg"
+    /6 = "OPic/Opic6.jpg"
+    /7 = "OPic/Opic7.jpg"
+    /8 = "OPic/Opic8.jpg"
+    /9 = "OPic/Opic9.jpg"
+    /10 = "OPic/Opic10.jpg"
+    /11 = "OPic/Opic11.jpg"
+    /12 = "OPic/Opic12.jpg"
+    /13 = "OPic/Opic13.jpg"
+    /14 = "OPic/Opic14.jpg"
+    /15 = "OPic/Opic15.jpg"
+    /16 = "OPic/Opic16.jpg"
+</item>
+
+<item TPics>
+    /1 = "TPic/Tpic1.jpg"
+    /2 = "TPic/Tpic2.jpg"
+    /3 = "TPic/Tpic3.jpg"
+    /4 = "TPic/Tpic4.jpg"
+    /5 = "TPic/Tpic5.jpg"
+    /6 = "TPic/Tpic6.jpg"
+    /7 = "TPic/Tpic7.jpg"
+    /8 = "TPic/Tpic8.jpg"
+    /9 = "TPic/Tpic9.jpg"
+    /10 = "TPic/Tpic10.jpg"
+    /11 = "TPic/Tpic11.jpg"
+    /12 = "TPic/Tpic12.jpg"
+    /13 = "TPic/Tpic13.jpg"
+    /14 = "TPic/Tpic14.jpg"
+    /15 = "TPic/Tpic15.jpg"
+    /16 = "TPic/Tpic16.jpg"
+</item>
+
+//用图片定义刺激材料。每个trial有四张图片，其中三张灰度相同，一张灰度不同
+//每个trial中改变灰度的图片灰度依trial名递增10
+
+
+<picture OPicsa1>
+	/erase = True(0,0,0) 
+	/ halign =  left
+    / valign =  top
+	/items = OPics1
+    /select = 1
+</picture>
+
+<picture OPicsb1>
+	/erase = True(0,0,0) 
+	/ halign =  right
+    / valign =  top
+	/items = OPics2
+    /select = 1
+</picture>
+
+<picture OPicsc1>
+	/erase = True(0,0,0) 
+	/ halign =  left
+    / valign =  bottom
+	/items = OPics3
+    /select = 1
+</picture>
+
+<picture TPics1>
+	/erase = True(0,0,0)
+	/ halign =  right
+    / valign =  bottom
+	/items = TPics
+    /select = 1
+</picture>
+
+<picture OPicsa2>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 2
+</picture>
+
+<picture OPicsb2>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 2
+</picture>
+
+<picture OPicsc2>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics3
+    /select = 2
+</picture>
+
+<picture TPics2>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  bottom
+    /items = TPics
+    /select = 2
+</picture>
+
+<picture OPicsa3>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 3
+</picture>
+
+<picture OPicsb3>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics2
+    /select = 3
+</picture>
+
+<picture OPicsc3>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 3
+</picture>
+
+<picture TPics3>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  top
+    /items = TPics
+    /select = 3
+</picture>
+
+<picture OPicsa4>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics1
+    /select = 4
+</picture>
+
+<picture OPicsb4>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 4
+</picture>
+
+<picture OPicsc4>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 4
+</picture>
+
+<picture TPics4>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  top
+    /items = TPics
+    /select = 4
+</picture>
+
+<picture OPicsa5>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 5
+</picture>
+
+<picture OPicsb5>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 5
+</picture>
+
+<picture OPicsc5>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 5
+</picture>
+
+<picture TPics5>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  bottom
+    /items = TPics
+    /select = 5
+</picture>
+
+<picture OPicsa6>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 6
+</picture>
+
+<picture OPicsb6>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 6
+</picture>
+
+<picture OPicsc6>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics3
+    /select = 6
+</picture>
+
+<picture TPics6>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  bottom
+    /items = TPics
+    /select = 6
+</picture>
+
+<picture OPicsa7>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 7
+</picture>
+
+<picture OPicsb7>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics2
+    /select = 7
+</picture>
+
+<picture OPicsc7>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 7
+</picture>
+
+<picture TPics7>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  top
+    /items = TPics
+    /select = 7
+</picture>
+
+<picture OPicsa8>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics1
+    /select = 8
+</picture>
+
+<picture OPicsb8>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 8
+</picture>
+
+<picture OPicsc8>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 8
+</picture>
+
+<picture TPics8>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  top
+    /items = TPics
+    /select = 8
+</picture>
+
+<picture OPicsa9>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 9
+</picture>
+
+<picture OPicsb9>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 9
+</picture>
+
+<picture OPicsc9>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 9
+</picture>
+
+<picture TPics9>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  bottom
+    /items = TPics
+    /select = 9
+</picture>
+
+<picture OPicsa10>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 10
+</picture>
+
+<picture OPicsb10>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 10
+</picture>
+
+<picture OPicsc10>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics3
+    /select = 10
+</picture>
+
+<picture TPics10>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  bottom
+    /items = TPics
+    /select = 10
+</picture>
+
+<picture OPicsa11>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 11
+</picture>
+
+<picture OPicsb11>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics2
+    /select = 11
+</picture>
+
+<picture OPicsc11>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 11
+</picture>
+
+<picture TPics11>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  top
+    /items = TPics
+    /select = 11
+</picture>
+
+<picture OPicsa12>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics1
+    /select = 12
+</picture>
+
+<picture OPicsb12>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 12
+</picture>
+
+<picture OPicsc12>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 12
+</picture>
+
+<picture TPics12>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = TPics
+    /select = 12
+</picture>
+
+<picture OPicsa13>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 13
+</picture>
+
+<picture OPicsb13>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 13
+</picture>
+
+<picture OPicsc13>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 13
+</picture>
+
+<picture TPics13>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  bottom
+    /items = TPics
+    /select = 13
+</picture>
+
+<picture OPicsa14>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 14
+</picture>
+
+<picture OPicsb14>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 14
+</picture>
+
+<picture OPicsc14>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics3
+    /select = 14
+</picture>
+
+<picture TPics14>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  bottom
+    /items = TPics
+    /select = 14
+</picture>
+
+<picture OPicsa15>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  top
+    /items = OPics1
+    /select = 15
+</picture>
+
+<picture OPicsb15>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics2
+    /select = 15
+</picture>
+
+<picture OPicsc15>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 15
+</picture>
+
+<picture TPics15>
+    /erase = True(0,0,0)
+    / halign =  right
+    / valign =  top
+    /items = TPics
+    /select = 15
+</picture>
+
+<picture OPicsa16>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  bottom
+    /items = OPics1
+    /select = 16
+</picture>
+
+<picture OPicsb16>
+    /erase = True(0,0,0) 
+    / halign =  right
+    / valign =  top
+    /items = OPics2
+    /select = 16
+</picture>
+
+<picture OPicsc16>
+    /erase = True(0,0,0) 
+    / halign =  left
+    / valign =  bottom
+    /items = OPics3
+    /select = 16
+</picture>
+
+<picture TPics16>
+    /erase = True(0,0,0)
+    / halign =  left
+    / valign =  top
+    /items = TPics
+    /select = 16
+</picture>
+
+
+
+
+//指导语
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (1000,800)
+</instruct>
+
+
+<page begininstruction>^^^^您好，非常欢迎您参与我们的研究！^^实验开始后，屏幕上将呈现四张内容相同的图片。您的任务是找出与其他三张图片灰度有差异的图片，并用鼠标点选。^^请您尽量准确快速的对我们呈现的刺激材料进行反应！^^</page>
+
+<page endinstruction>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^再次感谢您的参与！^^</page>
+
+
+//定义注视点和随机注视时间
+
+<text fixation>
+	/items = ("+")
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = white
+	/txcolor = black
+</text>
+
+<values fixation>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(200,300))
+</expressions>
+
+
+//16个trials
+
+<trial 1>
+    /stimulusframes = [1 = OPicsa1, OPicsb1, OPicsc1, TPics1]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa1,OPicsb1,OPicsc1,TPics1)
+    /correctresponse = (TPics1)
+    
+</trial>
+
+<trial 2>
+    /stimulusframes = [1 = OPicsa2, OPicsb2, OPicsc2, TPics2]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa2,OPicsb2,OPicsc2,TPics2)
+    /correctresponse = (TPics2)
+    
+</trial>
+
+<trial 3>
+    /stimulusframes = [1 = OPicsa3, OPicsb3, OPicsc3, TPics3]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa3, OPicsb3, OPicsc3, TPics3)
+    /correctresponse = (TPics3)
+    
+</trial>
+
+
+<trial 4>
+    /stimulusframes = [1 = OPicsa4, OPicsb4, OPicsc4, TPics4]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa4, OPicsb4, OPicsc4, TPics4)
+    /correctresponse = (TPics4)
+    
+</trial>
+
+<trial 5>
+    /stimulusframes = [1 = OPicsa5, OPicsb5, OPicsc5, TPics5]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa5, OPicsb5, OPicsc5, TPics5)
+    /correctresponse = (TPics5)
+    
+</trial>
+
+<trial 6>
+    /stimulusframes = [1 = OPicsa6, OPicsb6, OPicsc6, TPics6]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa6, OPicsb6, OPicsc6, TPics6)
+    /correctresponse = (TPics6)
+    
+</trial>
+
+<trial 7>
+    /stimulusframes = [1 = OPicsa7, OPicsb7, OPicsc7, TPics7]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa7, OPicsb7, OPicsc7, TPics7)
+    /correctresponse = (TPics7)
+    
+</trial>
+
+<trial 8>
+    /stimulusframes = [1 = OPicsa8, OPicsb8, OPicsc8, TPics8]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa8, OPicsb8, OPicsc8, TPics8)
+    /correctresponse = (TPics8)
+    
+</trial>
+
+<trial 9>
+    /stimulusframes = [1 = OPicsa9, OPicsb9, OPicsc9, TPics9]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa9, OPicsb9, OPicsc9, TPics9)
+    /correctresponse = (TPics9)
+    
+</trial>
+
+<trial 10>
+    /stimulusframes = [1 = OPicsa10, OPicsb10, OPicsc10, TPics10]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa10, OPicsb10, OPicsc10, TPics10)
+    /correctresponse = (TPics10)
+    
+</trial>
+
+<trial 11>
+    /stimulusframes = [1 = OPicsa11, OPicsb11, OPicsc11, TPics11]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa11, OPicsb11, OPicsc11, TPics11)
+    /correctresponse = (TPics11)
+    
+</trial>
+
+<trial 12>
+    /stimulusframes = [1 = OPicsa12, OPicsb12, OPicsc12, TPics12]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa12, OPicsb12, OPicsc12, TPics12)
+    /correctresponse = (TPics12)
+    
+</trial>
+
+<trial 13>
+    /stimulusframes = [1 = OPicsa13, OPicsb13, OPicsc13, TPics13]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa13, OPicsb13, OPicsc13, TPics13)
+    /correctresponse = (TPics13)
+    
+</trial>
+
+<trial 14>
+    /stimulusframes = [1 = OPicsa14, OPicsb14, OPicsc14, TPics14]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa14, OPicsb14, OPicsc14, TPics14)
+    /correctresponse = (TPics14)
+    
+</trial>
+
+
+<trial 15>
+    /stimulusframes = [1 = OPicsa15, OPicsb15, OPicsc15, TPics15]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa15, OPicsb15, OPicsc15, TPics15)
+    /correctresponse = (TPics15)
+    
+</trial>
+
+
+<trial 16>
+    /stimulusframes = [1 = OPicsa16, OPicsb16, OPicsc16, TPics16]
+    /inputdevice = mouse
+    /validresponse = ( OPicsa16, OPicsb16, OPicsc16, TPics16)
+    /correctresponse = (TPics16)
+    
+</trial>
+
+//
+
+<block pic>
+
+    / trials = [1-16 = noreplace(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16)]
+</block>
+
+
+<expt myexp>
+   / preinstructions = (begininstruction)
+   / postinstructions = (endinstruction)
+   / blocks = [1 = pic]
+   </expt>
+
+
+
+
+

@@ -1,0 +1,59 @@
+﻿<item instruction>
+	/1 = "给老子好好做实验哦，俺们北师大向来有的是钱，
+       到时大秤分金银哦，知道俺说啥了吗？
+                 知道了就按空格!"
+</item>
+<item goodbye>
+	/1= "你的银子在路上了，老子不会亏待你的"
+</item>
+
+
+
+<text instructiontxt>
+	/ items = instruction
+	/ fontstyle = ("楷体",5%)
+	/ txbgcolor = (transparent)  
+	/ txcolor = (200,100,0)
+	/ vposition = 35
+</text>
+
+<text goodbyetxt>
+	/ items = goodbye
+	/ fontstyle = ("楷体",6%)
+	/ txbgcolor = (transparent)  
+	/ txcolor = (200,100,0)
+	/ vposition = 35
+</text>
+
+
+<picture instructionbgpic>
+	/items = ("psy.jpg")  
+
+	/ position = (50,50)  
+	/ size = (120%,120%)
+</picture>
+
+
+<trial instruct>
+	/validresponse = (" ")
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic,instructiontxt]  
+</trial>
+
+<trial ends>
+	/validresponse = (" ")
+	/recorddata = false
+	/stimulusframes = [1=instructionbgpic,goodbyetxt]
+</trial>
+
+
+<block ins>
+	/ screencolor = (255,255,255)
+	/ trials = [1=instruct,ends]
+</block>
+
+
+<expt in>
+	/ blocks = [1=ins]
+
+</expt>

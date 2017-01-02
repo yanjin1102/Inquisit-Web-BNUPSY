@@ -1,0 +1,74 @@
+﻿<picture instructionpic>
+	/ items = ("instruction.jpg")
+	/size = (1600,900)
+</picture>
+
+<text instructiontxt>
+	/items = ("欢迎参加什么都没有的实验！请将左数和右手的食指分别放在键盘的空格键上，屏幕上显示的只有指导语")
+	/size = (50%,50%)
+	/position = (50%, 50%)
+	/fontstyle = ("Adobe 仿宋 Std R", 4.26%, false, false, false, false, 5, 1)
+	/txcolor = (231, 255, 253)
+	/txbgcolor = (transparent)
+</text>
+
+<text instructionkey>
+	/items = ("请按空格键继续")
+	/position = (70%,80%)
+	/fontstyle = ("Adobe 仿宋 Std R", 4.26%, false, false, false, false, 5, 1)
+	/txcolor = (231, 255, 253)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (" ")
+	/stimulusframes = [1=instructionpic,instructiontxt,instructionkey]
+	/recorddata = false
+</trial>
+
+<picture goodbyepic>
+	/items = ("zaijian.jpg")
+	/size = (1600,900)
+</picture>
+
+<text goodbyetxt>
+	/items = ("实验结束！人生还在继续，但是每个人终会孤独地死去。被试费也是骗人的！感谢您的参与。如果觉得指导语漂亮，请领取￥100,000的被试费")
+	/size = (50%,50%)
+	/fontstyle = ("Adobe 仿宋 Std R", 4.26%, false, false, false, false, 5, 1)
+	/txcolor = (231, 255, 253)
+	/txbgcolor = (transparent)
+	/hjustify = left
+</text>
+
+<text goodbyekey>
+	/items = ("请按任意键结束实验，而不是编程者的小命")
+	/position = (70%,120%)
+	/fontstyle = ("Adobe 仿宋 Std R", 4.26%, false, false, false, false, 5, 1)
+	/txcolor = (231, 255, 253)
+	/txbgcolor = (transparent)
+	/hjustify = left
+</text>
+
+<trial goodbye>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=goodbyepic,goodbyetxt,goodbyekey]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = black
+	/trials = [1=instruction]
+</block>
+
+<block goodbyeblk>
+	/screencolor = black
+	/trials = [1=goodbye]
+</block>
+
+<expt >
+	/ blocks = [1=instructionblk;2=goodbyeblk]
+</expt>
+
+
+
+

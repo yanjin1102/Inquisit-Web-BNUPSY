@@ -1,0 +1,302 @@
+﻿<text instruction>
+	/hjustify = left
+	/items = (/1 = "    欢迎参加本实验！屏幕上将同时出现4张图片，请您找出其中颜色不同的一张，并用鼠标点击。")
+	/size=(800,150)
+	/fontstyle = ("楷体", 24pt)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+<text fixation>
+	/items = ("+")
+	/fontstyle = ("Arial", 40ptc)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 70 pct
+	/fontstyle = ("宋体", 24pt)
+	/txcolor = (255,0,0)
+	/txbgcolor = (transparent)
+</text>
+
+<text correctmsg>
+	/items = ("√")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (0,255,0)
+</text>
+
+<text errormsg>
+	/items = ("×")
+	/fontstyle = ("Arial", 10%)
+	/txbgcolor = (transparent)
+	/txcolor = (255,0,0)
+</text>
+
+<picture consistent1>
+/items = ("16.bmp")
+/position=(20,45)
+</picture>
+
+<picture consistent2>
+/items = ("16.bmp")
+/position=(40,45)
+</picture>
+
+<picture consistent3>
+/items = ("16.bmp")
+/position=(60,45)
+</picture>
+
+<picture consistent4>
+/items = ("16.bmp")
+/position=(80,45)
+</picture>
+
+<picture incon1>
+/items = ("1.bmp")
+/position=(20,45)
+</picture>
+
+<picture incon2>
+/items = ("2.bmp")
+/position=(40,45)
+</picture>
+
+<picture incon3>
+/items = ("3.bmp")
+/position=(60,45)
+</picture>
+
+<picture incon4>
+/items = ("4.bmp")
+/position=(80,45)
+</picture>
+
+<picture incon5>
+/items = ("5.bmp")
+/position=(20,45)
+</picture>
+
+<picture incon6>
+/items = ("6.bmp")
+/position=(40,45)
+</picture>
+
+<picture incon7>
+/items = ("7.bmp")
+/position=(60,45)
+</picture>
+
+<picture incon8>
+/items = ("8.bmp")
+/position=(80,45)
+</picture>
+
+<picture incon9>
+/items = ("9.bmp")
+/position=(20,45)
+</picture>
+
+<picture incon10>
+/items = ("10.bmp")
+/position=(40,45)
+</picture>
+
+<picture incon11>
+/items = ("11.bmp")
+/position=(60,45)
+</picture>
+
+<picture incon12>
+/items = ("12.bmp")
+/position=(80,45)
+</picture>
+
+<picture incon13>
+/items = ("13.bmp")
+/position=(20,45)
+</picture>
+
+<picture incon14>
+/items = ("14.bmp")
+/position=(40,45)
+</picture>
+
+<picture incon15>
+/items = ("15.bmp")
+/position=(60,45)
+</picture>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instruction,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial 1>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon1)
+/validresponse = (incon1, consistent2, consistent3, consistent4)
+/stimulusframes=[1=incon1, consistent2, consistent3, consistent4]
+</trial>
+
+<trial 5>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon5)
+/validresponse = (incon5, consistent2, consistent3, consistent4)
+/stimulusframes=[1=incon5, consistent2, consistent3, consistent4]
+</trial>
+
+<trial 9>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon9)
+/validresponse = (incon9, consistent2, consistent3, consistent4)
+/stimulusframes=[1=incon9, consistent2, consistent3, consistent4]
+</trial>
+
+<trial 13>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon13)
+/validresponse = (incon13, consistent2, consistent3, consistent4)
+/stimulusframes=[1=incon13, consistent2, consistent3, consistent4]
+</trial>
+
+<trial 2>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon2)
+/validresponse = (incon2, consistent1, consistent3, consistent4)
+/stimulusframes=[1=incon2, consistent1, consistent3, consistent4]
+</trial>
+
+<trial 6>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon6)
+/validresponse = (incon6, consistent1, consistent3, consistent4)
+/stimulusframes=[1=incon6, consistent1, consistent3, consistent4]
+</trial>
+
+<trial 10>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon10)
+/validresponse = (incon10, consistent1, consistent3, consistent4)
+/stimulusframes=[1=incon10, consistent1, consistent3, consistent4]
+</trial>
+
+<trial 14>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon14)
+/validresponse = (incon14, consistent1, consistent3, consistent4)
+/stimulusframes=[1=incon14, consistent1, consistent3, consistent4]
+</trial>
+
+<trial 3>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon3)
+/validresponse = (incon3, consistent1, consistent2, consistent4)
+/stimulusframes=[1=incon3, consistent1, consistent2, consistent4]
+</trial>
+
+<trial 7>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon7)
+/validresponse = (incon7, consistent1, consistent2, consistent4)
+/stimulusframes=[1=incon7, consistent1, consistent2, consistent4]
+</trial>
+
+<trial 11>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon11)
+/validresponse = (incon11, consistent1, consistent2, consistent4)
+/stimulusframes=[1=incon11, consistent1, consistent2, consistent4]
+</trial>
+
+<trial 15>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon15)
+/validresponse = (incon15, consistent1, consistent2, consistent4)
+/stimulusframes=[1=incon15, consistent1, consistent2, consistent4]
+</trial>
+
+<trial 4>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon4)
+/validresponse = (incon4, consistent1, consistent2, consistent3)
+/stimulusframes=[1=incon4, consistent1, consistent2, consistent3]
+</trial>
+
+<trial 8>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon8)
+/validresponse = (incon8, consistent1, consistent2, consistent3)
+/stimulusframes=[1=incon8, consistent1, consistent2, consistent3]
+</trial>
+
+<trial 12>
+/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/pretrialpause = 500
+/inputdevice=mouse
+/correctresponse = (incon12)
+/validresponse = (incon12, consistent1, consistent2, consistent3)
+/stimulusframes=[1=incon12, consistent1, consistent2, consistent3]
+</trial>
+
+<block instruction>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block threshold>
+/screencolor = (0,0,0)
+/blockfeedback = (meanlatency,correct)
+/trials = [1-15=noreplace(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)]
+</block>
+
+<expt>
+	/ blocks = [1 = instruction; 2 = threshold]
+</expt>

@@ -1,0 +1,35 @@
+<picture instructionpic>
+	/ items = ("instruction.BMP")
+	/size = (1366,768)
+	/halign =  center
+	/valign =  center
+	
+
+</picture>
+<picture endpic>
+	/items = ("end.BMP")
+	/size = (1366,768)
+	/halign =  center
+	/valign =  center
+
+</picture>
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulustimes = [1=instructionpic]
+	/recorddata = false
+
+</trial>
+<trial end>
+	/validresponse = (anyresponse)
+	/stimulustimes = [1=endpic]
+	/recorddata = false
+
+</trial>
+<block instructionblk>
+	/screencolor =/color = (255, 252, 247)
+	/trials = [1 = instruction;2=end]
+
+</block>
+<expt >
+	/ blocks = [1=instructionblk]
+</expt>

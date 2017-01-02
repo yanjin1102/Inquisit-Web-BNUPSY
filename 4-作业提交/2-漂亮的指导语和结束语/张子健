@@ -1,0 +1,36 @@
+//感谢魏老师凯琳和培莹
+<picture instructionpic>
+	/ items = ("instruction.JPG")
+	/size = (1920,1080)
+	/halign =  center
+	/valign =  center
+	
+
+</picture>
+<picture endpic>
+	/items = ("end.JPG")
+	/size = (1920,1080)
+	/halign =  center
+	/valign =  center
+
+</picture>
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulustimes = [1=instructionpic]
+	/recorddata = false
+
+</trial>
+<trial end>
+	/validresponse = (anyresponse)
+	/stimulustimes = [1=endpic]
+	/recorddata = false
+
+</trial>
+<block instructionblk>
+	/screencolor =/color = (255, 255, 255)
+	/trials = [1 = instruction;2=end]
+
+</block>
+<expt >
+	/ blocks = [1=instructionblk]
+</expt>

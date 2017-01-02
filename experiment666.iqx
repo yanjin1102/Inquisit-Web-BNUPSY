@@ -1,0 +1,46 @@
+﻿<instruct zhidaoyu2>
+/inputdevice = mouse
+/ fontstyle = ("宋体",60ptc)
+/txcolor = white
+/screencolor = black
+/windowsize = (1440,900)
+
+/lastlabel = "続くため、ここにしてください"
+</instruct>
+
+<page zhidaoyu2>
+この実験は、実験心理学のことである.
+
+</page>
+<page ending>
+ご参加をいただき、ありがとうございます。
+</page>
+
+****
+<picture zhidaoyu2>
+/items = ("cja.jpeg")
+/size = (1440,900)
+
+</picture>
+<trial zhidaoyu2>
+	/validresponse = ("F","J")
+	/stimulusframes = [1=zhidaoyu2]
+	/recorddata = false
+</trial>
+
+<block kongbai>
+	/screencolor = black
+	/trials = [1 = zhidaoyu2]
+</block>
+
+**************************************************************************************************************************************************************************
+
+<expt zhengshizhidaoyu>
+	/preinstructions = (zhidaoyu2)
+	/postinstructions = (ending)
+	/blocks = [1 = kongbai]
+
+</expt>
+
+
+

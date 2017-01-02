@@ -1,0 +1,40 @@
+﻿//这是一个用图片来显示指导语和结束语的程序，但程序中有部分问题（收集了不想要的数据）没有解决
+*****************************************************
+<picture instruction>
+	/items = ("instruction.bmp")
+	/size = (1500,800)
+</picture>
+
+<picture goodbye>
+	/items = ("goodbye.bmp")
+	/size = (1500,800)
+</picture>
+
+*****************************************************
+<trial triinstruction>
+	/validresponse = (" ")
+	/stimulusframes  = [1 = instruction]
+</trial>
+
+<trial trigoodbye>
+	/validresponse = (" ")
+	/stimulusframes = [1 = goodbye]
+</trial>
+
+*****************************************************
+<block blinstruction>
+	/screencolor =  (180, 242, 255)
+	/trials = [1 = triinstruction]
+</block>
+
+<block blgoodbye>
+	/screencolor = (0, 170, 255)
+	/trials = [1 = trigoodbye]
+</block>
+
+*****************************************************
+<expt>
+	/ blocks = [1=blinstruction;2=blgoodbye]
+</expt>
+
+

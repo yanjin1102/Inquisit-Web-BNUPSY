@@ -1,0 +1,14 @@
+<instruct instruction>
+	/nextkey = (" ")
+	/fontstyle = ("宋体", 3.14%, false, false, false, false, 5, 1)
+	/txcolor = (189,183,107)
+	/screencolor = (255,245,238)
+	/lastlabel = "请按任意键继续"
+	/windowsize = (800,640)
+</instruct>
+<page instruction>"欢迎参加本次实验。请认真阅读以下指导语，并跟随第一反应做出判断。"</page>
+<page endinstruction>"感谢您参加我们的实验。我们承诺实验结果将严格保密，仅作为科学用途。"</page>
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+</expt>

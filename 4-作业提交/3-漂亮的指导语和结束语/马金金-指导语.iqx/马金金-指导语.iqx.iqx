@@ -1,0 +1,39 @@
+﻿// 指导语要漂亮--采用默认的instruct标记符构建方法
+<instruct myinstruct>
+	/ inputdevice = mouse
+	/ fontstyle = ("微软雅黑", 4.81%, true, false, false, false, 5, 1)
+	/ txcolor = (255, 255, 255)
+	/ screencolor = (0,0,0)
+	/ windowsize = (1920,1080)
+	/ lastlabel = "点击此处进入下一页（精分冷漠脸）↑上面的智障是谁家的，快领回去 "
+</instruct>
+
+<page instruction>今天魏聪巨巨教我们我们怎么制作美美哒指导语了^^上来浪一波 ✪ω✪^^魏聪巨巨霸气威武 身高绝对两米八！！^^ </page>
+
+<page endinstruction>浪不动了╮(╯_╰)╭^^滚去碎觉（乖巧）^^ </page>
+
+**************************************************************************************************************************************************************************
+
+<picture instruction>
+	/items = ("instruction.jpg")
+	/size = (1920,1080)
+</picture>
+
+<trial instruction>
+	/validresponse = (" ")
+	/stimulusframes = [1=instruction]
+	/recorddata = false
+</trial>
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+**************************************************************************************************************************************************************************
+
+<expt defaultinstruction>
+	/preinstructions = (instruction)
+	/postinstructions = (endinstruction)
+	/blocks = [1 = instructionblk]
+</expt>

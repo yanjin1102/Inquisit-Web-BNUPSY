@@ -1,0 +1,18 @@
+﻿+﻿<instruct myinstruct>
+  +	/nextkey = (" ")
+  +	/fontstyle = ("宋体", 3.14%, false, false, false, false, 5, 1)
+  +	/txcolor = (0,0,255)
+  +	/screencolor = (255,255,255)
+  +	/lastlabel = ("用你最大的力气点击空格就能继续，一定要最大的力气")
+  +	/windowsize = (1000,800)
+  +</instruct>
+  +
+  +<page instruction>你看这里，这里是一个实验，啥，你没看到实验？哦......那可能是幻觉，不要在意，继续吧，加油！</page>
+  +
+  +<page endinstruction>你说啥？还是没实验？不科学呀......要不然你重新来一次？~</page>
+  +
+  +
+  +<expt defaultinstruction>
+  +	/preinstructions = (instruction)
+  +	/postinstructions = (endinstruction)
+  +</expt>

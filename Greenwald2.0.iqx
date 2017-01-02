@@ -1,0 +1,554 @@
+﻿//参照老师原有的IAT代码，根据Greenwald(1998)的原始实验和原始设计，制作了以下实验
+1. 更改了归因类别和不同归因类别下的词语；
+2. 添加了图片刺激；
+3. 根据Greenwald(1998)的原始设计，将实验范式更改为“分类测试-按键定义1-练习1-正式实验1-按键定义2-练习2-正式实验2”，组间1、2顺序已得到平衡；
+4 去除了原有的词语分类指示。在实验最开始，添加了分类测验以评定个体对图片的归类是否正常，排除了因被试自身理解问题和刺激选用不当问题造成错误率过高的浪费；
+5 按键定义（左-积极词汇或右-积极词汇）使得被试将中性按键赋予意义，在随后的反应中更容易表现出内因态度；
+6 在原有练习的基础上，加入了对练习结果的判断和反馈。若被试达不到一定的正确率要求（80%）会被要求重新完成该部分练习；
+7. 根据Greenwald(1998)的原始设计，调整每个block正式实验的trial个数为50；
+8. 根据Greenwald(1998)的原始处理，调整了对反应时的处理，即300ms以下以300ms计算，3000ms以上以3000ms计算。正确反应区间为300-3000ms；
+9. 对原有指导语及指导语屏进行了一定的调整，使其更简单易懂；
+10. 调整了部分文字的位置和其他属性;
+11. 因为存在被试反复练习的可能性，因而去掉了progress.
+**************************************************************************************************************
+**************************************************************************************************************
+<item attributeAlabel>
+	/1 = "积极"
+</item>
+
+<item attributeBlabel>
+	/1 = "消极"
+</item>
+
+<item targetALabel>
+	/1 = "白人"
+</item>
+
+<item targetBLabel>
+	/1 = "黑人"
+</item>
+
+<item attributeA>
+	/1 = "优秀的"
+	/2 = "杰出的"
+	/3 = "重要的"
+	/4 = "美好的"
+</item>
+
+<item attributeB>
+	/1 = "危险的"
+	/2 = "落后的"
+	/3 = "可怕的"
+	/4 = "粗俗的"
+</item>
+
+<item targetA>
+	/1 = "白人1.jpg"
+	/2 = "白人2.jpg"
+	/3 = "白人3.jpg"
+	/4 = "白人4.jpg"
+</item>
+
+<item targetB>
+	/1 = "黑人1.jpg"
+	/2 = "黑人2.jpg"
+	/3 = "黑人3.jpg"
+	/4 = "黑人4.jpg"
+</item>
+
+<item introinstructions>
+	/ 1 = "1.在实验中，请您根据指导语要求，对呈现的词语或图片做出按键反应~n~n2.请您先对刺激进行归类，随后开始练习~n~n3.请您在保证正确的前提下，尽快做出反应~n~n4.确认理解后，请您按空格键继续"
+</item>
+
+//按键定义指导语
+<item defineins>
+    / 1 ="请您对以下词语进行归类，若该词是'<%values.currentLable%>'类的词汇，请按 I 键~n~n看到非'<%values.currentLable%>'类的词语请按 E 键~n~n~n请您尽可能正确地做出反应（在该阶段，您不会得到反馈）~n~n请按空格键开始"
+</item>
+//刺激分类指导语
+<item category>
+    / 1 ="请您对以下图片进行归类，若该图片是<%item.targetALabel.1%>的图片，请按 I 键~n~n若该图片是<%item.targetBLabel.1%>的图片请按 E 键~n~n~n请您尽可能正确地做出反应（在该阶段，您不会得到反馈）~n~n请按空格键开始"
+</item>
+
+<item testinstructions>
+	/ 1 = "看到<%item.targetALabel.1%>的图片，或 '<%values.currentLable%>'类的词语，请按 I 键~n~n看到其他类别的刺激请按 E 键~n~n如果您按错了键，屏幕上会呈现 ~"X~". 请尽快按另一键来更正。~n~n您的反应越快越好~n~n请按空格键开始"
+</item>
+//当前词类型
+<item currentLable>
+	/ 1 = "<%values.currentLable%>"
+</item>
+
+<item targetAFocusInstruct>
+	/ 1 = "<%item.targetALabel.1%>"
+</item>
+
+<item targetBFocusInstruct>
+	/ 1 = "<%item.targetBLabel.1%>"
+</item>
+
+**************************************************************************************************************
+**************************************************************************************************************
+
+<text introinstructions>
+/ items = introinstructions
+/ size = (90%, 50%)
+/ position = (50%, 20%)
+/ resetinterval = 20
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text testInstructions>
+/ items = testInstructions
+/ size = (90%, 50%)
+/ position = (50%, 15%)
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text defineins>
+/ items = defineins
+/ size = (90%, 50%)
+/ position = (50%, 30%)
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+//定义错误警告
+
+<text definealert>
+	/hjustify = center
+	/items = ("您的正确率过低，请您认真阅读指导语并确认您理解后，按空格键进入下一次练习。如果您对本实验有疑问，请您联系主试。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+</text>
+
+<text category>
+/ items = category
+/ size = (90%, 50%)
+/ position = (50%, 30%)
+/ valign = top
+/ hjustify = center
+/ vjustify = top
+</text>
+
+<text attributeA>
+/ items = attributeA
+/ fontstyle = ("Arial", 10%)
+/ txcolor = yellow
+</text>
+
+<text attributeB>
+/ items = attributeB
+/ fontstyle = ("Arial", 10%)
+/ txcolor = yellow
+</text>
+
+<picture targetA>
+/ items = targetA
+/ size = (200,200)
+/ halign = center
+/ valign = center
+</picture>
+
+<picture targetB>
+/ items = targetB
+/ size = (200,200)
+/ halign = center
+/ valign = center
+</picture>
+
+<text error>
+/ position = (50%, 75%)
+/ items = ("×")
+/ color = red
+/ fontstyle = ("Arial", 10%)
+</text>
+
+<text currentLable>
+/ items = currentLable
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+<text targetFocusLabel>
+/ items = ("<%item.targetALabel.1%>")
+/ valign = top
+/ halign = center
+/ position = (50%, 5%)
+/ txcolor = aqua
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+<text orLabel>
+/ items = ("or")
+/ valign = top
+/ halign = center
+/ position = (50%, 10%)
+/ txcolor = white
+/ fontstyle = ("Arial", 3%)
+/ erase = false
+</text>
+
+<text orcurrentLable>
+/ items = currentlable
+/ valign = top
+/ halign = center
+/ position = (50%, 15%)
+/ txcolor = yellow
+/ fontstyle = ("Arial", 4%)
+/ erase = false
+</text>
+
+<shape eraseLabels>
+/ color = black
+/ shape = rectangle
+/ size = (50%, 20%)
+/ position = (50%,  10%)
+</shape>
+
+//练习正确率过低/分类错误警示语
+
+<text alerttxt>
+	/hjustify = center
+	/items = ("您的正确率过低，请您认真阅读指导语并确认您理解后，按空格键进入下一次练习。如果您对本实验有疑问，请您联系主试。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+</text>
+
+<text alertcategory>
+	/hjustify = center
+	/items = ("您的分类不正确，请您联系主试。")
+	/size = (1000,300)
+	/fontstyle = ("宋体", 24pt)
+</text>
+
+**************************************************************************************************************
+**************************************************************************************************************
+
+<trial category>
+/ stimulustimes = [1=category]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial defineins>
+/ stimulustimes = [1=defineins]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial definealert>
+/ stimulusframes = [1 = definealert]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial attributeA>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeA]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeB>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeB]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeA2>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = attributeA]
+/ posttrialpause = 250
+</trial>
+
+<trial attributeB2>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = attributeB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetALeft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetARight>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetA]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBLeft>
+/ validresponse = ("E", "I")
+/ correctresponse = ("E")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial targetBRight>
+/ validresponse = ("E", "I")
+/ correctresponse = ("I")
+/ stimulusframes = [1 = targetB]
+/ posttrialpause = 250
+</trial>
+
+<trial introinstructions>
+/ ontrialbegin = [if ( script.currentblock == "attributes" ) {values.currentTarget = item.attributeAlabel.1;} ]
+/ stimulustimes = [1=introinstructions]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial testinstructions>
+/ stimulustimes = [1=testinstructions]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial showAttributeLabel>
+/ stimulusframes = [1=currentLable]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial showLabels>
+/ stimulusframes = [1=targetFocusLabel, orLabel, orcurrentLable]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial eraseLabels>
+/ stimulusframes = [1=eraseLabels]
+/ response = noresponse
+/ recorddata = false
+</trial>
+
+<trial summary>
+/ ontrialbegin = [values.magnitude = "不存在"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.15 ) values.magnitude = "存在轻度的"]
+/ ontrialbegin = [if( abs(expressions.d) > 0.35 ) values.magnitude = "存在中等的"]
+/ ontrialbegin = [if( abs(expressions.d) >= 0.65 ) values.magnitude = "存在强烈的"]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.preferred = item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.preferred = item.targetBLabel.1]
+/ ontrialbegin = [if (expressions.d < 0.0) expressions.notpreferred= item.targetALabel.1]
+/ ontrialbegin = [if (expressions.d >= 0.0) expressions.notpreferred= item.targetBLabel.1]
+/ stimulustimes = [0=summary]
+/ validresponse = (" ")
+/ recorddata = false
+</trial>
+
+<text summary>
+/ items = ("你的IAT得分为 <% expressions.d %> ~n这代表相较于 <% expressions.notpreferred %>，您可能 <% values.magnitude %> 对 <% expressions.preferred %> 的偏好~n~n~n请按空格键退出")  
+/ size = (60%, 80%)
+/ hjustify = left
+ </text>
+
+<trial alert>
+/ stimulusframes = [1 = alerttxt]
+/ correctresponse = (" ")
+/ errormessage = false
+/ recorddata = false
+</trial>
+
+<trial alertcategory>
+/ stimulusframes = [1 = alertcategory]
+/ errormessage = false
+/ recorddata = false
+/ timeout = 60000
+</trial>
+
+**************************************************************************************************************
+**************************************************************************************************************
+
+<block intro>
+/ trials = [1 = introinstructions]
+</block>
+
+//分类任务block及警示block
+<block category>
+/ trials = [1 = category; 2-9 = noreplace(targetARight, targetBLeft)]
+/ branch = [if(block.category.percentcorrect<=50)block.alertcategory]
+</block>
+
+<block alertcategory>
+/ trials = [1 = alertcategory]
+</block>
+
+//两类按键定义的block和正确率过低的警示语block
+
+<block Aright>
+/ onblockbegin = [values.currentLable = item.attributeALabel.1]
+/ trials = [1 = defineins; 2-9 = noreplace(attributeA, attributeB)]
+/ branch = [if(block.Aright.percentcorrect<80)block.alertAright]
+</block>
+
+<block alertAright>
+/ onblockbegin = [values.currentLable = item.attributeALabel.1]
+/ trials = [1=definealert; 2=defineins; 3-10 = noreplace(attributeA, attributeB)]
+/ branch = [if(block.alertAright.percentcorrect<80)block.alertAright]
+</block>
+
+<block Bright>
+/ onblockbegin = [values.currentLable = item.attributeBLabel.1]
+/ trials = [1 = defineins; 2-9 = noreplace(attributeA2, attributeB2)]
+/ branch = [if(block.Bright.percentcorrect<80)block.alertBright]
+</block>
+
+<block alertBright>
+/ onblockbegin = [values.currentLable = item.attributeBLabel.1]
+/ trials = [1=definealert; 2=defineins; 3-10 = noreplace(attributeA2, attributeB2)]
+/ branch = [if(block.alertBright.percentcorrect<80)block.alertBright]
+</block>
+
+//两类练习的block和正确率过低的警示语block
+
+<block short_a>
+/ onblockbegin = [values.currentLable = item.attributeALabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-18 = noreplace(targetARight, targetBLeft, attributeA, attributeB)];
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ branch = [if(block.short_a.percentcorrect<80)block.alert1]
+</block>
+
+<block alert1>
+/ onblockbegin = [values.currentLable = item.attributeALabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=alert; 2=testInstructions; 3=showLabels;
+  4-19 = noreplace(targetARight, targetBLeft, attributeA, attributeB)];
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ branch = [if(block.alert1.percentcorrect<80)block.alert1]
+</block>
+
+<block short_b>
+/ onblockbegin = [values.currentLable = item.attributeBLabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-18 = noreplace(targetARight, targetBLeft, attributeA2, attributeB2)];
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ branch = [if(block.short_b.percentcorrect<80)block.alert2]
+</block>
+
+<block alert2>
+/ onblockbegin = [values.currentLable = item.attributeBLabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=alert; 2=testInstructions; 3=showLabels;
+  4-19 = noreplace(targetBRight, targetALeft, attributeA2, attributeB2)];
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ branch = [if(block.alert2.percentcorrect<80)block.alert2]
+</block>
+
+//正式实验block
+
+<block A>
+/ onblockbegin = [values.currentLable = item.attributeALabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-52= noreplace(attributeA, attributeB, targetARight, targetBLeft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.A.latency  <= 300 && block.A.currenttrialnumber >= 3 ) values.A1sum =  values.A1sum + 300]
+/ ontrialend = [if (block.A.latency  >= 3000 && block.A.currenttrialnumber >= 3 ) values.A1sum =  values.A1sum + 3000]
+/ ontrialend = [if (block.A.latency  <= 3000 && block.A.latency  >= 300 && block.A.currenttrialnumber >= 3 ) values.A1sum =  values.A1sum + block.A.latency]
+/ ontrialend = [if (block.A.currenttrialnumber >= 3 ) values.A1n += 1]
+/ ontrialend = [if (block.A.latency  <= 300 && block.A.currenttrialnumber >= 3 ) values.A1ss =  values.A1ss  + 90000]
+/ ontrialend = [if (block.A.latency  >= 3000 && block.A.currenttrialnumber >= 3 ) values.A1ss =  values.A1ss  + 9000000]
+/ ontrialend = [if (block.A.latency  <= 3000 && block.A.latency  >= 300 && block.A.currenttrialnumber >= 3 ) values.A1ss =  values.A1ss  + (block.A.latency * block.A.latency)]
+</block>
+
+<block B>
+/ onblockbegin = [values.currentLable = item.attributeBLabel.1; values.currentTarget = item.targetALabel.1]
+/ trials = [1=testInstructions; 2=showLabels;
+  3-52= noreplace(attributeA2, attributeB2, targetARight, targetBLeft)]
+/ errormessage = true(error,200)
+/ responsemode = correct
+/ ontrialend = [if (block.B.latency  <= 300 && block.B.currenttrialnumber >= 3) values.B1sum =  values.B1sum + 300]
+/ ontrialend = [if (block.B.latency  >= 3000 && block.B.currenttrialnumber >= 3) values.B1sum =  values.B1sum + 3000]
+/ ontrialend = [if (block.B.latency  <= 3000 && block.B.latency  >= 300 && block.B.currenttrialnumber >= 3 ) values.B1sum =  values.B1sum + block.B.latency]
+/ ontrialend = [if (block.B.currenttrialnumber >= 3) values.B1n += 1]
+/ ontrialend = [if (block.B.latency  <= 300 && block.B.currenttrialnumber >= 3) values.B1ss =  values.B1ss  + 90000]
+/ ontrialend = [if (block.B.latency  >= 3000 && block.B.currenttrialnumber >= 3 ) values.B1ss =  values.B1ss  + 9000000]
+/ ontrialend = [if (block.B.latency  <= 3000 && block.B.latency  >= 300 && block.B.currenttrialnumber >= 3 ) values.B1ss =  values.B1ss  + (block.B.latency * block.B.latency)]
+</block>
+
+<block summary>
+/ trials = [1=summary]
+/ recorddata = false
+</block>
+
+**************************************************************************************************************
+**************************************************************************************************************
+
+<expt>
+/ subjects = (1 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1 = intro; 2 = category; 3 = Aright; 4 = short_a; 5 = A; 6 = Bright ; 7=short_b; 8=B; 9=summary]
+</expt>
+
+<expt>
+/ subjects = (2 of 2)
+/ groupassignment = groupnumber
+/ blocks = [1 = intro; 2 = category; 3 = Bright; 4 = short_b; 5 = B; 6 = Aright ; 7=short_a; 8=A; 9=summary]
+</expt>
+
+**************************************************************************************************************
+**************************************************************************************************************
+
+<data>
+/file = "BriefIAT_rawdata.iqdat"
+/ columns = [date, time, group, subject, blockcode, blocknum, trialcode, trialnum, response, correct, latency, 
+					stimulusnumber, stimulusitem, expressions.d, expressions.percentcorrect]
+/separatefiles = true
+</data>
+
+<values>
+/completed = 0
+/ A1sum = 0
+/ B1sum = 0
+/ A1n = 0
+/ B1n = 0
+/ A1ss = 0
+/ B1ss = 0
+/ magnitude = "存在未知的"
+/ currentTarget = ""
+/ currentLable = ""
+/ n_correct = 0
+</values>
+
+<expressions>
+/ A1m = values.A1sum / values.A1n
+/ B1m = values.B1sum / values.B1n
+/ A1sd = sqrt((values.A1ss - (values.A1n* (expressions.A1m * expressions.A1m))) / (values.A1n - 1))
+/ B1sd = sqrt((values.B1ss - (values.B1n* (expressions.B1m * expressions.B1m))) / (values.B1n - 1))
+/ sd1 = sqrt((((values.A1n - 1) * (expressions.A1sd * expressions.A1sd) + (values.B1n - 1) * (expressions.B1sd * expressions.B1sd)) + ((values.A1n + values.B1n) * ((expressions.A1m - expressions.B1m) * (expressions.A1m - expressions.B1m)) / 4) ) / (values.A1n + values.B1n - 1) )
+/ d = (expressions.B1m - expressions.A1m) / expressions.sd1
+/ preferred = "未知人种"
+/ notpreferred = "未知人种"
+/ percentcorrect = (values.n_correct/ (values.a1n + values.b1n)) * 100
+</expressions>
+
+<defaults>
+/ fontstyle = ("Arial", 5%)
+/ screencolor = black
+/ txbgcolor = black
+/ txcolor = white
+</defaults>

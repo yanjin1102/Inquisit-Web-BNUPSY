@@ -1,0 +1,134 @@
+﻿<picture yellowpic>
+    /items=("yellow.jpg")
+    /position = (70,20)
+    /valign = top
+    / halign = left
+</picture>
+
+<text instructiontxt>
+	/hjustify = center
+	/items = ("这是一个简单的视觉反应实验
+在这一阶段
+屏幕中央将会出现一个单词
+请您进行记忆
+当您完成记忆时
+请按空格键进入下一个单词的记忆
+")
+	/txbgcolor = (transparent)
+	/ fontstyle = ("华文新魏", 4.95%, false, false, false, false, 5, 1)
+	/ txcolor = (0, 191, 255)
+</text>
+
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 70 pct
+    / fontstyle = ("微软雅黑 Light", 3.65%, false, false, false, false, 5, 1)
+	/ txcolor = (255, 99, 71)
+	/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt,yellowpic]
+	/recorddata = false
+</trial>
+
+//休息阶段
+<text relaxtxt>
+	/hjustify = center
+	/items = ("您已完成记忆阶段
+
+请休息片刻~
+")
+	/size = (1000,300)
+	/ fontstyle = ("华文新魏", 4.95%, false, false, false, false, 5, 1)
+	/ txcolor = (0, 191, 255)
+	/txbgcolor = (transparent)
+</text>
+
+
+<trial relax>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=relaxtxt,anykeytxt,yellowpic]
+	/recorddata = false
+</trial>
+
+//第二条指导语
+<text thentxt>
+	/hjustify = center
+	/items = ("接下来是实验的第二阶段
+屏幕中央将呈现一个单词
+请您判断是否在前一阶段记忆过
+如果是，请按“F”键
+如果否，请按“J”键
+")
+	/size = (1000,300)
+	/ fontstyle = ("华文新魏", 4.95%, false, false, false, false, 5, 1)
+	/ txcolor = (0, 191, 255)
+	/txbgcolor = (transparent)
+</text>
+
+
+<trial then>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=thentxt,anykeytxt,yellowpic]
+	/recorddata = false
+</trial>
+
+//结束语
+<text goodbyetxt>
+	/hjustify = center
+	/items = ("实验已结束
+
+谢谢您的参与~
+")
+	/size = (1000,300)
+	/ fontstyle = ("华文新魏", 4.95%, false, false, false, false, 5, 1)
+	/ txcolor = (0, 191, 255)
+	/txbgcolor = (transparent)
+</text>
+
+<text endtxt>
+	/items = ("按任意键结束实验")
+	/vposition = 70 pct	
+	/ fontstyle = ("微软雅黑 Light", 3.65%, false, false, false, false, 5, 1)
+	/ txcolor = (255, 99, 71)
+	/txbgcolor = (transparent)
+</text>
+
+<trial goodbye>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=goodbyetxt,endtxt,yellowpic]
+	/recorddata = false
+</trial>
+
+//block
+<block instructionblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = instruction]
+</block>
+
+<block relaxblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = relax]
+</block>
+
+<block thenblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = then]
+</block>
+
+<block goodbyeblk>
+	/screencolor = (255,255,255)
+	/trials = [1 = goodbye]
+</block>
+
+
+//experiment
+
+<expt>
+	/ blocks = [1 = instructionblk; 2 = relaxblk; 3 = thenblk; 4 = goodbyeblk]
+</expt>
+
+**************************************************************************************************************************************************************************

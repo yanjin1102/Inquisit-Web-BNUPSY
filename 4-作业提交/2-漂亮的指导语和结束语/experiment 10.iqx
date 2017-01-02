@@ -1,0 +1,74 @@
+﻿<picture inspic>		
+/items = ("1.jpg")
+/size = (200,200)		
+</picture>
+
+<picture instpic>
+/vposition = 85
+/items = ("3.jpg")
+/size = (150,150)
+</picture>
+
+<picture endpic>		
+/items = ("2.jpg")
+/size = (200,200)		
+</picture>		
+
+<text instxt>
+/items = ("恭喜你看到了世界上最美的指导语！")
+/size = (1000,300)
+/fontstyle = ("楷体", 30pt)
+/txbgcolor = (transparent)
+/txcolor = (255,255,255)
+</text>		
+
+<text anykeytxt>
+/items = ("按任意键继续观看世界上最美的结束语")
+/vposition = 70 pct
+/fontstyle = ("楷体", 24pt)
+/txcolor = (255,255,255)
+/txbgcolor = (transparent)
+</text>
+
+<trial instruction>
+/validresponse = (anyresponse)
+/stimulusframes = [1=inspic,instxt,anykeytxt,instpic]
+/recorddata = false
+</trial>
+
+<text end>
+/items = ("您已欣赏到世界上最美的结束语！byebye~ ლ(╹◡╹ლ)")
+/size = (1000,300)
+/fontstyle = ("楷体", 30pt)
+/txbgcolor = (transparent)
+/txcolor = (255,255,255)
+</text>
+
+<text endkeytxt>
+/items = ("按任意键结束实验，并向主试赞美指导语和结束语！")
+/vposition = 70 pct
+/fontstyle = ("楷体", 24pt)
+/txcolor = (255,255,255)
+/txbgcolor = (transparent)
+</text>
+
+
+<trial end>
+/validresponse = (anyresponse)
+/stimulusframes = [1=endpic,end,endkeytxt]
+/recorddata =false
+</trial>
+
+<block instruction>
+/screencolor = (0,0,0)
+/trials = [1 = instruction]
+</block>
+
+<block end>
+/screencolor = (0,0,0)
+/trials = [1 = end]
+</block>
+
+<expt>
+/blocks = [1 = instruction; 2 = end]
+</expt>

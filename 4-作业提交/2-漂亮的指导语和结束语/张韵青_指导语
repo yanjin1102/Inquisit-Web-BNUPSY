@@ -1,0 +1,65 @@
+<text instructiontxt>
+	/hjustify = center
+	/items = ("请将左数和右手的食指分别放在键盘的“F”键和“J”键上；在屏幕的中央会随机出现单词blue或green，请判断单词的颜色；如果单词的颜色是蓝色请按“F”键，如果单词的颜色是绿色请按“J”键。")
+	/size = (1000,300)
+	/fontstyle = ("方正粗宋简体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text anykeytxt>
+	/items = ("按任意键开始实验")
+	/vposition = 70 pct
+	/fontstyle = ("方正粗宋简体", 24pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+<text goodbyetxt>
+	/hjustify = center
+	/items = ("实验结束，感谢您的参与。")
+	/size = (1000,300)
+	/fontstyle = ("方正粗宋简体", 24pt)
+	/txbgcolor = (transparent)
+	/txcolor = (255,255,255)
+</text>
+
+<text spacetxt>
+	/items = ("请按空格键结束实验")
+	/vposition = 70 pct
+	/fontstyle = ("方正粗宋简体", 24pt)
+	/txcolor = (255,255,255)
+	/txbgcolor = (transparent)
+</text>
+
+=================================================================
+
+<trial instruction>
+	/validresponse = (anyresponse)
+	/stimulusframes = [1=instructiontxt,anykeytxt]
+	/recorddata = false
+</trial>
+
+<trial goodbye>
+	/validresponse = (" ")
+	/stimulusframes = [1=goodbyetxt,spacetxt]
+	/recorddata = false
+</trial>
+
+=================================================================
+
+<block instructionblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = instruction]
+</block>
+
+<block goodbyeblk>
+	/screencolor = (0,0,0)
+	/trials = [1 = goodbye]
+</block>
+
+=================================================================
+
+<expt>
+	/blocks = [1 = instructionblk; 2 = goodbyeblk]
+</expt>
