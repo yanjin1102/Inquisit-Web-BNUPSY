@@ -1,0 +1,181 @@
+<item standard>
+/1 = "grey0.jpg"
+</item>
+
+<item target>
+/1 = "grey1.jpg"
+/2 = "grey2.jpg"
+/3 = "grey3.jpg"
+/4 = "grey4.jpg"
+/5 = "grey5.jpg"
+/6 = "grey6.jpg"
+/7 = "grey7.jpg"
+/8 = "grey8.jpg"
+/9 = "grey9.jpg"
+/10 = "grey10.jpg"
+/11 = "grey11.jpg"
+/12 = "grey12.jpg"
+/13 = "grey13.jpg"
+/14 = "grey14.jpg"
+/15 = "grey15.jpg" 
+</item>
+
+<item fixation>
+	/1 = "+"
+</item>
+
+<item correctmsg>
+	/1 = "√"
+</item>
+
+<item errormsg>
+	/1 = "×"
+</item>
+
+<instruct myinstruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (1366,768)
+</instruct>
+
+<page begininstruction1>^^^^您好，非常欢迎您参与我们的研究！^^我们当前的研究是测验您进行观察能力。^^请您尽量准确快速的对我们呈现的刺激材料进行反应！^^</page>
+
+<page begininstruction2>^^^^请用鼠标选出四幅图中灰度不同的图片！^^左上为F,右上为J，左下为V，右下为N</page>
+
+<page endinstruction1>^^^^请您稍微休息一下!^^如果您休息好了，准备进入下一阶段的实验，请您按空格键继续！^^</page>
+
+<page endinstruction2>^^^^非常感谢您的参与，您提供的行为数据对我们的研究特别重要!^^为表达感谢，请您找主试领取被试费！^^再次感谢您的参与！^^</page>
+
+
+====================================================================================================================
+//接下来我们就需要用图片刺激的定义方式定义我们的刺激材料啦！
+
+<picture standardpic1>
+    /position = (25,25)
+	/items = standard
+    /erase = True(0,0,0) 
+	/size = (300,200)
+</picture>
+<picture standardpic2>
+	/position = (25,75)
+	/items = standard
+    /erase = True(0,0,0) 
+	/size = (300,200)
+</picture>
+<picture standardpic3>
+    /position = (75,75)
+	/items = standard
+    /erase = True(0,0,0) 
+	/size = (300,200)
+</picture>
+
+<picture targetpic>
+    /position = (75,25)	
+    /items = target
+    /select = sequence
+    /erase = True(0,0,0) 
+	/size = (300,200)
+</picture>
+
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+	/size = (200,200)
+    /shape = rectangle
+</shape>
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (255,255,255)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+
+//定义values & expressions，让我们的注视点呈现时间任性起来。
+==========================================================================================================================================
+
+<values>
+	/fixationtime = 0
+	/shapetime = 0
+	/stimulustimep = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(400,600))
+	/generaterandomshape = ceil(rand(200,300))
+</expressions>
+
+
+
+//定义trials
+===========================================================================================================================================
+
+<trial selectpic>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage = (errormsg,500)
+	/validresponse = ("F","J","V","N")
+    /correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.shapetime = values.fixationtime + expressions.generaterandomshape]
+	/ontrialbegin = [values.stimulustimep = values.shapetime + 300]
+	/ontrialbegin = [trial.selectpic.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.selectpic.insertstimulustime(shape.blank,values.fixationtime)]
+	/ontrialbegin = [trial.selectpic.insertstimulustime(picture.standardpic1,values.shapetime)]
+    /ontrialbegin = [trial.selectpic.insertstimulustime(picture.standardpic2,values.shapetime)]
+    /ontrialbegin = [trial.selectpic.insertstimulustime(picture.standardpic3,values.shapetime)]
+    /ontrialbegin = [trial.selectpic.insertstimulustime(picture.targetpic,values.shapetime)]
+	/ontrialbegin = [trial.selectpic.insertstimulustime(shape.blank,values.stimulustimep)]
+	/ontrialend = [trial.selectpic.clearstimulusframes()]
+	/beginresponsetime = values.shapetime
+</trial>
+
+//定义blocks,我们在这里定义三个block，一个是instruction，一个是练习block，一个是正式实验的block。
+=============================================================================================================================================================
+
+<block startblock>
+	/screencolor = (255,255,255)
+	/preinstructions = (begininstruction2)
+</block>
+
+<block exerciseblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-4 = noreplacenorepeat(selectpic)]
+</block>
+
+<block restblock>
+	/screencolor = (255,255,255)
+	/postinstructions = (endinstruction1)
+</block>
+
+<block judgeblk>
+	/screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-15 = noreplacenorepeat(selectpic)]
+</block>
+<expt>
+	/preinstructions = (begininstruction1)
+	/ blocks = [1 = startblock; 2=exerciseblk; 3 = restblock; 4 = startblock; 5 = judgeblk]
+	/postinstructions = (endinstruction2)
+</expt>
